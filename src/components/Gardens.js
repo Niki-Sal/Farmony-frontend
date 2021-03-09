@@ -16,7 +16,7 @@ const Gardens = () => {
     },[])
     const listOfGardens = gardens.map((gardenData, index) =>{
         return(
-            <p key={gardenData._id}>{gardenData.name} <img src= {gardenData.image}/></p>
+            <p key={gardenData._id}>{gardenData.name} <img src= {gardenData.image} alt= "gardenpicture"/></p>
         )
     })
 
