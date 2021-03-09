@@ -19,5 +19,5 @@ class GardenModel {
         return request
     }
 }
-boo
+
 export default GardenModel

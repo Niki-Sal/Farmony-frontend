@@ -26,16 +26,22 @@ const EditForm = (props) => {
     const onInputChange = (event) =>{
         setAboutme(event.target.value)
     }
-
-
-
+    //////////////
+    // const updateUser = async (userAbout, userId) => {
+    //     function isUpdatedUser(todo) {
+    //         return CurrentUser.id === userId;
+    //     }
+    //     const result = await UserModel.update(userId, userAbout)
+    //     let usersCurrent = [...users]
+    //     usersCurrent.find(isUpdatedUser).body = userAbout.body
+    //     setUsers(todosCurrent)
+    //   }
+      ////////////
     const onFormSubmit = async (event)=> {
         event.preventDefault()
         console.log(aboutme)
         UserModel.update(currentUser.id, 
             {
-                name: currentUser.name,
-                email: currentUser.email,
                 about: aboutme
             })
     }
