@@ -8,6 +8,7 @@ const EditForm = (props) => {
     const [currentUser, setCurrentUser] = useState('');
     const [isAuthenticated, setIsAuthenticated] = useState(true);
     const [aboutme, setAboutme] = useState('')
+    const [users, setUsers] = useState([])
    
     useEffect(() => {
       let token;
@@ -26,24 +27,34 @@ const EditForm = (props) => {
     const onInputChange = (event) =>{
         setAboutme(event.target.value)
     }
-    //////////////
-    // const updateUser = async (userAbout, userId) => {
-    //     function isUpdatedUser(todo) {
-    //         return CurrentUser.id === userId;
-    //     }
-    //     const result = await UserModel.update(userId, userAbout)
-    //     let usersCurrent = [...users]
-    //     usersCurrent.find(isUpdatedUser).body = userAbout.body
-    //     setUsers(todosCurrent)
-    //   }
-      ////////////
+    ////////////
+    const updateUser = async (userAbout, userId) => {
+        function isUpdatedUser(user) {
+            return currentUser.id === userId;
+        }
+        const result = await UserModel.update(userId, userAbout)
+        let usersCurrent = [...users]
+        usersCurrent.find(isUpdatedUser).body = userAbout.body
+        setUsers(usersCurrent)
+      }
+      
+      const [formStyle, setFormStyle ] = useState({ display: 'none'})
+      const [bodyStyle, setBodyStyle ] = useState({})
+      const toggleBodyForm = () => {
+        if (formStyle.display === 'block') {
+          setFormStyle({ display: 'none'})
+          setBodyStyle({ display: 'block'})
+        } else {
+          setFormStyle({display: 'block'})
+          setBodyStyle({display: 'none'})
+        }
+      }
+      //////////
     const onFormSubmit = async (event)=> {
         event.preventDefault()
+        toggleBodyForm()
         console.log(aboutme)
-        UserModel.update(currentUser.id, 
-            {
-                about: aboutme
-            })
+        updateUser({about: aboutme}, currentUser.id)
     }
 
     return (

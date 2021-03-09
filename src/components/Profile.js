@@ -1,6 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+// const cloudinary = require('cloudinary')
+// const multer = require('multer')
+// import multer from 'multer'
+
+// const uploads = multer({dest:"../uploads"})
 
 
 const Profile = (props) => {
@@ -18,23 +23,27 @@ const Profile = (props) => {
     const [image, setImage] = useState('')
     const uploadImage = async (e)=>{
         e.preventDefault()
+        // let uploadResult = await uploads.single(e.target.file)
+        // console.log(uploadResult)
         const files = e.target.files
+        // cloudinary.uploader.upload
         const data = new FormData()
-        // data.append('file', file[0])
-        data.append('upload_preset', 'geekyimage')
-        setLoading(true)
-        const res = await fetch(
-            'https://api.cloudinary.com/v1_1/ddmbb2ian/image/upload',
-            {
-                method: 'POST',
-                body: data
-            }
-        )
-        const file = await res.json()
-        console.log(file)
+        data.append('inputfile', files)
+        console.log(files)
+        // data.append('upload_preset', 'geekyimage')
+        // setLoading(true)
+        // const res = await fetch(
+        //     'https://api.cloudinary.com/v1_1/ddmbb2ian/image/upload',
+        //     {
+        //         method: 'POST',
+        //         body: data
+        //     }
+        // )
+        // const file = await res.json()
+        // console.log(file)
 
-        setImage(file.secure_url)
-        setLoading(false)
+        // setImage(file.secure_url)
+        // setLoading(false)
     }
 
    const userData = user ?
@@ -42,13 +51,15 @@ const Profile = (props) => {
        <h1>Profile</h1>
        <p>[Image placeholder] {photo}</p>
        <div className="App">
-          
-            <input type= "file" name="file" placeholder="upload an image" onChange={uploadImage} />
+          <form encType="multipart/form-data" onSubmit={uploadImage}>
+            <input type= "file" name="inputfile" placeholder="upload an image" onChange={uploadImage} />
             {loading ? (
                 <h3>Loading...</h3>
             ):(
                 <img src={image} style={{width: '300px'}}/>
             )}
+            <button type= "submit">submit</button>
+          </form>
         </div>
        <p>Name: {name}</p>
        <p>Email: {email}</p>
