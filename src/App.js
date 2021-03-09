@@ -16,7 +16,6 @@ import Login from './components/Login';
 import Navbar from './components/Navbar';
 import Profile from './components/Profile';
 import Welcome from './components/Welcome';
-import Home from './components/Home';
 
 const PrivateRoute = ({ component: Component, ...rest}) => {
   let token = localStorage.getItem('jwtToken');
@@ -76,7 +75,6 @@ function App() {
           <Route path="/about" component={About} />
         </Switch>
       </div>
-      
       {routes}
       <Footer />
     </div>
