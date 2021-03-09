@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const NewPost = () => {
-    const [category, setCategory] = useState()
+    const [category, setCategory] = useState('')
 
     const handleChange = (e) => {
         setCategory(e.target.value)
@@ -12,8 +12,13 @@ const NewPost = () => {
         <div>
             <form>
                 <form>
-                    <input type="text" name="postTitle"></input>
-                    <input type="text" name="body"></input>
+                    <label>
+                        Post Title: 
+                        <input type="text" htmlFor="Post Title" name="postTitle"></input>
+                    </label><br />
+                    <label>Body: 
+                    <input type="text" htmlFor="Body" name="body"></input>
+                    </label><br/>
                     <label>
                         Category:
                         <select value={category.value} onChange={handleChange}>
