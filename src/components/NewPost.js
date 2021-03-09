@@ -2,10 +2,29 @@ import React, { useState } from 'react';
 
 const NewPost = () => {
     const [category, setCategory] = useState('')
+    const [title, setTitle] = useState('')
+    const [body, setBody] = useState('')
 
-    const handleChange = (e) => {
+
+    const handleTitle = (e) => {
+        setTitle(e.target.value)
+        console.log('***** title', title)
+    }
+
+    const handleBody = (e) => {
+        setBody(e.target.value)
+        console.log('***** body', body)
+    }
+
+    const handleCategory = (e) => {
         setCategory(e.target.value)
-        console.log(category)
+        console.log('*****category', category)
+    }
+
+    const handleClick = (e) => {
+        e.preventDefault()
+        console.log(title, body, category)
+      
     }
 
     return (
@@ -14,19 +33,21 @@ const NewPost = () => {
                 <form>
                     <label>
                         Post Title: 
-                        <input type="text" htmlFor="Post Title" name="postTitle"></input>
+                        <input type="text" name="postTitle" value={title} onChange={handleTitle}></input>
                     </label><br />
                     <label>Body: 
-                    <input type="text" htmlFor="Body" name="body"></input>
+                    <input type="text" name="body" value={body} onChange={handleBody}></input>
                     </label><br/>
                     <label>
                         Category:
-                        <select value={category.value} onChange={handleChange}>
+                        <select value={category} onChange={handleCategory}>
                         <option value="Trade">Trade</option>
                         <option value="Buy">Buy</option>
                         <option value="Volunteer">Volunteer</option>
                         <option value="Holistic Hub">Holistic Hub</option>
+                        
                         </select>
+                        <input type="submit" value="Submit" onClick={handleClick}></input>
                     </label>
 
                 </form>
