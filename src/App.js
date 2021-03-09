@@ -78,7 +78,6 @@ function App() {
           <Route path="/holistichub" component={Holistic} />
         </Switch>
       </div>
-      
       {routes}
       <Footer />
     </div>
