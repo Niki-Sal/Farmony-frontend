@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import UserModel from '../models/user'
 // const cloudinary = require('cloudinary')
 // const multer = require('multer')
@@ -31,7 +31,6 @@ const Profile = (props) => {
        alert('Session has ended. Please login to continue.');
    } else {
         getAbout()
-        
    }
  
     const [loading, setLoading] = useState(false)
@@ -94,7 +93,6 @@ const Profile = (props) => {
     return (
         <div className="text-center pt-4">
             {user ? userData : errorDiv()}
-            {/* <Link to='/editform'>edit about me</Link> */}
             <EditForm />
            
         </div>
