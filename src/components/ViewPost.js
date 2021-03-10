@@ -3,12 +3,12 @@ import HolisticModel from '../models/holistic'
 
 const ViewPost = (props) => {
 
-    let { id } = props.id
-    console.log(id)
+    
+    console.log(props.id)
 
     return (
         <div>
-            <p>post {id}</p>
+            <p>post {props.id}</p>
         </div>
     );
 }
