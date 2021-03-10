@@ -10,6 +10,12 @@ class GardenModel {
         let request = axios.get(endPoint)
         return request
     }
+    static query = (data) => {
+        let request = axios.post(`${endPoint}/query`, data)
+        console.log(data)
+        console.log(request)
+        return request
+    }
     static create = (garden)=>{
         let request = axios.post(endPoint, garden)
         return request

@@ -17,6 +17,7 @@ import Navbar from './components/Navbar';
 import Profile from './components/Profile';
 import Welcome from './components/Welcome';
 
+
 const PrivateRoute = ({ component: Component, ...rest}) => {
   let token = localStorage.getItem('jwtToken');
   console.log('===> Hitting a Private Route');
