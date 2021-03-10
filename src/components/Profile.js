@@ -1,25 +1,39 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import UserModel from '../models/user'
 // const cloudinary = require('cloudinary')
 // const multer = require('multer')
 // import multer from 'multer'
 // import cloudinary from 'cloudinary';
-
 // const uploads = multer({dest:"../uploads"})
-
+import EditForm from './EditForm'
 
 const Profile = (props) => {
    const { handleLogout, user } = props;
-   const { id, name, email,exp, about } = user;
+   const { id, name, email,exp} = user;
    const expirationTime = new Date(exp * 1000);
    let currentTime = Date.now();
+
+    const [ about, setAbout] = useState('')
+    const getAbout = async() =>{
+        let newAbout = ''
+        const result = await UserModel.oneUser(id)
+        newAbout= result.data.about
+        setAbout(newAbout)
+        console.log(newAbout)
+    }
+   
 
    // make a condition that compares exp and current time
    if (currentTime >= expirationTime) {
        handleLogout();
        alert('Session has ended. Please login to continue.');
+   } else {
+        getAbout()
+        
    }
+ 
     const [loading, setLoading] = useState(false)
     const [image, setImage] = useState('')
     const uploadImage = async (e)=>{
@@ -34,7 +48,7 @@ const Profile = (props) => {
         // data.append('upload_preset', 'geekyimage')
         // setLoading(true)
         // const res = await fetch(
-        //     'https://api.cloudinary.com/v1_1/ddmbb2ian/image/upload',
+        //     'https://',
         //     {
         //         method: 'POST',
         //         body: data
@@ -80,7 +94,8 @@ const Profile = (props) => {
     return (
         <div className="text-center pt-4">
             {user ? userData : errorDiv()}
-            <Link to='/editform'>edit about me</Link>
+            {/* <Link to='/editform'>edit about me</Link> */}
+            <EditForm />
            
         </div>
     );
