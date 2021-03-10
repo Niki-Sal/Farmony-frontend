@@ -27,8 +27,8 @@ const NewPost = () => {
         console.log(title, body, category)
         // HolisticModel.create({
         //     title,
-        //     Name: currentUser.name,
-        //     photo: currentUser.photo
+        //     name: currentUser.name,
+        //     photo: currentUser.photo,
         //     body,
         //     category,
         // })
