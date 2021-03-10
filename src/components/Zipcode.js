@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react'
 import GardenModel from '../models/garden'
+import {Link} from 'react-router-dom'
 
 
 const Zipcode = () => {
@@ -18,9 +19,10 @@ const Zipcode = () => {
     // }, [])
     const listOfGardens = gardens.map((gardenData, index) => {
         return (
-            <div key={gardenData._id}> 
+            <div>
             <img src={gardenData.image}/>
             <p>{gardenData.name} {gardenData.address} {gardenData.state} {gardenData.zip}</p>
+            <button key={gardenData._id}><Link to="/:id"/>View Farm Profile</button>
             </div>
         )
     })
@@ -46,9 +48,9 @@ const Zipcode = () => {
         <div>
             <form onSubmit={handleSubmit} className="zip-form">
                 <textarea type="text" name="zip" onChange={entry} className="form-control" />
-                <button type="submit">Search</button>
+                <button type="submit"><Link to="/localgardens"/>Search</button>
             </form>
-            {listOfGardens.length >= 1 ? listOfGardens : null}
+            
         </div>
     )
 }
