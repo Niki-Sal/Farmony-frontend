@@ -30,7 +30,7 @@ const Holistic = () => {
             <h4>Community chit-chat. Discuss community news, trade recipes, share photos, etc. Be kind and respectful. </h4>
             <button><Link to="/newpost">Make New Post</Link></button>
             {listOfPosts}
-            
+            <ViewPost />
         </div>
         
     );
