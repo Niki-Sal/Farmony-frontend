@@ -22,7 +22,6 @@ const ViewPost = (props) => {
         {post.title}
         {post.content}
         {post.comments}
-        
         </div>
     })
 
