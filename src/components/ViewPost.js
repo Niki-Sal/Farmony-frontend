@@ -10,17 +10,27 @@ const ViewPost = (props) => {
         const fetchData = async () => {
             const res = await HolisticModel.all()
             console.log(res.data) 
-            //setPosts(res.data[0]) 
+            setPosts(res.data) 
         };
         fetchData()
     }, []);
     
-    console.log(props.id)
+    const listOfPosts = posts.map((post) => {
+        <div key={post.id}>
+        {post.date}
+        {post.username}
+        {post.title}
+        {post.content}
+        {post.comments}
+        
+        </div>
+    })
 
     return (
         <div>
-            <p>post {posts}{props.id}</p>
+           {listOfPosts}
         </div>
+        
     );
 }
 
