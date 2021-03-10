@@ -33,9 +33,9 @@ const EditForm = (props) => {
             return currentUser.id === userId;
         }
         const result = await UserModel.update(userId, userAbout)
-        let usersCurrent = [...users]
-        usersCurrent.find(isUpdatedUser).body = userAbout.body
-        setUsers(usersCurrent)
+        let usersCurrent = currentUser
+        usersCurrent.about= userAbout.about
+        setCurrentUser(usersCurrent)
       }
       
       const [formStyle, setFormStyle ] = useState({ display: 'none'})

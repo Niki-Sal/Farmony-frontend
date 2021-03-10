@@ -4,13 +4,14 @@ import { useState } from 'react';
 // const cloudinary = require('cloudinary')
 // const multer = require('multer')
 // import multer from 'multer'
+// import cloudinary from 'cloudinary';
 
 // const uploads = multer({dest:"../uploads"})
 
 
 const Profile = (props) => {
    const { handleLogout, user } = props;
-   const { id, name, email, exp, about, photo } = user;
+   const { id, name, email,exp, about } = user;
    const expirationTime = new Date(exp * 1000);
    let currentTime = Date.now();
 
@@ -49,7 +50,7 @@ const Profile = (props) => {
    const userData = user ?
    (<div>
        <h1>Profile</h1>
-       <p>[Image placeholder] {photo}</p>
+       <p>[Image placeholder]</p>
        <div className="App">
           <form encType="multipart/form-data" onSubmit={uploadImage}>
             <input type= "file" name="inputfile" placeholder="upload an image" onChange={uploadImage} />
