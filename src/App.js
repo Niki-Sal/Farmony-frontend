@@ -19,6 +19,7 @@ import Welcome from './components/Welcome';
 import Home from './components/Home';
 import Holistic from './components/Holistic';
 
+
 const PrivateRoute = ({ component: Component, ...rest}) => {
   let token = localStorage.getItem('jwtToken');
   console.log('===> Hitting a Private Route');
