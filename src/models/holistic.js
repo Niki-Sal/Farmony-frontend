@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const endPoint = 'http://localhost:8000/holistichub'
+const endPoint = 'http://localhost:8000/api/holistic'
 
 
 
