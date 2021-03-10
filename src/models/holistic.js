@@ -15,9 +15,14 @@ class HolisticModel {
         return request
     }
     static delete = (post) =>{
-        let request = axios.delete(`${endPoint}/${post._id}` )
+        let request = axios.delete( )
         return request
     }
+    static show = (post) => {
+        let request = axios.show(`${endPoint}/${post._id}`)
+        return request
+    }
+    
 }
 
 export default HolisticModel;
