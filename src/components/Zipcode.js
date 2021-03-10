@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState} from 'react'
 import GardenModel from '../models/garden'
+import {Link} from 'react-router-dom'
 
 const Zipcode = () => {
     const [zipcode, setZipcode] = useState('')
@@ -11,6 +12,7 @@ const Zipcode = () => {
             <div key={gardenData._id}> 
             <img src={gardenData.image} alt="garden"/>
             <p>{gardenData.name} {gardenData.address} {gardenData.state} {gardenData.zip}</p>
+            <Link to={`/gardenprofile/${gardenData._id}`}>View Garden Profile</Link>
             </div>
         )
     })
