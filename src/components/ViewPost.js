@@ -10,7 +10,7 @@ const ViewPost = (props) => {
         const fetchData = async () => {
             const res = await HolisticModel.all()
             console.log(res.data) 
-            //setPosts(res.data) 
+            //setPosts(res.data[0]) 
         };
         fetchData()
     }, []);
