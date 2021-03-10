@@ -26,6 +26,10 @@ class UserModel {
         let request = axios.put(`${endPoint}/${userId}`, updatedUserObject )
         return request
     }
+    static oneUser = (userId) =>{
+        let request = axios.get(`${endPoint}/${userId}`)
+        return request
+    }
 }
 
 export default UserModel
