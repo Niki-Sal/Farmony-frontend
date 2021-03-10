@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import HolisticModel from '../models/holistic'
 
 const NewPost = () => {
     const [category, setCategory] = useState('')
@@ -18,19 +19,25 @@ const NewPost = () => {
 
     const handleCategory = (e) => {
         setCategory(e.target.value)
-        console.log('*****category', category)
+        console.log('***** category', category)
     }
 
-    const handleClick = (e) => {
+    const onFormSubmit = (e) => {
         e.preventDefault()
         console.log(title, body, category)
-      
+        // HolisticModel.create({
+        //     title,
+        //     Name: currentUser.name,
+        //     photo: currentUser.photo
+        //     body,
+        //     category,
+        // })
     }
 
     return (
         <div>
             <form>
-                <form>
+                <form onSubmit={onFormSubmit}>
                     <label>
                         Post Title: 
                         <input type="text" name="postTitle" value={title} onChange={handleTitle}></input>
@@ -47,7 +54,7 @@ const NewPost = () => {
                         <option value="Holistic Hub">Holistic Hub</option>
                         
                         </select>
-                        <input type="submit" value="Submit" onClick={handleClick}></input>
+                        <input type="submit" value="Submit"></input>
                     </label>
 
                 </form>
