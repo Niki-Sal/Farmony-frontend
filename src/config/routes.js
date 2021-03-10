@@ -13,6 +13,6 @@ export default(
         <Route exact path='/gardens' component={ Gardens } />
         <Route exact path='/newpost' component={ NewPost } />
         <Route exact path='/editform' component={ EditForm } />
-        <Route exact path='/viewpost/:id' component={ ViewPost } />
+        <Route exact path='/post/:id' component={ ViewPost } />
     </Switch> 
 )
