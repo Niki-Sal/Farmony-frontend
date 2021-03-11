@@ -5,10 +5,10 @@ import setAuthToken from '../utils/setAuthToken';
 import ViewPostTrade from './ViewPostTrade';
 
 const NewPostTrade = () => {
-    const [category, setCategory] = useState(null)
+    const [category, setCategory] = useState('Select')
     const [title, setTitle] = useState('')
     const [body, setBody] = useState('')
-    const [postType, setPostType] = useState(null)
+    const [postType, setPostType] = useState('Select')
     const [currentUser, setCurrentUser] = useState({});
     const [isAuthenticated, setIsAuthenticated] = useState(true);
     
@@ -50,23 +50,21 @@ const NewPostTrade = () => {
     const onFormSubmit = (e) => {
         e.preventDefault()
         console.log(title, body, category, currentUser.name, postType)
-        // if (title || body || category|| postType === '') {
-        //     alert('Must fill out all fields.')
-        // }
-        if (category || postType === null) {
-            alert('Please choose an option')
-
-            } else {
-                alert('Post Submited! :)')
-                TradeModel.create({
-                    title,
-                    name: currentUser.name,
-                    photo: currentUser.photo,
-                    body,
-                    postType,
-                    category,
-            
+       
+        if (category !== 'Select' && postType !== 'Select') {
+        
+            alert('Post Submited! :)')
+            TradeModel.create({
+                title,
+                name: currentUser.name,
+                photo: currentUser.photo,
+                content: body,
+                postType,
+                category,
+        
             })
+            } else {
+               alert('Please choose an option')
         }
 
         
