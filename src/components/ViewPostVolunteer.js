@@ -1,15 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import VolunteerModel from '../models/volunteer'
-import NewPostVolunteer from './newpostvolunteer'
+import NewPostVolunteer from './NewPostVolunteer'
 
 const ViewPostVolunteer = (props) => {
     const [post, setPost] = useState([])
     const [posts, setPosts] = useState([])
 
     let thisPost = props.match.params.id
+    console.log(thisPost)
+
     useEffect(async() => {
         const res = await VolunteerModel.all() 
         setPosts(res.data) 
+        console.log('********** RES ===>', res)
         let onePost = res.data.filter((singlePost) => {
             return thisPost === singlePost._id
         })

@@ -2,13 +2,14 @@ import React, { useState, useEffect } from 'react';
 import jwt_decode from 'jwt-decode';
 import setAuthToken from '../utils/setAuthToken';
 import VolunteerModel from '../models/volunteer'
+import ViewPostVolunteer from './ViewPostVolunteer'
 
 
 const NewPostVolunteer = () => {
-    const [category, setCategory] = useState(null)
+    const [category, setCategory] = useState('Select')
     const [title, setTitle] = useState('')
     const [body, setBody] = useState('')
-    const [postType, setPostType] = useState(null)
+    const [postType, setPostType] = useState('Select')
     const [currentUser, setCurrentUser] = useState({});
     const [isAuthenticated, setIsAuthenticated] = useState(true);
 
@@ -45,20 +46,21 @@ const NewPostVolunteer = () => {
         // if (title || body || category|| postType === '') {
         //     alert('Must fill out all fields.')
         // }
-        if (category || postType === null) {
-            alert('Please choose an option')
-            } else {
-                alert('Post Submited! :)')
-                VolunteerModel.create({
-                    title,
-                    name: currentUser.name,
-                    photo: currentUser.photo,
-                    body,
-                    postType,
-                    category,
+        if (category !== 'Select' && postType !== 'Select') {
+            alert('Post Submited! :)')
+            VolunteerModel.create({
+                title,
+                name: currentUser.name,
+                photo: currentUser.photo,
+                content: body,
+                postType,
+                category,
             })
+            } else {
+               alert('Please choose an option')
         }
     }
+
     return (
         <div>
                 <form onSubmit={onFormSubmit}>
@@ -81,8 +83,8 @@ const NewPostVolunteer = () => {
                         Post Type: 
                         <select value={postType} onChange={handlePostType}>
                         <option value="Select">Select</option>
-                        <option value="Seeking">Seeking</option>
-                        <option value="Sharing">Sharing</option>
+                        <option value="Seeking">Seeking Volunteer</option>
+                        <option value="Sharing">Volunteer</option>
                         </select>
                         <input type="submit" value="Submit"></input>
                     </label>

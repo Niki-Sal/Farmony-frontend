@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import BuyModel from '../models/buy'
 import jwt_decode from 'jwt-decode';
 import setAuthToken from '../utils/setAuthToken';
-
+import ViewPostBuy from './ViewPostBuy';
 
 const NewPostBuy = () => {
-    const [category, setCategory] = useState(null)
+    const [category, setCategory] = useState('Select')
     const [title, setTitle] = useState('')
     const [body, setBody] = useState('')
-    const [postType, setPostType] = useState(null)
+    const [postType, setPostType] = useState('Select')
     const [currentUser, setCurrentUser] = useState({});
     const [isAuthenticated, setIsAuthenticated] = useState(true);
 
@@ -45,19 +45,20 @@ const NewPostBuy = () => {
         // if (title || body || category|| postType === '') {
         //     alert('Must fill out all fields.')
         // }
-        if (category || postType === null) {
-            alert('Please choose an option')
-            } else {
-                alert('Post Submited! :)')
-                BuyModel.create({
-                    title,
-                    name: currentUser.name,
-                    photo: currentUser.photo,
-                    body,
-                    postType,
-                    category,
+        if (category !== 'Select' && postType !== 'Select') {
+            alert('Post Submited! :)')
+            BuyModel.create({
+                title,
+                name: currentUser.name,
+                photo: currentUser.photo,
+                content: body,
+                postType,
+                category,
             })
+            } else {
+               alert('Please choose an option')
         }
+
     }
     return (
         <div>
@@ -81,8 +82,8 @@ const NewPostBuy = () => {
                         Post Type: 
                         <select value={postType} onChange={handlePostType}>
                         <option value="Select">Select</option>
-                        <option value="Seeking">Seeking</option>
-                        <option value="Sharing">Sharing</option>
+                        <option value="Seeking">Buying</option>
+                        <option value="Sharing">Selling</option>
                         </select>
                         <input type="submit" value="Submit"></input>
                     </label>

@@ -6,6 +6,7 @@ import EditForm from './EditForm'
 import CreateImage from './CreateImage'
 
 const Profile = (props) => {
+
    const { handleLogout, user } = props;
    const { id, name, email, farmer, exp} = user;
    const expirationTime = new Date(exp * 1000);

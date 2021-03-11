@@ -1,15 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import BuyModel from '../models/buy'
-import NewPost from './NewPost'
+import NewPostBuy from './NewPostBuy'
 
 const ViewPostBuy = (props) => {
     const [post, setPost] = useState([])
     const [posts, setPosts] = useState([])
 
     let thisPost = props.match.params.id
+    console.log(thisPost)
+
     useEffect(async() => {
         const res = await BuyModel.all() 
         setPosts(res.data) 
+        console.log('********** RES ===>', res)
         let onePost = res.data.filter((singlePost) => {
             return thisPost === singlePost._id
         })

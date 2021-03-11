@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
-import NewPost from './NewPost'
-import ViewPost from './ViewPost'
+import NewPostBuy from './NewPostBuy'
+import ViewPostBuy from './ViewPostBuy'
 import BuyModel from '../models/buy'
 
 
@@ -20,7 +20,7 @@ const Buy = () => {
 
     const listOfPosts = posts.map((post) => {
         return (
-            <div key={post._id}>{post.title}{post.username}{post.date}<button><Link to="/viewpost/:id" id={post._id}>View Post</Link></button></div>
+            <div key={post._id}>{post.title}{post.username}{post.date}<button><Link to="/viewpostbuy/:id" id={post._id}>View Post</Link></button></div>
         )
     })
 

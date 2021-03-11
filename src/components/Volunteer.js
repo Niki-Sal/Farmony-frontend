@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
-import NewPostVolunteer from './NewPostVolunteer'
-import ViewPostVolunteer from './ViewPostVolunteer'
+
 import VolunteerModel from '../models/volunteer'
 
 
