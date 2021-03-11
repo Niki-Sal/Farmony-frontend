@@ -17,7 +17,10 @@ const Navbar = (props) => {
                         <li className="nav-item">
                             <NavLink className="nav-link"  to="/about">About</NavLink>
                         </li>
-                        <li className="nav-item">
+                       
+                    {props.isAuth ? 
+                    <>
+                         <li className="nav-item">
                             <NavLink className="nav-link"  to="/holistichub">Holistic Hub</NavLink>
                         </li>
                         <li className="nav-item">
@@ -29,8 +32,6 @@ const Navbar = (props) => {
                         <li className="nav-item">
                             <NavLink className="nav-link"  to="/volunteer">Volunteer</NavLink>
                         </li>
-                    {props.isAuth ? 
-                    <>
                         <li className="nav-item">
                             <NavLink className="nav-link" to="/profile">Profile</NavLink>
                         </li> 
