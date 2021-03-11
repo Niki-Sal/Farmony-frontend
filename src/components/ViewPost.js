@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import HolisticModel from '../models/holistic'
+import NewPost from './NewPost'
 
 
-const ViewPost = (props) => {
+const ViewPost = () => {
 
     const [posts, setPosts] = useState([])
 
     useEffect(() => {
         const fetchData = async () => {
             const res = await HolisticModel.all()
-            console.log(res.data) 
+            //console.log(res.data) 
             setPosts(res.data) 
         };
         fetchData()
@@ -28,6 +29,7 @@ const ViewPost = (props) => {
     return (
         <div>
            {listOfPosts}
+           
         </div>
         
     );
