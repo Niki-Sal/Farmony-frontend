@@ -5,6 +5,7 @@ import NewPost from '../components/NewPost'
 import EditForm from '../components/EditForm'
 import ViewPost from '../components/ViewPost'
 import GardenProfile from '../components/GardenProfile'
+import Trade from '../components/Trade'
 
 
 export default(
@@ -15,6 +16,7 @@ export default(
         <Route exact path='/editform' component={ EditForm } />
         <Route exact path='/post/:id' component={ ViewPost } />
         <Route exact path='/viewpost' component={ ViewPost } />
-        <Route exact path='/gardenprofile/:id'  component={GardenProfile} />
+        <Route exact path='/gardenprofile/:id'  component={ GardenProfile } />
+        <Route exact path='/trade'  component={ Trade } />
     </Switch> 
 )
