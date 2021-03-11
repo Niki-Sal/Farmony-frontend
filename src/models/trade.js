@@ -1,10 +1,10 @@
 import axios from 'axios'
 
-const endPoint = 'http://localhost:8000/api/holistic'
+const endPoint = 'http://localhost:8000/api/trade'
 
 
 
-class HolisticModel {
+class TradeModel {
     
     static all = () => {
         let request = axios.get(endPoint)
@@ -25,4 +25,4 @@ class HolisticModel {
     
 }
 
-export default HolisticModel;
+export default TradeModel;
