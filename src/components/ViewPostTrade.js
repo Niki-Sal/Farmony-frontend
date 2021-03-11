@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import TradeModel from '../models/trade'
-import NewPost from './NewPost'
+import NewPostTrade from './NewPostTrade'
+
 
 
 const ViewPostTrade = (props) => {
@@ -8,15 +9,17 @@ const ViewPostTrade = (props) => {
     const [posts, setPosts] = useState([])
     
     let thisPost = props.match.params.id
+    console.log(thisPost)
 
     useEffect(async() => {
         
         const res = await TradeModel.all() 
         setPosts(res.data) 
-       
+        console.log('********** RES ===>', res)
         let onePost = res.data.filter((singlePost) => {
             return thisPost === singlePost._id
         })
+        
         console.log(onePost)
         setPost(onePost)
         
