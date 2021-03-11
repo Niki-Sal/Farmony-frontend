@@ -1,7 +1,8 @@
 import React from 'react';
-import Axios from 'axios'
+import axios from 'axios'
 import { useState } from 'react';
 import UserModel from '../models/user'
+
 
 
 const CreateImage = (props) => {
@@ -15,7 +16,7 @@ const CreateImage = (props) => {
             formData.append("file", photo)
             formData.append("upload_preset", "kqricfij")
             console.log(photo);
-            Axios.post("https://api.cloudinary.com/v1_1/ddmbb2ian/image/upload", formData)
+            axios.post("https://api.cloudinary.com/v1_1/doihe1pi6", formData)
             .then((response) => {
                     
                     console.log(response);
