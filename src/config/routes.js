@@ -21,6 +21,7 @@ export default(
         <Route exact path='/viewposttrade/:id' component={ ViewPostTrade } />
         <Route exact path='/viewposttrade' component={ ViewPostTrade } />
         <Route exact path='/newposttrade' component={ NewPostTrade } />
+        <Route exact path='/gardenprofile/:id'  component={GardenProfile} />
         <Route exact path='/previewprofile/:id'  component={OtherProfiles} />
     </Switch> 
 )
