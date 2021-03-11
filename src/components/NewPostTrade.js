@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import TradeModel from '../models/trade'
+import { Redirect } from 'react-router-dom';
+import TradeModel from '../models/trade';
 import jwt_decode from 'jwt-decode';
 import setAuthToken from '../utils/setAuthToken';
 import ViewPostTrade from './ViewPostTrade';
@@ -63,6 +64,7 @@ const NewPostTrade = () => {
                 category,
         
             })
+            return (<Redirect to="/trade" />)
             } else {
                alert('Please choose an option')
         }
@@ -103,6 +105,7 @@ const NewPostTrade = () => {
                     </label>
 
                 </form>
+                
         </div>
     );
 }
