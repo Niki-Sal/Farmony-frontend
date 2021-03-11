@@ -1,10 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import HolisticModel from '../models/holistic'
+import jwt_decode from 'jwt-decode';
+import setAuthToken from '../utils/setAuthToken';
+import ViewPost from './ViewPost';
 
 const NewPost = () => {
     const [category, setCategory] = useState('')
     const [title, setTitle] = useState('')
     const [body, setBody] = useState('')
+    const [currentUser, setCurrentUser] = useState({});
+    const [isAuthenticated, setIsAuthenticated] = useState(true);
+    
+    useEffect(() => {
+      let token;
+  
+      if (!localStorage.getItem('jwtToken')) {
+        setIsAuthenticated(false);
+        console.log('====> Authenticated is now FALSE');
+      } else {
+        token = jwt_decode(localStorage.getItem('jwtToken'));
+        setAuthToken(localStorage.getItem('jwtToken'));
+        setCurrentUser(token);
+      }
+    }, []);
 
 
     const handleTitle = (e) => {
@@ -24,19 +42,18 @@ const NewPost = () => {
 
     const onFormSubmit = (e) => {
         e.preventDefault()
-        console.log(title, body, category)
-        // HolisticModel.create({
-        //     title,
-        //     name: currentUser.name,
-        //     photo: currentUser.photo,
-        //     body,
-        //     category,
-        // })
+        console.log(title, body, category, currentUser.name, category)
+        HolisticModel.create({
+            title,
+            name: currentUser.name,
+            photo: currentUser.photo,
+            body,
+            category,
+        })
     }
 
     return (
         <div>
-            <form>
                 <form onSubmit={onFormSubmit}>
                     <label>
                         Post Title: 
@@ -55,10 +72,10 @@ const NewPost = () => {
                         
                         </select>
                         <input type="submit" value="Submit"></input>
+                        <ViewPost data={title, currentUser.name, currentUser.photo, body, category}/>
                     </label>
 
                 </form>
-            </form>
         </div>
     );
 }
