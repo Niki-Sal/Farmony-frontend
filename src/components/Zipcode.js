@@ -31,6 +31,7 @@ const Zipcode = () => {
         fetchData()
         console.log('====> from submit', zipcode)
     }
+   
     return (
         <div>
             <form onSubmit={handleSubmit} className="zip-form">
