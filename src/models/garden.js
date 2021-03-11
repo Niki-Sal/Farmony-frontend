@@ -20,6 +20,10 @@ class GardenModel {
         let request = axios.post(endPoint, garden)
         return request
     }
+    static show = (garden)=>{
+        let request = axios.show(`${endPoint}/${garden._id}`)
+        return request
+    }
     static delete = (garden) =>{
         let request = axios.delete(`${endPoint}/${garden._id}` )
         return request
