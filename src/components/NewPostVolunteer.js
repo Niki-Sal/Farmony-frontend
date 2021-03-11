@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import BuyModel from '../models/buy'
 import jwt_decode from 'jwt-decode';
 import setAuthToken from '../utils/setAuthToken';
+import VolunteerModel from '../models/volunteer'
 
 
-const NewPostBuy = () => {
+const NewPostVolunteer = () => {
     const [category, setCategory] = useState(null)
     const [title, setTitle] = useState('')
     const [body, setBody] = useState('')
@@ -49,7 +49,7 @@ const NewPostBuy = () => {
             alert('Please choose an option')
             } else {
                 alert('Post Submited! :)')
-                BuyModel.create({
+                VolunteerModel.create({
                     title,
                     name: currentUser.name,
                     photo: currentUser.photo,
@@ -90,4 +90,4 @@ const NewPostBuy = () => {
         </div>
     );
 }
-export default NewPostBuy;
+export default NewPostVolunteer;

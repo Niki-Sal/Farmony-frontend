@@ -7,6 +7,10 @@ import ViewPost from '../components/ViewPost'
 import GardenProfile from '../components/GardenProfile'
 import NewPostBuy from '../components/NewPostBuy'
 import ViewPostBuy from '../components/ViewPostBuy'
+import OtherProfiles from '../components/OtherProfiles'
+import ViewPostVolunteer from '../components/NewPostVolunteer'
+import NewPostVolunteer from '../components/NewPostVolunteer'
+
 
 
 export default(
@@ -19,6 +23,8 @@ export default(
         <Route exact path='/viewpost' component={ ViewPost } />
         <Route exact path='/viewpostbuy' component={ ViewPostBuy } />
         <Route exact path='/gardenprofile/:id'  component={GardenProfile} />
-        
+        <Route exact path='/viewpostvolunteer'  component={ViewPostVolunteer}/>
+        <Route exact path='/newpostvolunteer'  component={NewPostVolunteer}/>
+        <Route exact path='/previewprofile/:id'  component={OtherProfiles} />
     </Switch> 
 )

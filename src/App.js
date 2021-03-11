@@ -19,6 +19,7 @@ import Welcome from './components/Welcome';
 import Home from './components/Home';
 import Holistic from './components/Holistic';
 import Buy from './components/Buy'
+import Volunteer from './components/Volunteer'
 
 
 
