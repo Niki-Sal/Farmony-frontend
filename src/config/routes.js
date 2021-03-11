@@ -14,5 +14,6 @@ export default(
         <Route exact path='/newpost' component={ NewPost } />
         <Route exact path='/editform' component={ EditForm } />
         <Route exact path='/post/:id' component={ ViewPost } />
+        
     </Switch> 
 )
