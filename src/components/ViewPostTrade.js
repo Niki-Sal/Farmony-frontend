@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import TradeModel from '../models/trade'
 import NewPostTrade from './NewPostTrade'
+import Comments from './Comments'
 
 
 
@@ -41,8 +42,8 @@ const ViewPostTrade = (props) => {
     return (
         <div>
            {aPost}
+        <Comments />
         </div>
-        
     );
 }
 
