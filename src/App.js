@@ -18,6 +18,7 @@ import Profile from './components/Profile';
 import Welcome from './components/Welcome';
 import Home from './components/Home';
 import Holistic from './components/Holistic'
+import Trade from './components/Trade'
 
 
 const PrivateRoute = ({ component: Component, ...rest}) => {
@@ -77,6 +78,8 @@ function App() {
           <Route exact path="/" component={Welcome} />
           <Route path="/about" component={About} />
           <Route path="/holistichub" component={Holistic} />
+          <Route path="/trade" component={Trade} />
+
         </Switch>
       </div>
       {routes}
