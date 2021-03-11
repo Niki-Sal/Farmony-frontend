@@ -3,33 +3,41 @@ import HolisticModel from '../models/holistic'
 import NewPost from './NewPost'
 
 
-const ViewPost = () => {
-
+const ViewPost = (props) => {
+    const [post, setPost] = useState([])
     const [posts, setPosts] = useState([])
+    
+    let thisPost = props.match.params.id
 
-    useEffect(() => {
-        const fetchData = async () => {
-            const res = await HolisticModel.all()
-            //console.log(res.data) 
-            setPosts(res.data) 
-        };
-        fetchData()
+    useEffect(async() => {
+        
+        const res = await HolisticModel.all() 
+        setPosts(res.data) 
+       
+        let onePost = res.data.filter((singlePost) => {
+            return thisPost === singlePost._id
+        })
+        console.log(onePost)
+        setPost(onePost)
+        
     }, []);
     
-    const listOfPosts = posts.map((post) => {
-        <div key={post.id}>
+    const aPost = post.map((post) => {
+        //if (post.id === props.match.params.id)
+        return (
+          <div key={post.id}>
         {post.date}
-        {post.username}
+        {post.name}
         {post.title}
         {post.content}
         {post.comments}
-        </div>
+        </div>  
+        )
     })
-
+    
     return (
         <div>
-           {listOfPosts}
-           
+           {aPost}
         </div>
         
     );
