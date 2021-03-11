@@ -47,7 +47,7 @@ const NewPost = () => {
             title,
             name: currentUser.name,
             photo: currentUser.photo,
-            body,
+            content: body,
             category,
         })
     }
@@ -72,7 +72,7 @@ const NewPost = () => {
                         
                         </select>
                         <input type="submit" value="Submit"></input>
-                        <ViewPost data={title, currentUser.name, currentUser.photo, body, category}/>
+                        
                     </label>
 
                 </form>
