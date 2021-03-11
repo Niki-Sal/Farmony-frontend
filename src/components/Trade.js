@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
-import NewPost from './NewPost'
-import ViewPost from './ViewPost'
 import TradeModel from '../models/trade'
 
 
