@@ -5,10 +5,10 @@ import setAuthToken from '../utils/setAuthToken';
 import ViewPostTrade from './ViewPostTrade';
 
 const NewPostTrade = () => {
-    const [category, setCategory] = useState('')
+    const [category, setCategory] = useState(null)
     const [title, setTitle] = useState('')
     const [body, setBody] = useState('')
-    const [postType, setPostType] = useState('')
+    const [postType, setPostType] = useState(null)
     const [currentUser, setCurrentUser] = useState({});
     const [isAuthenticated, setIsAuthenticated] = useState(true);
     
@@ -48,20 +48,26 @@ const NewPostTrade = () => {
     }
 
     const onFormSubmit = (e) => {
-        //e.preventDefault()
+        e.preventDefault()
         console.log(title, body, category, currentUser.name, postType)
         // if (title || body || category|| postType === '') {
         //     alert('Must fill out all fields.')
         // }
-        alert('Post Submited! :)')
-        TradeModel.create({
-            title,
-            name: currentUser.name,
-            photo: currentUser.photo,
-            body,
-            postType,
-            category,
-        })
+        if (category || postType === null) {
+            alert('Please choose an option')
+
+            } else {
+                alert('Post Submited! :)')
+                TradeModel.create({
+                    title,
+                    name: currentUser.name,
+                    photo: currentUser.photo,
+                    body,
+                    postType,
+                    category,
+            
+            })
+        }
 
         
     }
@@ -81,6 +87,7 @@ const NewPostTrade = () => {
                     <label>
                         Category:
                         <select value={category} onChange={handleCategory}>
+                        <option value="Select">Select</option>
                         <option value="Trade">Trade</option>
                         <option value="Buy">Buy</option>
                         <option value="Volunteer">Volunteer</option>
@@ -88,6 +95,7 @@ const NewPostTrade = () => {
                         </select>
                         Post Type: 
                         <select value={postType} onChange={handlePostType}>
+                        <option value="Select">Select</option>
                         <option value="Seeking">Seeking</option>
                         <option value="Sharing">Sharing</option>
                         </select>
