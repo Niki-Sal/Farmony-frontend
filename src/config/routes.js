@@ -17,6 +17,7 @@ export default(
         <Route exact path='/editform' component={ EditForm } />
         <Route exact path='/post/:id' component={ ViewPost } />
         <Route exact path='/viewpost' component={ ViewPost } />
+        <Route exact path='/viewposttrade/:id' component={ ViewPostTrade } />
         <Route exact path='/viewposttrade' component={ ViewPostTrade } />
         <Route exact path='/newposttrade' component={ NewPostTrade } />
 
