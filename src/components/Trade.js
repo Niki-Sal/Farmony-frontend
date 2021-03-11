@@ -20,7 +20,7 @@ const Trade = () => {
 
     const listOfPosts = posts.map((post) => {
         return (
-            <div key={post._id}>{post.title}{post.name}{post.date}<button><Link to={`/post/${post._id}`}>View Post</Link></button></div>
+            <div key={post._id}>{post.title}{post.name}{post.date}{post.postType}<button><Link to={`/post/${post._id}`}>View Post</Link></button></div>
         )
     })
 
@@ -28,7 +28,7 @@ const Trade = () => {
         <div>
             <h1>Trade</h1>
             <h4>Trade. Be kind and respectful. </h4>
-            <button><Link to="/newpost">Make New Post</Link></button>
+            <button><Link to="/newposttrade">Make New Post</Link></button>
             {listOfPosts}
             
         </div>
