@@ -18,6 +18,8 @@ import Profile from './components/Profile';
 import Welcome from './components/Welcome';
 import Home from './components/Home';
 import Holistic from './components/Holistic';
+import Buy from './components/Buy'
+
 
 
 
@@ -79,6 +81,8 @@ function App() {
           <Route exact path="/" component={Welcome} />
           <Route path="/about" component={About} />
           <Route path="/holistichub" component={Holistic} />
+          <Route exact path='/buy' component={Buy} />
+
         </Switch>
       </div>
       {routes}

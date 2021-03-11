@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import HolisticModel from '../models/holistic'
+import BuyModel from '../models/buy'
 import NewPost from './NewPost'
 
-const ViewPost = (props) => {
+const ViewPostBuy = (props) => {
     const [post, setPost] = useState([])
     const [posts, setPosts] = useState([])
+
     let thisPost = props.match.params.id
     useEffect(async() => {
-        const res = await HolisticModel.all() 
+        const res = await BuyModel.all() 
         setPosts(res.data) 
         let onePost = res.data.filter((singlePost) => {
             return thisPost === singlePost._id
@@ -33,4 +34,4 @@ const ViewPost = (props) => {
         </div>
     );
 }
-export default ViewPost;
+export default ViewPostBuy;
