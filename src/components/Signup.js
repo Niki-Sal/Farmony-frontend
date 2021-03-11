@@ -7,6 +7,7 @@ const { REACT_APP_SERVER_URL } = process.env;
 const Signup = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
+    const [farmer, setFarmer] = useState(false);
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [redirect, setRedirect] = useState(false);
@@ -17,6 +18,9 @@ const Signup = () => {
 
     const handleEmail = (e) => {
         setEmail(e.target.value);
+    }
+    const handleFarmer = (e) => {
+        setFarmer(e.target.value);
     }
 
     const handlePassword = (e) => {
@@ -32,7 +36,7 @@ const Signup = () => {
         // make sure password and confirm password are equal
         // password length >= 8 characters
         if (password === confirmPassword && password.length >= 8) {
-            const newUser = { name, email, password };
+            const newUser = { name, email, password, farmer };
             axios.post(`${REACT_APP_SERVER_URL}/users/register`, newUser)
             .then(response => {
                 console.log('===> Yay, new user');
@@ -61,6 +65,12 @@ const Signup = () => {
                         <div className="form-group">
                             <label htmlFor="email">Email</label>
                             <input type="email" name="email" value={email} onChange={handleEmail} className="form-control"/>
+                        </div>
+                        <div className="form-group">
+                            <input type="radio" name="farmer" value={true} onChange={handleFarmer} />
+                            <label htmlFor="farmer">Farmer</label>
+                            <input type="radio" name="nonfarmer" value={false} onChange={handleFarmer} />
+                            <label htmlFor="nonfarmer">Non-Farmer</label>
                         </div>
                         <div className="form-group">
                             <label htmlFor="password">Password</label>

@@ -1,7 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react'
 import GardenModel from '../models/garden'
-import {Link} from 'react-router-dom'
 
 
 
@@ -23,23 +22,18 @@ const GardenProfile = (props) => {
         
     },[])
 
-    const listofReviews = garden.map((gardenData)=>{
-        for(let i=0; i<gardenData.review.length; i++){
-            let reviews = gardenData.review[i]
-            return <p>{reviews}</p>
-        }
-    })
   
     const thisGarden = garden.map((gardenData, index) =>{
       
         return(
             <div>
-
                 <p key={gardenData._id}>{gardenData.name}</p>
                 <img src= {gardenData.image} alt= "gardenpicture"/>
                 <p>{gardenData.address}</p>
                 <p>{gardenData.state} {gardenData.zip}</p>
-                <p>{listofReviews}</p>
+                <p>{gardenData.review[0]}</p>
+                <p>{gardenData.review[1]}</p>
+                <p>{gardenData.review[2]}</p>
                 <a href= {gardenData.map}>Google map</a>
 
             </div>

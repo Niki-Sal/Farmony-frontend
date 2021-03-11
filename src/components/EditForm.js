@@ -1,5 +1,4 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import UserModel from '../models/user'
 import jwt_decode from 'jwt-decode';
@@ -9,7 +8,6 @@ const EditForm = (props) => {
     const [currentUser, setCurrentUser] = useState('');
     const [isAuthenticated, setIsAuthenticated] = useState(true);
     const [aboutme, setAboutme] = useState('')
-    // const [users, setUsers] = useState([])
    
     useEffect(() => {
       let token;
@@ -28,7 +26,6 @@ const EditForm = (props) => {
     const onInputChange = (event) =>{
         setAboutme(event.target.value)
     }
-    ////////////
     const updateUser = async (userAbout, userId) => {
         function isUpdatedUser(user) {
             return currentUser.id === userId;
@@ -50,7 +47,7 @@ const EditForm = (props) => {
           setBodyStyle({display: 'none'})
         }
       }
-      //////////
+
     const onFormSubmit = async (event)=> {
         // event.preventDefault()
         toggleBodyForm()
@@ -60,13 +57,10 @@ const EditForm = (props) => {
 
     return (
         <div>
-            {/* <p>Name: {currentUser.name}</p>  
-            <p>ID: {currentUser.id}</p>   */}
             <form onSubmit={ onFormSubmit }>
-                {/* <label for="about">About Me</label> */}
                 <textarea 
                 onChange = {onInputChange }
-                id="aboutme" rows='5' cols='30'
+                id="aboutme" rows='3' cols='50'
                 value={aboutme}
                 placeholder="tell us about yourself">
                 </textarea>

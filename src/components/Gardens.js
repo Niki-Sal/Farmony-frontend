@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react'
 import GardenModel from '../models/garden'
+import {Link} from 'react-router-dom'
 
 
 
@@ -17,7 +18,10 @@ const Gardens = () => {
     },[])
     const listOfGardens = gardens.map((gardenData, index) =>{
         return(
-            <p key={gardenData._id}>{gardenData.name} <img src= {gardenData.image} alt= "gardenpicture"/>{gardenData.address} {gardenData.state} {gardenData.zip}</p>
+            <div>
+                <p key={gardenData._id}>{gardenData.name} <img src= {gardenData.image} alt= "gardenpicture"/>{gardenData.address} {gardenData.state} {gardenData.zip}</p>
+                <Link to={`/gardenprofile/${gardenData._id}`}>View Garden Profile</Link>
+            </div>
         )
     })
 
