@@ -8,7 +8,7 @@ const ViewPost = (props) => {
     const [posts, setPosts] = useState([])
     
     let thisPost = props.match.params.id
-
+ 
     useEffect(async() => {
         
         const res = await HolisticModel.all() 
