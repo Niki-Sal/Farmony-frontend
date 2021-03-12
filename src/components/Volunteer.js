@@ -25,7 +25,7 @@ const Volunteer = () => {
 
     return (
         <div>
-            <h1>Volunteer</h1>
+            <h1 className="volunteer">Volunteer</h1>
             <h4>Volunteer at farms or find folks to volunteer at yours</h4>
             <button><Link to="/newpostvolunteer">Make New Post</Link></button>
             {listOfPosts}

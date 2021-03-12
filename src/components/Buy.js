@@ -24,7 +24,7 @@ const Buy = () => {
 
     return (
         <div>
-            <h1>Buy</h1>
+            <h1 className="buy">Buy</h1>
             <h4>Sell and Buy Goods </h4>
             <button><Link to="/newpostbuy">Make New Post</Link></button>
             {listOfPosts}
