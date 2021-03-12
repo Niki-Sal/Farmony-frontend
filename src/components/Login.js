@@ -52,7 +52,7 @@ const Login = (props) => {
                     <form onSubmit={handleSubmit}>
                         <div className="form-group">
                             <label htmlFor="email">Email</label>
-                            <input type="text" name="name" value={email} onChange={handleEmail} className="form-control"/>
+                            <input type="text" name="email" value={email} onChange={handleEmail} className="form-control"/>
                         </div>
                         <div className="form-group">
                             <label htmlFor="password">Password</label>

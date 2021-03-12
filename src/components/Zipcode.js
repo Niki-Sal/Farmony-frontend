@@ -36,7 +36,7 @@ const Zipcode = () => {
         <div>
             <form onSubmit={handleSubmit} className="zip-form">
                 <input type="text" name="zip" onChange={entry} className="form-control" />
-                <button type="zip-submit">Search</button>
+                <button type="submit">Search</button>
             </form>
             
             {listOfGardens.length >= 1 ? listOfGardens : null}
