@@ -19,6 +19,7 @@ import Welcome from './components/Welcome';
 import Home from './components/Home';
 import Holistic from './components/Holistic'
 import Trade from './components/Trade'
+import Buy from './components/Buy'
 
 
 const PrivateRoute = ({ component: Component, ...rest}) => {
@@ -65,10 +66,10 @@ function App() {
 
   return (
     <div className="App">
-      <h1>FARMONY</h1>
+      <h1 className="header">FARMONY</h1>
       <Navbar handleLogout={handleLogout} isAuth={isAuthenticated} />
-      <div className="container mt-5">
-        <Switch>
+      <div className="container-mt-5">
+        <Switch className="switch">
           <Route path='/signup' component={Signup} />
           <Route 
             path="/login"
@@ -78,6 +79,7 @@ function App() {
           <Route exact path="/" component={Welcome} />
           <Route path="/about" component={About} />
           <Route path="/holistichub" component={Holistic} />
+          <Route exact path='/buy' component={Buy} />
           <Route path="/trade" component={Trade} />
 
         </Switch>

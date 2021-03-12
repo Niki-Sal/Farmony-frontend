@@ -63,5 +63,4 @@ const ViewPost = (props) => {
         
     );
 }
-
 export default ViewPost;
