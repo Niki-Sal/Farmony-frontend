@@ -8,6 +8,7 @@ import Comments from './Comments'
 const ViewPostTrade = (props) => {
     const [post, setPost] = useState([])
     const [posts, setPosts] = useState([])
+    const [comments, setComments] = useState([])
     
     let thisPost = props.match.params.id
     console.log(thisPost)
@@ -23,6 +24,7 @@ const ViewPostTrade = (props) => {
         
         console.log(onePost)
         setPost(onePost)
+        setComments(onePost.comment)
         
     }, []);
     
@@ -34,14 +36,21 @@ const ViewPostTrade = (props) => {
         {post.name}
         {post.title}
         {post.content}
-        {post.comments}
+        
         </div>  
         )
+    })
+
+    const aComment = comments.map((comment) => {
+        <div>
+        {comment}    
+        </div>
     })
     
     return (
         <div>
            {aPost}
+           {aComment}
         <Comments />
         </div>
     );
