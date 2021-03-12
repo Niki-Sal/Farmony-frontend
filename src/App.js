@@ -77,7 +77,7 @@ function App() {
           />
           <PrivateRoute path="/profile" component={Profile} user={currentUser} handleLogout={handleLogout} />
           <Route exact path="/" component={Welcome} />
-          <Route path="/about" component={About} />
+          
           <Route path="/holistichub" component={Holistic} />
           <Route exact path='/buy' component={Buy} />
           <Route path="/trade" component={Trade} />
