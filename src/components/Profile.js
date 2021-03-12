@@ -49,14 +49,9 @@ const Profile = (props) => {
     
     return (
         <div className="text-center pt-4">
-           
             {user ? userData : errorDiv()}
-<<<<<<< HEAD
             <CreateImage user={user}/>
-            {farmer ? `%${name} is a farmer% ` : `%${name} is not a farmer%`}
-=======
             {farmer ? <img src="https://i.imgur.com/G9tBFn9.png" alt="farmer-badge"/> : `%${name} is not a farmer%`}
->>>>>>> a074912967dc763b1cd0c65fd2dafddcc50a1f50
             <EditForm />
             <Link to={`/previewprofile/${user.id}`} >view how your profile looks like for others</Link>
             
