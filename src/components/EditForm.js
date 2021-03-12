@@ -56,11 +56,11 @@ const EditForm = (props) => {
     }
 
     return (
-        <div>
-            <form onSubmit={ onFormSubmit }>
+        <div >
+            <form className= "about-form" onSubmit={ onFormSubmit }>
                 <textarea 
                 onChange = {onInputChange }
-                id="aboutme" rows='3' cols='50'
+                id="aboutme" rows='5' cols='100'
                 value={aboutme}
                 placeholder="tell us about yourself">
                 </textarea>

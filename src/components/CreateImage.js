@@ -92,15 +92,16 @@ const CreateImage = (props) => {
        }
 
     return (
-        <div className="App">
+        <div className="pic-section">
     
-        {photo? <img src={photo} style={{maxWidth:'200px'}}/> : <img src = "https://res.cloudinary.com/ddmbb2ian/image/upload/v1613687758/c1phcqb46j0rzxtysmnw.jpg" style={{maxWidth:'200px'}} />}
+        {photo? <img className = "profile-pic" src={photo} /> : <img src = "https://res.cloudinary.com/ddmbb2ian/image/upload/v1613687758/c1phcqb46j0rzxtysmnw.jpg" style={{maxWidth:'200px'}} />}
        
-        <form onSubmit={handleSubmit}>
+        <p>Change your profile picture</p>
+        <form className= "picture-change"onSubmit={handleSubmit}>
             <input type='file' onChange={(event)=> {
             setPhotoo(event.target.files[0])
             }} />
-            <button type='submit'>Submit</button>
+            <button type='submit'>Upload</button>
         </form>
         
      
