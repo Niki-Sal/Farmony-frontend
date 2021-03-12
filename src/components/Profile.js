@@ -5,7 +5,9 @@ import UserModel from '../models/user'
 import EditForm from './EditForm'
 import CreateImage from './CreateImage'
 
+
 const Profile = (props) => {
+  
    const { handleLogout, user } = props;
    const { id, name, email, farmer, exp} = user;
    const expirationTime = new Date(exp * 1000);
@@ -32,7 +34,6 @@ const Profile = (props) => {
    (<div>
        <p>Name: {name}</p>
        <p>Email: {email}</p>
-       <p>ID: {id}</p>
        <p>About Me: {about}</p>
        
    </div>) : <h2>Loading...</h2>
@@ -50,8 +51,12 @@ const Profile = (props) => {
         <div className="text-center pt-4">
            
             {user ? userData : errorDiv()}
+<<<<<<< HEAD
             <CreateImage user={user}/>
             {farmer ? `%${name} is a farmer% ` : `%${name} is not a farmer%`}
+=======
+            {farmer ? <img src="https://i.imgur.com/G9tBFn9.png" alt="farmer-badge"/> : `%${name} is not a farmer%`}
+>>>>>>> a074912967dc763b1cd0c65fd2dafddcc50a1f50
             <EditForm />
             <Link to={`/previewprofile/${user.id}`} >view how your profile looks like for others</Link>
             

@@ -2,7 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import UserModel from '../models/user'
 
-const cloudinary = require('cloudinary-core').Cloudinary.new()
+// const cloudinary = require('cloudinary-core').Cloudinary.new()
 
 
 

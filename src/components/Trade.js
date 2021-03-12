@@ -34,7 +34,7 @@ const Trade = () => {
 
     return (
         <div>
-            <h1>Trade</h1>
+            <h1 className="trade">Trade</h1>
             <h4>Trade. Be kind and respectful. </h4>
             <button><Link to="/newposttrade">Make New Post</Link></button>
             {listOfPosts}

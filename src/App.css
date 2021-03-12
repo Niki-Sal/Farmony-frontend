@@ -1,14 +1,305 @@
-html {
-  position: relative;
-  min-height: 100%;
+body{
+  background-image: url("https://i.imgur.com/VWwS0Zf.jpg");
+  background-size: cover;
 }
-body {
-  margin-bottom: 60px; /* Margin bottom by footer height */
+
+.header{
+  font-family: 'Elisabeth Clara', sans-serif;
+  color:white;
+  display: flex;
+  justify-content: left;
+  font-size: 60px;
+  margin-left: 100px;
 }
-.footer {
-  position: absolute;
-  bottom: 0;
+
+
+/* garden profile styling */
+.garden-img-div {
+  position: relative; 
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-left: 140px;
+  margin-bottom: 100px;
+  
+  
+}
+
+.garden-img {
   width: 100%;
-  height: 60px; /* Set the fixed height of the footer here */
-  line-height: 60px; /* Vertically center the text there */
+  height: 100%;
+  object-fit: cover;
+  margin-top: 50px;
+  
+}
+
+.garden-profile-heading{
+  background-color: rgb(115, 181, 145) ;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100px;
+
+}
+.garden-profile-name{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: white;
+  font-family: 'Elisabeth Clara', sans-serif;
+  font-size: 60px;
+
+}
+.farm-profile {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-left: 140px;
+  margin-bottom: 50px;
+  
+}
+
+.farm-profile-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.garden-profile{
+  background:rgba(255,255,255,0.6);
+  font-family: 'Medio', sans-serif;
+  display: flexbox;
+   
+}
+
+.garden-profile-info{
+  margin-left:600px;
+  /* box-sizing: border-box;
+      border: solid; */
+      /* border-color: black; */
+      background:rgba(215, 238, 214); 
+      width: 800px;
+      
+}
+
+.farm-profile-address{
+  margin-top: 200px;
+}
+
+/* user profile styling */
+
+.badge-div {
+  position: relative; 
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 50%;
+
+  
+  
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-top: 50px;
+  position: relative; 
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 50%;
+
+  
+}
+
+
+/* about us page styling */
+
+.about-us-heading{
+  background-color: rgb(115, 181, 145) ;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: white;
+  font-family: 'Elisabeth Clara', sans-serif;
+  font-size: 60px;
+}
+
+.about{
+  background:rgba(255,255,255,0.6);
+  font-family: 'Medio', sans-serif;
+  display: flexbox;
+}
+
+/* trade styling */
+
+.trade{
+  background-color: rgb(115, 181, 145) ;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: white;
+  font-family: 'Elisabeth Clara', sans-serif;
+  font-size: 60px;
+}
+
+/* buy styling */
+
+.buy{
+  background-color: rgb(115, 181, 145) ;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: white;
+  font-family: 'Elisabeth Clara', sans-serif;
+  font-size: 60px;
+}
+
+/* styling for holistic */
+
+.holistic{
+  background-color: rgb(115, 181, 145) ;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: white;
+  font-family: 'Elisabeth Clara', sans-serif;
+  font-size: 60px;
+}
+
+.holistic-div{
+  background:rgba(255,255,255,0.6);
+  font-family: 'Medio', sans-serif;
+  display: flexbox;
+}
+
+
+/* volunteer page styling */
+.volunteer{
+  background-color: rgb(115, 181, 145) ;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: white;
+  font-family: 'Elisabeth Clara', sans-serif;
+  font-size: 60px;
+}
+
+/* homepage styling */
+
+.welcome{
+  background-color: rgb(115, 181, 145) ;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: white;
+  font-family: 'Elisabeth Clara', sans-serif;
+  font-size: 60px;
+}
+
+/* login page styling */
+
+.login{
+  background-color: rgb(115, 181, 145) ;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: white;
+  font-family: 'Elisabeth Clara', sans-serif;
+  font-size: 60px;
+}
+
+/* signup page styling */
+
+.signup{
+  background-color: rgb(115, 181, 145) ;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: white;
+  font-family: 'Elisabeth Clara', sans-serif;
+  font-size: 60px;
+}
+
+/* nav styling */
+
+nav{
+  background-color:#7C997B;
+  
+}
+ul{
+  text-decoration: none;
+}
+.nav-link{
+  text-decoration: none;
+}
+
+/* garden page styling */
+
+.garden-list{
+  background-color: rgb(115, 181, 145) ;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: white;
+  font-family: 'Elisabeth Clara', sans-serif;
+  font-size: 60px;
+}
+
+.garden-list-img-div{
+  position: relative;
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 50%;
+            margin-left: 140px;
+            margin-bottom: 50px;
+  
+  
+}
+.garden-list-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
 }

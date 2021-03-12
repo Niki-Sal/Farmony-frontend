@@ -26,11 +26,12 @@ const Holistic = () => {
 
     return (
         <div>
-            <h1>Holistic Hub</h1>
+            <h1 className="holistic">Holistic Hub</h1>
+            <div className="holistic-div">
             <h4>Community chit-chat. Discuss community news, trade recipes, share photos, etc. Be kind and respectful. </h4>
             <button><Link to="/newpost">Make New Post</Link></button>
             {listOfPosts}
-            
+            </div>
         </div>
         
     );
