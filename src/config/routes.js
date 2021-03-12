@@ -12,6 +12,7 @@ import NewPostTrade from '../components/NewPostTrade'
 import OtherProfiles from '../components/OtherProfiles'
 import ViewPostVolunteer from '../components/NewPostVolunteer'
 import NewPostVolunteer from '../components/NewPostVolunteer'
+import Volunteer from '../components/Volunteer'
 
 
 
@@ -32,5 +33,6 @@ export default(
         <Route exact path='/viewpostvolunteer'  component={ViewPostVolunteer}/>
         <Route exact path='/newpostvolunteer'  component={NewPostVolunteer}/>
         <Route exact path='/previewprofile/:id'  component={OtherProfiles} />
+        <Route exact path='/volunteer' component={Volunteer} />
     </Switch> 
 )

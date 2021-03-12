@@ -4,16 +4,13 @@ import { useState, useEffect } from 'react';
 import UserModel from '../models/user'
 import EditForm from './EditForm'
 import CreateImage from './CreateImage'
-
-
 const Profile = (props) => {
-  
    const { handleLogout, user } = props;
    const { id, name, email, farmer, exp} = user;
    const expirationTime = new Date(exp * 1000);
    let currentTime = Date.now();
-
     const [ about, setAbout] = useState('')
+    const [ photo, setPhoto] = useState('')
     const getAbout = async() =>{
         let newAbout = ''
         const result = await UserModel.oneUser(id)
@@ -21,23 +18,18 @@ const Profile = (props) => {
         setAbout(newAbout)
         console.log(newAbout)
     }
-   
    if (currentTime >= expirationTime) {
        handleLogout();
        alert('Session has ended. Please login to continue.');
    } else {
         getAbout()
    }
- 
-
    const userData = user ?
    (<div>
        <p>Name: {name}</p>
        <p>Email: {email}</p>
        <p>About Me: {about}</p>
-       
    </div>) : <h2>Loading...</h2>
-
     const errorDiv = () => {
         return (
             <div className="text-center pt-4">
@@ -45,19 +37,14 @@ const Profile = (props) => {
             </div>
         );
     };
-
-    
     return (
         <div className="text-center pt-4">
             {user ? userData : errorDiv()}
+            <CreateImage user={user}/>
             {farmer ? <img src="https://i.imgur.com/G9tBFn9.png" alt="farmer-badge"/> : `%${name} is not a farmer%`}
             <EditForm />
-            <CreateImage user={user}/>
             <Link to={`/previewprofile/${user.id}`} >view how your profile looks like for others</Link>
-            
         </div>
     );
-
 }
-
 export default Profile;

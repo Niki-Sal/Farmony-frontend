@@ -32,7 +32,9 @@ const ViewPostBuy = (props) => {
         )
     })
     return (
+        
         <div>
+            <h1 className="buy">Buy</h1>
            {aPost}
         </div>
     );
