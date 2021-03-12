@@ -1,53 +1,111 @@
 
 import React from 'react';
 import axios from 'axios'
-import { useState } from 'react';
+import { useEffect,useState } from 'react';
 import UserModel from '../models/user'
+import jwt_decode from 'jwt-decode';
+import setAuthToken from '../utils/setAuthToken';
 
 
 
 const CreateImage = (props) => {
-    let [photo, setPhoto] = useState('');
-   
+    const [currentUser, setCurrentUser] = useState('');
+    const [isAuthenticated, setIsAuthenticated] = useState(true);
+    const [photoo, setPhotoo] = useState('')
+    const [url, setUrl] = useState('')
+    const { handleLogout, user } = props;
+    const { id, name, email, farmer, exp} = user;
+    const expirationTime = new Date(exp * 1000);
+    let currentTime = Date.now();
 
-
-    const handlePhoto = (e) =>  {
-            e.preventDefault();
-            const formData = new FormData()
-            formData.append("file", photo)
-            formData.append("upload_preset", "p3bforb")
-            console.log(photo);
-            axios.post("https://api.cloudinary.com/v1_1/dbljwcjis/image/upload", formData)
-            .then((response) => {
-                    
-                    console.log(response);
-                    const photoUrl = response.data.url;
-                    return photoUrl
-                })
-    }
-
-
-    const handleSubmit = () =>{
-    
-        // console.log(photo)
-        // updateUser({photo: photo}, currentUser.id)
-    }
-
-    return ( 
-       
-            <form onSubmit={handleSubmit}>
-                
-                <label htmlFor="name">Photo</label>
-                <input type="file" name="photo" 
-                    onChange={(e) => {setPhoto(e.target.files[0])}}  
-                    className="form-control"
-                />
-                <button onClick={handlePhoto} className="button float-right">Upload Photo</button>
-              
-            </form>
-            
       
-    )
+    useEffect(() => {
+        let token;
+    
+        if (!localStorage.getItem('jwtToken')) {
+          setIsAuthenticated(false);
+          console.log('====> Authenticated is now FALSE');
+        } else {
+          token = jwt_decode(localStorage.getItem('jwtToken'));
+          setAuthToken(localStorage.getItem('jwtToken'));
+          setCurrentUser(token);
+        }
+      }, []);
+
+    const updateUser = async (userPhoto, userId) => {
+        function isUpdatedUser(user) {
+            return currentUser.id === userId;
+        }
+        const result = await UserModel.update(userId, userPhoto)
+        let usersCurrent = currentUser
+        usersCurrent.photo= userPhoto
+        setCurrentUser(usersCurrent)
+        }
+        
+    const [formStyle, setFormStyle ] = useState({ display: 'none'})
+    const [bodyStyle, setBodyStyle ] = useState({})
+    const toggleBodyForm = () => {
+    if (formStyle.display === 'block') {
+        setFormStyle({ display: 'none'})
+        setBodyStyle({ display: 'block'})
+    } else {
+        setFormStyle({display: 'block'})
+        setBodyStyle({display: 'none'})
+    }
+    }
+
+    const handleSubmit = (e)=> {
+        e.preventDefault()
+        console.log('submit')
+        let form_data = new FormData();
+        form_data.append('image', photoo, 'image');
+        axios.post('http://localhost:8000/images', form_data, {
+            headers: {
+            'content-type': 'multipart/form-data'
+            }
+        })
+            .then(res => {
+            console.log(res.data);
+            setUrl(res.data.url)
+            toggleBodyForm()
+           
+            updateUser({photo: res.data.url}, currentUser.id)
+            })
+            .catch(err => console.log(err))
+        };
+
+      
+        const [ photo, setPhoto] = useState('')
+        const getPhoto = async() =>{
+            let newPhoto = ''
+            const result = await UserModel.oneUser(id)
+            newPhoto= result.data.photo
+            setPhoto(newPhoto)
+            console.log(newPhoto)
+        }
+       
+       if (currentTime >= expirationTime) {
+           handleLogout();
+           alert('Session has ended. Please login to continue.');
+       } else {
+            getPhoto()
+       }
+
+    return (
+        <div className="App">
+    
+        {photo? <img src={photo} style={{maxWidth:'200px'}}/> : <img src = "https://res.cloudinary.com/ddmbb2ian/image/upload/v1613687758/c1phcqb46j0rzxtysmnw.jpg" style={{maxWidth:'200px'}} />}
+       
+        <form onSubmit={handleSubmit}>
+            <input type='file' onChange={(event)=> {
+            setPhotoo(event.target.files[0])
+            }} />
+            <button type='submit'>Submit</button>
+        </form>
+        
+     
+        </div>
+    );
 }
 
 export default CreateImage;

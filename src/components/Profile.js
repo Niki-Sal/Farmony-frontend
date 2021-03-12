@@ -12,8 +12,8 @@ const Profile = (props) => {
    const { id, name, email, farmer, exp} = user;
    const expirationTime = new Date(exp * 1000);
    let currentTime = Date.now();
-
     const [ about, setAbout] = useState('')
+    const [ photo, setPhoto] = useState('')
     const getAbout = async() =>{
         let newAbout = ''
         const result = await UserModel.oneUser(id)
@@ -49,10 +49,10 @@ const Profile = (props) => {
     
     return (
         <div className="text-center pt-4">
+           
             {user ? userData : errorDiv()}
             {farmer ? <img src="https://i.imgur.com/G9tBFn9.png" alt="farmer-badge"/> : `%${name} is not a farmer%`}
             <EditForm />
-            <CreateImage user={user}/>
             <Link to={`/previewprofile/${user.id}`} >view how your profile looks like for others</Link>
             
         </div>

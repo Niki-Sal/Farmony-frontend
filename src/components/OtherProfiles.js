@@ -30,8 +30,8 @@ const thisUser = user.map((userData, index) =>{
             <p>{userData.name}</p>
             <p>{userData.email}</p>
             <p>{userData.about}</p>
-            <p>picture placeholder</p>
-            {userData.farmer ? `%${userData.name} is a farmer% ` : `%${userData.name} is not a farmer%`}
+            {userData.photo ? <img src={userData.photo} style={{maxWidth:'200px'}} />  : <img src = "https://res.cloudinary.com/ddmbb2ian/image/upload/v1613687758/c1phcqb46j0rzxtysmnw.jpg" style={{maxWidth:'200px'}} />}
+            <p>{userData.farmer ? `%${userData.name} is a farmer% ` : `%${userData.name} is not a farmer%`}</p>
         </div>
         )
 })
