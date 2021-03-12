@@ -17,10 +17,20 @@ const Navbar = (props) => {
                         <li>
                             <NavLink className="nav-link"  to="/about">About</NavLink>
                         </li>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 527456298282f161a77da9494735b331329cbfef
                        
                     {props.isAuth ? 
                     <>
                          <li className="nav-item">
+<<<<<<< HEAD
+=======
+=======
+                        <li>
+>>>>>>> a074912967dc763b1cd0c65fd2dafddcc50a1f50
+>>>>>>> 527456298282f161a77da9494735b331329cbfef
                             <NavLink className="nav-link"  to="/holistichub">Holistic Hub</NavLink>
                         </li>
                         <li>
@@ -32,7 +42,20 @@ const Navbar = (props) => {
                         <li>
                             <NavLink className="nav-link"  to="/volunteer">Volunteer</NavLink>
                         </li>
+<<<<<<< HEAD
                         <li className="nav-item">
+=======
+<<<<<<< HEAD
+                        <li className="nav-item">
+=======
+                        <li>
+                            <NavLink className="nav-link"  to='/gardens'>Gardens list</NavLink>
+                        </li>
+                    {props.isAuth ? 
+                    <>
+                        <li>
+>>>>>>> a074912967dc763b1cd0c65fd2dafddcc50a1f50
+>>>>>>> 527456298282f161a77da9494735b331329cbfef
                             <NavLink className="nav-link" to="/profile">Profile</NavLink>
                         </li> 
                         <li>

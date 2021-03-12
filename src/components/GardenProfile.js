@@ -20,10 +20,33 @@ const GardenProfile = (props) => {
         setGarden(tempgarden)
         console.log(tempgarden)
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  
+    const thisGarden = garden.map((gardenData, index) =>{
+      
+        return(
+            <div>
+                <p key={gardenData._id}>{gardenData.name}</p>
+                <img src= {gardenData.image} alt= "gardenpicture"/>
+                <p>{gardenData.address}</p>
+                <p>{gardenData.state} {gardenData.zip}</p>
+                <p>About: {gardenData.about}</p>
+                <p>{gardenData.review[0]}</p>
+                <p>{gardenData.review[1]}</p>
+                <p>{gardenData.review[2]}</p>
+                <a href= {gardenData.map}>Google map</a>
+=======
+>>>>>>> 527456298282f161a77da9494735b331329cbfef
     }, [])
 
 
     const thisGarden = garden.map((gardenData, index) => {
+<<<<<<< HEAD
+=======
+>>>>>>> a074912967dc763b1cd0c65fd2dafddcc50a1f50
+>>>>>>> 527456298282f161a77da9494735b331329cbfef
 
         return (
             <div>
