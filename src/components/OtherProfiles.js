@@ -26,12 +26,17 @@ useEffect(async()=>{
 const thisUser = user.map((userData, index) =>{
       
     return(
-        <div>
-            <p>{userData.name}</p>
-            <p>{userData.email}</p>
-            <p>{userData.about}</p>
-            {userData.photo ? <img src={userData.photo} style={{maxWidth:'200px'}} />  : <img src = "https://res.cloudinary.com/ddmbb2ian/image/upload/v1613687758/c1phcqb46j0rzxtysmnw.jpg" style={{maxWidth:'200px'}} />}
-            <p>{userData.farmer ? `%${userData.name} is a farmer% ` : `%${userData.name} is not a farmer%`}</p>
+        <div className="profile-container">
+            <div>
+                {userData.photo ? <img className = "profile-pic" src={userData.photo} />  : <img src = "https://res.cloudinary.com/ddmbb2ian/image/upload/v1613687758/c1phcqb46j0rzxtysmnw.jpg"  />}
+                <div className="name-farmer">
+                <p>Name | {userData.name}</p>
+                {userData.farmer ? <img className = "badge-pic" src="https://i.imgur.com/G9tBFn9.png" alt="farmer-badge"/> : ""}
+                </div>
+            </div>
+           <div className="about-container">
+                <p className="about">{userData.about}</p>
+           </div>
         </div>
         )
 })

@@ -33,10 +33,10 @@ const Profile = (props) => {
    const userData = user ?
    (<div className="profile-info">
        <div className="name-farmer">
-        <p>Name: {name}</p>
+        <p>Name | {name}</p>
         {farmer ? <img className = "badge-pic" src="https://i.imgur.com/G9tBFn9.png" alt="farmer-badge"/> : ""}
        </div>
-       <p>Email: {email}</p>
+       <p>Email | {email}</p>
 
        
    </div>) : <h2>Loading...</h2>
