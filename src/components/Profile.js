@@ -34,7 +34,7 @@ const Profile = (props) => {
    (<div className="profile-info">
        <div className="name-farmer">
         <p>Name: {name}</p>
-        {farmer ? <img className = "badge-pic" src="https://i.imgur.com/G9tBFn9.png" alt="farmer-badge"/> : `%${name} is not a farmer%`}
+        {farmer ? <img className = "badge-pic" src="https://i.imgur.com/G9tBFn9.png" alt="farmer-badge"/> : ""}
        </div>
        <p>Email: {email}</p>
 
