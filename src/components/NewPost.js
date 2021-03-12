@@ -46,6 +46,7 @@ const NewPost = () => {
         HolisticModel.create({
             title,
             name: currentUser.name,
+            date: Date(),
             photo: currentUser.photo,
             content: body,
             category,
