@@ -22,9 +22,10 @@ const ViewPostTrade = (props) => {
             return thisPost === singlePost._id
         })
         
+        let commentArray = await onePost[0].comment
         console.log(onePost)
         setPost(onePost)
-        setComments(onePost.comment)
+        setComments(commentArray)
         
     }, []);
     
@@ -39,7 +40,7 @@ const ViewPostTrade = (props) => {
         </div>  
         )
     })
-
+    console.log(comments)
     const aComment = comments.map((comment) => {
         return(
            <div key={comment._id}>
@@ -54,8 +55,8 @@ const ViewPostTrade = (props) => {
         <div>
            {aPost}
            <h4>Comments</h4>
-           {aComment}
-        <Comments id={ post.length > 0 ? post[0]._id : '' }/>
+           {/* {aComment} */}
+        <Comments post={ post.length > 0 ? post[0] : '' }/>
         </div>
     );
 }
