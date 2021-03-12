@@ -19,7 +19,7 @@ const Gardens = () => {
     const listOfGardens = gardens.map((gardenData, index) =>{
         return(
             <div>
-                <p key={gardenData._id}>{gardenData.name} <img src= {gardenData.image} alt= "gardenpicture"/>{gardenData.address} {gardenData.state} {gardenData.zip}</p>
+                <p key={gardenData._id}>{gardenData.name} <img  className="garden-img" src= {gardenData.image} alt= "gardenpicture"/>{gardenData.address} {gardenData.state} {gardenData.zip}</p>
                 <Link to={`/gardenprofile/${gardenData._id}`}>View Garden Profile</Link>
             </div>
         )

@@ -10,7 +10,7 @@ const Zipcode = () => {
     const listOfGardens = gardens.map((gardenData, index) => {
         return (
             <div key={gardenData._id}> 
-            <img src={gardenData.image} alt="garden"/>
+            <div className="garden-img-div"><img className="garden-img" src={gardenData.image} alt="garden"/></div>
             <p>{gardenData.name} {gardenData.address} {gardenData.state} {gardenData.zip}</p>
             <Link to={`/gardenprofile/${gardenData._id}`}>View Garden Profile</Link>
             </div>
@@ -31,13 +31,14 @@ const Zipcode = () => {
         fetchData()
         console.log('====> from submit', zipcode)
     }
-   
+   //Did you mean <= 1?
     return (
         <div>
             <form onSubmit={handleSubmit} className="zip-form">
                 <textarea type="text" name="zip" onChange={entry} className="form-control" />
                 <button type="submit">Search</button>
             </form>
+            
             {listOfGardens.length >= 1 ? listOfGardens : null}
         </div>
     )
