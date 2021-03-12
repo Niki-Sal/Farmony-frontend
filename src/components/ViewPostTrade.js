@@ -36,22 +36,26 @@ const ViewPostTrade = (props) => {
         {post.name}
         {post.title}
         {post.content}
-        
         </div>  
         )
     })
 
     const aComment = comments.map((comment) => {
-        <div>
-        {comment}    
-        </div>
+        return(
+           <div key={comment._id}>
+        {comment.name}
+        {comment.date}    
+        {comment.content}    
+        </div> 
+        )
     })
     
     return (
         <div>
            {aPost}
+           <h4>Comments</h4>
            {aComment}
-        <Comments />
+        <Comments id={ post.length > 0 ? post[0]._id : '' }/>
         </div>
     );
 }
