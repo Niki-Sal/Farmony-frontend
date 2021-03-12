@@ -49,10 +49,7 @@ const ViewPost = (props) => {
         </div> 
         )
     })
-    if (post.length > 0) {
-
-        console.log(post[0]._id)
-    }
+   
     return (
         <div>
            {aPost}
