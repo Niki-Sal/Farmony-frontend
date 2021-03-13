@@ -25,10 +25,14 @@ const Profile = (props) => {
         getAbout()
    }
    const userData = user ?
-   (<div>
-       <p>Name: {name}</p>
-       <p>Email: {email}</p>
-       <p>About Me: {about}</p>
+   (<div className="profile-info">
+       <div className="name-farmer">
+        <p>Name | {name}</p>
+        {farmer ? <img className = "badge-pic" src="https://i.imgur.com/G9tBFn9.png" alt="farmer-badge"/> : ""}
+       </div>
+       <p>Email | {email}</p>
+
+       
    </div>) : <h2>Loading...</h2>
     const errorDiv = () => {
         return (
@@ -38,12 +42,24 @@ const Profile = (props) => {
         );
     };
     return (
-        <div className="text-center pt-4">
-            {user ? userData : errorDiv()}
-            <CreateImage user={user}/>
-            {farmer ? <img src="https://i.imgur.com/G9tBFn9.png" alt="farmer-badge"/> : `%${name} is not a farmer%`}
-            <EditForm />
-            <Link to={`/previewprofile/${user.id}`} >view how your profile looks like for others</Link>
+        <div >
+            <h2 className="welcome-user">Welcome {name}!</h2>
+            <div className="profile-container">
+                <div className="pic-section">
+                    <CreateImage user={user}/>
+                    {user ? userData : errorDiv()}
+                </div>
+                <div className="about-container"> 
+                    <div>
+                        <h4>About ME</h4>
+                        <p className="about">{about}</p>
+                    </div>
+                    <EditForm />
+                    <Link to={`/previewprofile/${user.id}`} >Profile Preview</Link>
+                </div>
+
+            </div>
+            
         </div>
     );
 }
