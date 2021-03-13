@@ -8,7 +8,8 @@ const Home = () => {
 
   
     return (
-        <div>
+        
+        <div class='HomepageMain'>
             
             <Zipcode />
         </div>
