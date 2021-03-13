@@ -17,7 +17,7 @@ const Holistic = () => {
         };
         fetchData()
     }, []);
-
+    console.log(posts)
     const listOfPosts = posts.map((post) => {
         return (
             <div key={post._id}>{post.title}{post.name}{post.date}<button><Link to={`/post/${post._id}`}>View Post</Link></button></div>
