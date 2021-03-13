@@ -9,7 +9,7 @@ const Home = () => {
   
     return (
         <div>
-            <Link to='/gardens'>Gardens list</Link>
+            
             <Zipcode />
         </div>
     );

@@ -81,7 +81,6 @@ function App() {
           <Route path="/holistichub" component={Holistic} />
           <Route exact path='/buy' component={Buy} />
           <Route path="/trade" component={Trade} />
-
         </Switch>
       </div>
       {routes}

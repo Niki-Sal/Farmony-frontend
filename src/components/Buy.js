@@ -18,17 +18,19 @@ const Buy = () => {
 
     const listOfPosts = posts.map((post) => {
         return (
-            <div key={post._id}>{post.title}{post.username}{post.date}<button><Link to="/viewpostbuy/:id" id={post._id}>View Post</Link></button></div>
+            <div key={post._id} className="post-container">
+                <h4>{post.title} </h4>
+                <h6>{post.date} by {post.name} </h6>
+                <button><Link to={`/viewpostbuy/${post._id}`}>View Post</Link></button>
+            </div>
         )
     })
 
     return (
         <div>
-            <h1 className="buy">Buy</h1>
-            <h4>Sell and Buy Goods </h4>
-            <button><Link to="/newpostbuy">Make New Post</Link></button>
-            {listOfPosts}
-            
+            <h1 className="community-title">Buy</h1>
+            <button className="newpost-button"><Link to="/newpostbuy">Make New Post</Link></button>
+            {listOfPosts} 
         </div>
         
     );

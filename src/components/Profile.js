@@ -4,10 +4,7 @@ import { useState, useEffect } from 'react';
 import UserModel from '../models/user'
 import EditForm from './EditForm'
 import CreateImage from './CreateImage'
-
-
 const Profile = (props) => {
-  
    const { handleLogout, user } = props;
    const { id, name, email, farmer, exp} = user;
    const expirationTime = new Date(exp * 1000);
@@ -21,15 +18,12 @@ const Profile = (props) => {
         setAbout(newAbout)
         console.log(newAbout)
     }
-   
    if (currentTime >= expirationTime) {
        handleLogout();
        alert('Session has ended. Please login to continue.');
    } else {
         getAbout()
    }
- 
-
    const userData = user ?
    (<div className="profile-info">
        <div className="name-farmer">
@@ -40,7 +34,6 @@ const Profile = (props) => {
 
        
    </div>) : <h2>Loading...</h2>
-
     const errorDiv = () => {
         return (
             <div className="text-center pt-4">
@@ -48,8 +41,6 @@ const Profile = (props) => {
             </div>
         );
     };
-
-    
     return (
         <div >
             <h2 className="welcome-user">Welcome {name}!</h2>
@@ -71,7 +62,5 @@ const Profile = (props) => {
             
         </div>
     );
-
 }
-
 export default Profile;

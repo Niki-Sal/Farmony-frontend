@@ -20,7 +20,7 @@ const Holistic = () => {
 
     const listOfPosts = posts.map((post) => {
         return (
-            <div key={post._id}>{post.title}<Link to={`previewprofile/${post.name}`}>{post.name}</Link>{post.date}<button><Link to={`/post/${post._id}`}>View Post</Link></button></div>
+            <div key={post._id}>{post.title}{post.name}{post.date}<button><Link to={`/post/${post._id}`}>View Post</Link></button></div>
         )
     })
 
