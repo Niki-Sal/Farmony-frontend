@@ -39,23 +39,23 @@ const ViewPost = (props) => {
         </div>  
         )
     })
-
-    const aComment = comments.map((comment) => {
-        return(
-           <div key={comment._id}>
-        {comment.name}
-        {comment.date}    
-        {comment.content}    
-        </div> 
-        )
-    })
-   
+    
+//     const aComment = comments.map((comment) => {
+//         return(
+//            <div key={comment._id}>
+//         {comment.name}
+//         {comment.date}    
+//         {comment.content}    
+//         </div> 
+//         )
+//     })
+//    console.log(aComment)
     return (
         <div>
-           {aPost}
+           {/* {aPost} */}
            <h4>Comments</h4>
-           {aComment}
-           <Comments id={ post.length > 0 ? post[0]._id : '' } />
+           {/* {aComment} */}
+           {/* <Comments id={ post.length > 0 ? post[0] : '' } /> */}
         </div>
         
     );
