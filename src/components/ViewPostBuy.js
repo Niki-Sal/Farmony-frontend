@@ -12,21 +12,10 @@ const ViewPostBuy = (props) => {
     
 
     useEffect(async() => {
-<<<<<<< HEAD
-
-        const res = await BuyModel.all() 
-        setPosts(res.data) 
-
-        console.log('********** RES ===>', res)
-        
-        let onePost = res.data.filter((singlePost) => {
-            return thisPost === singlePost._id
-=======
         console.log(thisPostId)
         const buyPosts = await BuyModel.all()
         let temppost = buyPosts.data.filter((eachPost) => {
             return thisPostId === eachPost._id
->>>>>>> main
         })
         setPost(temppost[0])
         console.log(temppost[0])
