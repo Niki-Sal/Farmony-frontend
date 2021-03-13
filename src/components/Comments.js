@@ -33,9 +33,7 @@ const Comments = (props) => {
     const onFormSubmit = async (e) => {
         e.preventDefault()
         console.log(currentUser.name, comment)
-        // if (e.target.value === []) {
-        //     alert('Please enter a comment')
-        // }
+        
         const newComment = {
              
                 name: currentUser.name,
