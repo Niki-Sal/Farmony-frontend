@@ -28,7 +28,7 @@ const Comments = (props) => {
         setComment(e.target.value)
         console.log('***** comment', comment)
     }
-    console.log(props.id)
+    console.log(props.post)
 
     const onFormSubmit = async (e) => {
         e.preventDefault()
@@ -38,16 +38,15 @@ const Comments = (props) => {
         // }
         const newComment = {
              
-            comment: {
                 name: currentUser.name,
                 photo: currentUser.photo,
                 content: comment,
                 date: Date()
-            }
+            
         }
-        const postId = props.id
+        const foundPost = props.post
     
-        await PostModel.update(postId, newComment) 
+        await PostModel.update(foundPost._id, foundPost.comment.push(newComment)) 
 
     }
 
