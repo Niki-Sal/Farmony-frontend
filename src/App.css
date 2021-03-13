@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body{
   background-image: url("https://i.imgur.com/VWwS0Zf.jpg");
   background-size: cover;
