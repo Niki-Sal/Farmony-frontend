@@ -6,9 +6,10 @@ import Comments from './Comments'
 
 
 const ViewPostTrade = (props) => {
-    const [post, setPost] = useState([])
+    const [post, setPost] = useState({})
     const [posts, setPosts] = useState([])
     const [comments, setComments] = useState([])
+    
     
     let thisPost = props.match.params.id
     console.log(thisPost)
@@ -22,41 +23,47 @@ const ViewPostTrade = (props) => {
             return thisPost === singlePost._id
         })
         
-        let commentArray = await onePost[0].comment
-        console.log(onePost)
-        setPost(onePost)
-        setComments(commentArray)
+        
+        console.log(onePost[0])
+        setPost(onePost[0])
+        setComments(onePost[0].comment)
+        
         
     }, []);
     
-    const aPost = post.map((post) => {
-        //if (post.id === props.match.params.id)
-        return (
-          <div key={post.id}>
+    // const aPost = post.map((post) => {
+    //     //if (post.id === props.match.params.id)
+    //     return (
+    //       <div key={post.id}>
+    //     {post.date}
+    //     {post.name}
+    //     {post.title}
+    //     {post.content}
+    //     </div>  
+    //     )
+    // })
+    let commentsList;
+     if (comments) {
+          commentsList = comments.map((comment) => {
+           return(
+              <div key={comment._id}>
+           {comment.name}
+           {comment.date}    
+           {comment.content}    
+           </div> 
+           )
+       })
+    }
+    
+    return (
+        <div>
         {post.date}
         {post.name}
         {post.title}
         {post.content}
-        </div>  
-        )
-    })
-    console.log(comments)
-    const aComment = comments.map((comment) => {
-        return(
-           <div key={comment._id}>
-        {comment.name}
-        {comment.date}    
-        {comment.content}    
-        </div> 
-        )
-    })
-    
-    return (
-        <div>
-           {aPost}
            <h4>Comments</h4>
-           {/* {aComment} */}
-        <Comments post={ post.length > 0 ? post[0] : '' }/>
+           {commentsList}
+            <Comments post={ post }/>
         </div>
     );
 }
