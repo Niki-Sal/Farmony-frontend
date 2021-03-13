@@ -1,4 +1,3 @@
-
 import React from 'react';
 import axios from 'axios'
 import { useEffect,useState } from 'react';
@@ -90,6 +89,7 @@ const CreateImage = (props) => {
        } else {
             getPhoto()
        }
+
 
     return (
         <div className="pic-section">

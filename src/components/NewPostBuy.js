@@ -62,6 +62,7 @@ const NewPostBuy = () => {
     }
     return (
         <div>
+            <h1 className="buy">Buy</h1>
                 <form onSubmit={onFormSubmit}>
                     <label>
                         Post Title: 

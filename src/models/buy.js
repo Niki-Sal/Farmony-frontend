@@ -18,6 +18,14 @@ class BuyModel {
         let request = axios.delete(`${endPoint}/${post._id}` )
         return request
     }
+    static find = (post) =>{
+        let request = axios.find(`${endPoint}/${post._id}` )
+        return request
+    }
+    static update = (postId, updatedPostObject) =>{
+        let request = axios.put(`${endPoint}/${postId}`, updatedPostObject)
+        return request
+    }
 }
 
 export default BuyModel;

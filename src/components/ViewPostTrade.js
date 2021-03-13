@@ -8,6 +8,7 @@ import Comments from './Comments'
 const ViewPostTrade = (props) => {
     const [post, setPost] = useState([])
     const [posts, setPosts] = useState([])
+    const [ comments, setComments] = useState([])
     
     let thisPost = props.match.params.id
     console.log(thisPost)
@@ -23,7 +24,7 @@ const ViewPostTrade = (props) => {
         
         console.log(onePost)
         setPost(onePost)
-        
+        setComments (onePost.comment)
     }, []);
     
     const aPost = post.map((post) => {
@@ -42,6 +43,7 @@ const ViewPostTrade = (props) => {
     return (
         <div>
            {aPost}
+           { comments ? comments.content : "no comments yet!"}
         <Comments />
         </div>
     );
