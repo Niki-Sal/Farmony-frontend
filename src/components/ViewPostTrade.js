@@ -8,20 +8,20 @@ const ViewPostTrade = (props) => {
     const [content, setContent] = useState("")
     const [name, setName] = useState("")
     
-    let thisPost = props.match.params.id
+    let thisPostId = props.match.params.id
     
     useEffect(async () => {
         
         const res = await TradeModel.all() 
        
-        let tempPost = res.data.filter((singlePost) => {
-            return thisPost === singlePost._id
+        let temppost = res.data.filter((singlePost) => {
+            return thisPostId === singlePost._id
         })
         
-        setPost(tempPost[0])
-        console.log(tempPost[0])
-        setComments(tempPost[0].comment)
-        console.log(tempPost[0].comment)
+        setPost(temppost[0])
+        console.log(temppost[0])
+        setComments(temppost[0].comment)
+        console.log(temppost[0].comment)
     }, []);
     
    
