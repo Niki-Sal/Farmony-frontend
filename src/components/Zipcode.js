@@ -33,10 +33,12 @@ const Zipcode = () => {
     }
    //Did you mean <= 1?
     return (
-        <div>
+        <div className="zipFormDiv">
+           
+
             <form onSubmit={handleSubmit} className="zip-form">
-                <input type="text" name="zip" onChange={entry} className="form-control" />
-                <button type="submit">Search</button>
+                <input type="text" name="zip" placeholder="Enter zipcode to find farms near you." onChange={entry} className="form-controlHp" />
+                <button type="submit" id="zipButton">Search</button>
             </form>
             
             {listOfGardens.length >= 1 ? listOfGardens : null}
