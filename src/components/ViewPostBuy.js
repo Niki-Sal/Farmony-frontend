@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'
 import BuyModel from '../models/buy'
 
 
@@ -66,9 +67,10 @@ const ViewPostBuy = (props) => {
   
     return (
         <div>
+            <Link to='/buy'>&larr;Back to Buy Community Board</Link>
             <div className="view-post">
                 <h3>Post Title: {post.title}</h3>
-                <h5>By: {post.name}</h5>
+                <h5 className="no-margin">By: {post.name}</h5>
             </div>
             <p className="post-content">{post.content}</p>
             <div>

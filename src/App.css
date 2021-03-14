@@ -96,12 +96,18 @@ body{
 
 }
 .welcome-user{
-  text-align: center;
+  background-color: rgb(115, 181, 145) ;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
   color: white;
-  font-size: 40px;
-  background-color: rgba(124, 153, 123, 0.5);
-  margin-left: 50px;
-  margin-right: 50px;
+  font-family: 'Elisabeth Clara', sans-serif;
+  font-size: 60px;
+  margin-top: 0px;
 }
 .badge-div {
   position: relative; 
@@ -152,10 +158,13 @@ body{
   justify-content: space-around;
 }
 .about {
-  max-width: 500px;
+  
   border: solid black 2px;
   padding: 20px;
+  background:rgba(255,255,255,0.6);
+  font-family: 'Medio', sans-serif;
 }
+
 .about-container{
   display: flex;
   flex-direction: column;
@@ -187,11 +196,7 @@ body{
   font-size: 60px;
 }
 
-.about{
-  background:rgba(255,255,255,0.6);
-  font-family: 'Medio', sans-serif;
-  display: flexbox;
-}
+
 
 /* trade styling */
 
@@ -212,21 +217,29 @@ body{
 /* buy styling */
 
 .community-title{
-  text-align: center;
+  background-color: rgb(115, 181, 145) ;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
   color: white;
-  font-size: 40px;
-  background-color: rgba(124, 153, 123, 0.5);
-  margin-left: 50px;
-  margin-right: 50px;
   font-family: 'Elisabeth Clara', sans-serif;
   font-size: 60px;
-  
+  margin-top: 0px;
 }
 .newpost-button{
   margin: 0 auto;
 }
+.post-back{
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 20px;
+  margin: 50px;
+}
 .post-container{
-  background-color: white;
+  background-color: rgba(215, 238, 214);
   margin: 50px;
   padding: 20px;
   display: flex;
@@ -236,10 +249,14 @@ body{
 .view-post{
   background-color: white;
   margin: 20px 50px 0 50px;
-  padding: 20px;
+  padding: 10px;
   display: flex;
-  justify-content: space-between;
+  flex-direction:column;
+  justify-content: center;
   align-items: center;
+}
+.no-margin{
+  margin:0px;
 }
 .post-content{
   background-color: white;
@@ -248,16 +265,17 @@ body{
   padding: 20px;
 }
 .comment-title{
-  text-align: center;
+  background-color: rgb(115, 181, 145) ;
+  justify-content: center;
+  align-items: center;
+  display: flex;
   color: white;
-  font-size: 30px;
-  background-color: rgba(124, 153, 123, 0.5);
-  margin-left: 300px;
-  margin-right: 300px;
   font-family: 'Elisabeth Clara', sans-serif;
+  font-size: 30px;
+  margin: 0px 300px 0px 300px;
 }
 .comments{
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(215, 238, 214);
   margin-left: 300px;
   margin-right: 300px;
   padding-left: 20px;
@@ -269,6 +287,26 @@ body{
   justify-content: space-between;
   margin-left: 300px;
   margin-right: 300px;
+}
+.post-title{
+  background-color: rgb(115, 181, 145) ;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: white;
+  font-family: 'Elisabeth Clara', sans-serif;
+  font-size: 30px;
+  margin: 0px 50px 0px 50px;
+}
+.post-form{
+  background-color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 50px;
+  margin-right: 50px;
+  padding: 20px;
+
 }
 
 /* styling for holistic */
@@ -310,6 +348,21 @@ body{
 }
 
 /* homepage styling */
+.garden-profile-heading{
+  background-color: rgb(115, 181, 145) ;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100px;
+}
+.garden-profile-name{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: white;
+  font-family: 'Elisabeth Clara', sans-serif;
+  font-size: 60px;
+}
 
 .welcome{
   background-color: rgb(115, 181, 145) ;
@@ -323,6 +376,7 @@ body{
   color: white;
   font-family: 'Elisabeth Clara', sans-serif;
   font-size: 60px;
+  margin-top: 0px;
 }
 
 /* login page styling */
@@ -340,6 +394,15 @@ body{
   font-family: 'Elisabeth Clara', sans-serif;
   font-size: 60px;
 }
+.login-container{
+  background-color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  margin-left: 400px;
+  margin-right: 400px;
+}
+.form-group{
+  margin:  15px 0px 15px 0px;
+}
 
 /* signup page styling */
 
@@ -355,6 +418,15 @@ body{
   color: white;
   font-family: 'Elisabeth Clara', sans-serif;
   font-size: 60px;
+}
+.signup-container{
+  background-color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  margin-left: 400px;
+  margin-right: 400px;
+}
+.form-group{
+  margin:  15px 0px 15px 0px;
 }
 
 /* nav styling */
@@ -421,3 +493,87 @@ li{
   object-fit: cover;
   
 }
+
+/* zip-code styling */
+
+.zip-form{
+  background-color: rgba(255, 255, 255, 0.507);
+  padding: 50px;
+  margin: 0px 50px 0px 50px;
+  display:flex;
+  justify-content: center;
+}
+.garden-result{
+  background-color: rgba(255, 255, 255, 0.507);
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.garden-prop{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px
+
+}
+.garden-img-zip {
+  position: relative; 
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 50%;
+  
+}
+
+/* team */
+.team{
+  background-color: rgba(215, 238, 214);
+  margin: 50px;
+}
+.team-heading{
+  margin: 20px;
+}
+.about-us-heading{
+  background-color: rgb(115, 181, 145) ;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: white;
+  font-family: 'Elisabeth Clara', sans-serif;
+  font-size: 60px;
+}
+.about-homepage{
+  background:rgba(255,255,255,0.6);
+  font-family: 'Medio', sans-serif;
+  margin: 50px;
+  border: solid black 2px;
+  padding: 20px;
+}
+.bio-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-top: 50px;
+  position: relative; 
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 20px;
+}
+
+.one-bio{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.bio-text{
+ 
+}
+
+
+
+

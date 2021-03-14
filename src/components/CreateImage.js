@@ -94,7 +94,7 @@ const CreateImage = (props) => {
     return (
         <div className="pic-section">
     
-        {photo? <img className = "profile-pic" src={photo} /> : <img src = "https://res.cloudinary.com/ddmbb2ian/image/upload/v1613687758/c1phcqb46j0rzxtysmnw.jpg" style={{maxWidth:'200px'}} />}
+        {photo? <img className = "profile-pic" src={photo} /> : <img className = "profile-pic" src = "https://res.cloudinary.com/ddmbb2ian/image/upload/v1615672962/qvo_UWEYzvsVDmwUPEWLsCIh_xjgub8.jpg" />}
        
         <p>Change your profile picture</p>
         <form className= "picture-change"onSubmit={handleSubmit}>

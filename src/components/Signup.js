@@ -53,17 +53,17 @@ const Signup = () => {
     if (redirect) return <Redirect to="/login" /> // You can have them redirected to profile (your choice)
 
     return (
-        <div className="row mt-4">
-            <div className="col-md-7 offset-md-3">
-                <div className="card card-body">
+        <div className="signup-container">
+            <div>
+                <div >
                     <h1 className="signup">Sign up</h1>
                     <form onSubmit={handleSubmit}>
                         <div className="form-group">
-                            <label htmlFor="name">Name</label>
+                            <label htmlFor="name">Name  </label>
                             <input type="text" name="name" value={name} onChange={handleName} className="form-control"/>
                         </div>
                         <div className="form-group">
-                            <label htmlFor="email">Email</label>
+                            <label htmlFor="email">Email  </label>
                             <input type="email" name="email" value={email} onChange={handleEmail} className="form-control"/>
                         </div>
                         <div className="form-group">
@@ -73,14 +73,14 @@ const Signup = () => {
                             <label htmlFor="nonfarmer">Non-Farmer</label>
                         </div>
                         <div className="form-group">
-                            <label htmlFor="password">Password</label>
+                            <label htmlFor="password">Password  </label>
                             <input type="password" name="password" value={password} onChange={handlePassword} className="form-control"/>
                         </div>
                         <div className="form-group">
-                            <label htmlFor="confirmPassword">Confirm Password</label>
+                            <label htmlFor="confirmPassword">Confirm Password  </label>
                             <input type="password" name="confirmPassword" value={confirmPassword} onChange={handleConfirmPassword} className="form-control"/>
                         </div>
-                        <button type="submit" className="singup-submit">Submit</button>
+                        <button className="form-group" type="submit" className="singup-submit">Submit</button>
                     </form>
                 </div>
             </div>

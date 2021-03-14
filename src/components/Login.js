@@ -41,24 +41,24 @@ const Login = (props) => {
         });
     }
 
-    if (props.user) return <Redirect to="/profile" /> // double check
+    if (props.user) return <Redirect to="/" /> // double check
 
     return (
        
-        <div className="row mt-4">
-            <div className="col-md-7 offset-md-3">
-                <div className="card card-body">
+        <div className="login-container">
+            <div>
+                <div>
                 <h1 className="login">Login</h1>
-                    <form onSubmit={handleSubmit}>
+                    <form className="login-form"onSubmit={handleSubmit}>
                         <div className="form-group">
-                            <label htmlFor="email">Email</label>
+                            <label htmlFor="email">Email  </label>
                             <input type="text" name="email" value={email} onChange={handleEmail} className="form-control"/>
                         </div>
                         <div className="form-group">
-                            <label htmlFor="password">Password</label>
+                            <label htmlFor="password">Password  </label>
                             <input type="password" name="password" value={password} onChange={handlePassword} className="form-control"/>
                         </div>
-                        <button type="submit" className="login-submit">Submit</button>
+                        <button type="submit" className="form-group">Submit</button>
                     </form>
                 </div>
             </div>

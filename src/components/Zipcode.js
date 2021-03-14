@@ -9,8 +9,8 @@ const Zipcode = () => {
     
     const listOfGardens = gardens.map((gardenData, index) => {
         return (
-            <div key={gardenData._id}> 
-            <div className="garden-img-div"><img className="garden-img" src={gardenData.image} alt="garden"/></div>
+            <div  className="garden-prop"key={gardenData._id}> 
+            <div className="garden-img-zip "><img src={gardenData.image} alt="garden"/></div>
             <p>{gardenData.name} {gardenData.address} {gardenData.state} {gardenData.zip}</p>
             <Link to={`/gardenprofile/${gardenData._id}`}>View Garden Profile</Link>
             </div>
@@ -38,8 +38,9 @@ const Zipcode = () => {
                 <input type="text" name="zip" onChange={entry} className="form-control" />
                 <button type="submit">Search</button>
             </form>
-            
-            {listOfGardens.length >= 1 ? listOfGardens : null}
+            <div className="garden-result">
+                {listOfGardens.length >= 1 ? listOfGardens : null}
+            </div>
         </div>
     )
 }
