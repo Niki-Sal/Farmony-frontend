@@ -42,7 +42,6 @@ const Zipcode = () => {
                 <input type="text" name="zip" placeholder="Enter zipcode to find farms near you." onChange={entry} className="form-controlHp" />
                 <button type="submit" id="zipButton">Search</button>
             </form>
-
             {listOfGardens.length >= 1 ? listOfGardens : null}
         </div>
     )

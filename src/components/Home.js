@@ -1,14 +1,10 @@
 import React from 'react';
 import Zipcode from './Zipcode'
-
 import {  Link } from 'react-router-dom';
 import Footer from './Footer'
 import Navbar from './Navbar';
-
-
+import Team from './Team';
 const Home = () => {
-
-  
     return (
         
         <div class='HomepageMain'>
@@ -24,9 +20,9 @@ const Home = () => {
             <div class ="triangleDivHpR"></div>
             <div class ="triangleDivHpL"></div>
             <Zipcode />
+            <Team />
             <Footer />
         </div>
     );
 }
-
 export default Home;
