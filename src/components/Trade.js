@@ -19,7 +19,7 @@ const Trade = () => {
 
     const listOfPosts = posts.map((post) => {
         return (
-            <div key={post._id}>
+            <div key={post._id} className="post-container">
                 {post.title}
                 {post.name}
                 {post.date}
