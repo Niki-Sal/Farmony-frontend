@@ -30,7 +30,6 @@ body{
   width: 100%;
   height: 100%;
   object-fit: cover;
-  margin-top: 50px;
   
 }
 
@@ -76,17 +75,18 @@ body{
 }
 
 .garden-profile-info{
-  margin-left:600px;
-  /* box-sizing: border-box;
-      border: solid; */
-      /* border-color: black; */
       background:rgba(215, 238, 214); 
       width: 800px;
-      
 }
-
+.garden-left{
+  display: flex;
+  flex-direction:column;
+  justify-content: space-around;
+  align-items:  center;
+  margin-left: 100px;
+}
 .farm-profile-address{
-  margin-top: 200px;
+
 }
 
 /* user profile styling */
@@ -347,38 +347,114 @@ body{
   font-size: 60px;
 }
 
-/* homepage styling */
-.garden-profile-heading{
-  background-color: rgb(115, 181, 145) ;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  height: 100px;
+* {
+  box-sizing: border-box;
 }
-.garden-profile-name{
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  color: white;
+body{
+  background-image: url("https://i.imgur.com/VWwS0Zf.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+/* *** Homepage Styling ***  */
+.header{
   font-family: 'Elisabeth Clara', sans-serif;
-  font-size: 60px;
-}
-
-.welcome{
-  background-color: rgb(115, 181, 145) ;
-  justify-content: center;
-  align-items: center;
+  color:white;
   display: flex;
-  height: 100px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  color: white;
-  font-family: 'Elisabeth Clara', sans-serif;
+  justify-content: left;
   font-size: 60px;
-  margin-top: 0px;
+  margin-left: 100px;
 }
+.HomepageMain {
+  background:rgba(255,255,255,0.6);
+  font-family: 'Medio', sans-serif;
+  display: block;
+  position: relative;
+  margin: 15px auto;
+  padding: 15px;
+  height: auto;
+  width: 1200px;
+}
+.aboutFarmony {
+  position: relative;
+  text-align: center;
+  letter-spacing: 1px;
+  color:#D7EED6;
+  margin: 0 auto;
+  font-size: 28px;
+  top: 230px;
+}
+#aboutFarmony2 {
+  color: #507E5A;
+  margin-bottom: -200px;
+}
+.topDivHP {
+  height: 200px;
+  width: 1100px;
+  background-color:rgba(115, 181, 145);
+  margin: auto;
+}
+.bottomDivHP {
+  height: 200px;
+  width: 1100px;
+  background-color: #D7EED6;
+  margin: auto;
+}
+.triangleDivHpR {
+  position: relative;
+  width: 0;
+  height: 0;
+  left: 585px;
+  border-top: 100px solid #D7EED6;
+  border-right: 550px solid transparent;
+}
+.triangleDivHpL {
+  position: relative;
+  display: inline;
+  right: -35px;
+  width: 0;
+  height: 0;
+  border-top: 100px solid #D7EED6;
+  border-left: 550px solid transparent;
+}
+.zipFormDiv {
+  position: relative;
+  width: 900px;
+  height: 10px;
+  left: 0px;
+  margin: 0 auto;
+  padding: 10px;
+}
+/* ***Zip Form styling*** */
 
+.form-controlHp {
+  font-size: 30px;
+  color: #156C28;
+  text-align: center;
+  height: 40px;
+  width: 750px;
+}
+#zipButton {
+  position: relative;
+  color: #156C28;
+  width: 100px;
+  left: 10px;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: rgba(115, 181, 145, .4);
+  border: 2px solid #156C28;
+}
+.gardenDisplayDiv {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 30px;
+  background-color: rgba(255,255,255,0.8);
+  border: 2px solid #156C28;
+}
 /* login page styling */
 
 .login{
@@ -494,35 +570,6 @@ li{
   
 }
 
-/* zip-code styling */
-
-.zip-form{
-  background-color: rgba(255, 255, 255, 0.507);
-  padding: 50px;
-  margin: 0px 50px 0px 50px;
-  display:flex;
-  justify-content: center;
-}
-.garden-result{
-  background-color: rgba(255, 255, 255, 0.507);
-  margin-left: 50px;
-  margin-right: 50px;
-}
-.garden-prop{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 10px
-
-}
-.garden-img-zip {
-  position: relative; 
-  width: 100px;
-  height: 100px;
-  overflow: hidden;
-  border-radius: 50%;
-  
-}
 
 /* team */
 .team{
@@ -570,10 +617,181 @@ li{
   justify-content: flex-start;
   align-items: center;
 }
-.bio-text{
- 
+
+/* garden profile styling */
+.garden-profile{
+  background:rgba(255,255,255,0.6);
+  font-family: 'Medio', sans-serif;
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+}
+.garden-img-div {
+  position: relative; 
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-left: 140px;
+  margin-bottom: 100px;
+}
+.garden-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.garden-profile-heading{
+  background-color: rgb(115, 181, 145) ;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100px;
+}
+.garden-profile-name{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: white;
+  font-family: 'Elisabeth Clara', sans-serif;
+  font-size: 60px;
+}
+.farm-profile-img-div {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-bottom: 50px;
+  margin-top: 150px;
+}
+.farm-profile-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+ .garden-profile-info{
+ margin: 100px 100px 100px 0px;
+ }
+.garden-profile-about-heading{
+  font-family: 'Elisabeth Clara', sans-serif;
+  font-size: 24px;
+}
+.garden-profile-about{
+  background:rgba(215, 238, 214); 
+  width: 800px;
+  letter-spacing: 1.5px;
+  width: 700px;
+  padding: 20px;
+  font-weight: bold;
+  margin:20px;
+  font-family: 'Beauty Club', sans-serif;
+  font-size: 16px;
+  border: solid black;
+}
+.garden-profile-reviews-heading{
+  font-family: 'Elisabeth Clara', sans-serif;
+  font-size: 24px;
+}
+.review-1{
+  background:rgba(215, 238, 214); 
+  font-family: 'Josefin Slab', sans-serif;
+  letter-spacing: 1.5px;
+  padding: 20px;
+  margin: 20px;
+  font-weight: bold;
+  font-family: 'Beauty Club', sans-serif;
+  border: solid black;
+  font-size: 16px;
+}
+.review-2{
+  background:rgba(215, 238, 214);
+  font-family: 'Josefin Slab', sans-serif;
+  letter-spacing: 1.5px;
+  padding: 20px;
+ font-weight: bold;
+  margin: 20px;
+  font-family: 'Beauty Club', sans-serif;
+  border: solid black;
+  font-size: 16px;
+}
+.review-3{
+  background:rgba(215, 238, 214);
+  font-family: 'Josefin Slab', sans-serif;
+  letter-spacing: 1.5px;
+  padding: 20px;
+ font-weight: bold;
+  margin: 20px;
+  font-family: 'Beauty Club', sans-serif;
+  border: solid black;
+  font-size: 16px;
+}
+.farm-profile-address{
+
+  font-family: 'Beauty Club', sans-serif; 
+  font-size: 18px;
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
 }
 
-
+/* garden page styling */
+.garden-list-heading{
+  background-color: rgb(115, 181, 145) ;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100px;
+}
+.garden-list{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: white;
+  font-family: 'Elisabeth Clara', sans-serif;
+  font-size: 60px;
+}
+.ind-garden-heading{
+  font-family: 'Elisabeth Clara', sans-serif;
+  font-size: 24px;
+}
+.ind-garden{
+  background:rgba(255,255,255,0.6);
+  border: solid black;
+  margin: 15px;
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+  align-items: center;
+}
+.ind-garden-profile{
+  margin-right:80px;
+}
+.garden-list-img-div{
+  position: relative;
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 50%;
+            margin-left: 140px;
+            margin-bottom: 50px;
+            margin-top: 50px;
+}
+.garden-list-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+p{
+  font-family: 'Beauty Club', sans-serif; 
+}
+.list-of-gardens{
+  margin-top:100px;
+  width: 1200px;
+  margin-left: 300px;
+  margin-right: 400px;
+}
+.gardren-list-address{
+  margin:50px;
+}
 
 
