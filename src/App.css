@@ -18,6 +18,12 @@ body{
   margin-left: 100px;
 }
 
+.welcome {
+  color: #507E5A;
+  text-align: center;
+  font-size: 40px;
+}
+
 .HomepageMain {
   background:rgba(255,255,255,0.6);
   font-family: 'Medio', sans-serif;
@@ -621,11 +627,13 @@ li{
 
 /* ***Team*** */
 .team{
+  color: #507E5A;
   padding: 10px;
   background-color: rgba(255,255,255,0.7);
   border: 2px solid #156C28;
   margin: 50px;
 }
+
 
 .about-us-heading{
   background-color: rgb(115, 181, 145) ;
