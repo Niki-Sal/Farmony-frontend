@@ -10,7 +10,7 @@ const Team = () => {
                 </div>
                 <div className="one-bio">
                     <img className="bio-img" src="https://ca.slack-edge.com/T0351JZQ0-U01HBTGU8U9-97747d0de7b7-512" alt="NIkki photo"/>
-                    <p classname="bio-text"> Nikk is a software developer with a creative and analytical mind, she developed in previous roles as an architectural designer and energy analyst.<br/>
+                    <p classname="bio-text"> Nikki is a software developer with a creative and analytical mind, she developed in previous roles as an architectural designer and energy analyst.<br/>
 I am a progressive technologist who strives to be a better version of myself by constantly learning and improving.<br/>
 Strong time management and a detailed-oriented mind are my superpowers to maximize my impact and solve problems quickly and collaboratively.
  </p>
