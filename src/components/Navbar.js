@@ -11,9 +11,9 @@ const Navbar = (props) => {
                         <li>
                             <NavLink className="nav-link" exact to="/">Home</NavLink>
                         </li>
-                        <li>
+                        {/* <li>
                             <NavLink className="nav-link"  to="/about">About</NavLink>
-                        </li>
+                        </li> */}
                         <li>
                             <NavLink className="nav-link"  to='/gardens'>Gardens list</NavLink>
                         </li>
@@ -23,9 +23,9 @@ const Navbar = (props) => {
                          <li className="nav-item">
                             <NavLink className="nav-link"  to="/holistichub">Holistic Hub</NavLink>
                         </li>
-                        <li>
+                        {/* <li>
                             <NavLink className="nav-link"  to="/trade">Trade</NavLink>
-                        </li>
+                        </li> */}
                         <li>
                             <NavLink className="nav-link"  to="/buy">Buy</NavLink>
                         </li>

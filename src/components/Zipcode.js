@@ -2,9 +2,11 @@ import React from 'react';
 import { useState } from 'react'
 import GardenModel from '../models/garden'
 import { Link } from 'react-router-dom'
+
 const Zipcode = () => {
     const [zipcode, setZipcode] = useState('')
     const [gardens, setGardens] = useState([])
+
     const listOfGardens = gardens.map((gardenData, index) => {
         return (
             <div key={gardenData._id} className="gardenDisplayDiv">
@@ -16,6 +18,7 @@ const Zipcode = () => {
             </div>
         )
     })
+
     const entry = (e) => {
         setZipcode(e.target.value)
         console.log('====> from entry', zipcode)
@@ -33,6 +36,8 @@ const Zipcode = () => {
     //Did you mean <= 1?
     return (
         <div className="pageContainer">
+            
+
             <form onSubmit={handleSubmit} className="zip-form">
                 <input type="text" name="zip" placeholder="Enter zipcode to find farms near you." onChange={entry} className="form-controlHp" />
                 <button type="submit" id="zipButton">Search</button>

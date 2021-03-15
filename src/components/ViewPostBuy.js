@@ -13,8 +13,9 @@ const ViewPostBuy = (props) => {
     
 
     useEffect(async() => {
-        console.log(thisPostId)
+        
         const buyPosts = await BuyModel.all()
+
         let temppost = buyPosts.data.filter((eachPost) => {
             return thisPostId === eachPost._id
         })
@@ -50,7 +51,7 @@ const ViewPostBuy = (props) => {
       }
 
     const onFormSubmit = async(e) =>{
-        const newComment= {
+        const newComment= await {
             name: name,
             content: content,
             date: Date()
@@ -70,6 +71,8 @@ const ViewPostBuy = (props) => {
             <Link to='/buy'>&larr;Back to Buy Community Board</Link>
             <div className="view-post">
                 <h3>Post Title: {post.title}</h3>
+                <h5>By: {post.name}</h5>
+                <h5>{post.date}</h5>
                 <h5 className="no-margin">By: {post.name}</h5>
             </div>
             <p className="post-content">{post.content}</p>
@@ -83,14 +86,14 @@ const ViewPostBuy = (props) => {
                 <label htmlFor="content">Your Name</label>
                 <input type="text" id="content" value ={name} placeholder="your name" onChange={handleName} />
             
-                <label htmlFor="content">Post a comment</label>
+                <label htmlFor="content">Post a Comment</label>
                 <textarea 
                 onChange={handleCommentContent}
                 id="content" rows= '5' cols='80'
                 value={content}
                 placeholder="post a comment to this post">
                 </textarea> 
-                <button type="submit" >Post</button>
+                <button type="submit">Post</button>
             </form>
          
         </div>

@@ -14,7 +14,7 @@ const Team = () => {
                 </div>
                 <div className="one-bio">
                     <img className="bio-img" src="https://ca.slack-edge.com/T0351JZQ0-U01H6MDTMRB-f354f619620c-512" alt="Mocha photo"/>
-                    <p classname="bio-text"> </p>
+                    <p classname="bio-text">Mocha Brown is a full-stack web developer from Detroit, Michigan. Farmony falls right in line with one of her her life goals of connecting <br/> communities to affordable, healthy food. She is especially passionate about doing so for lower income households and folks living in poverty. <br/>As a creative, applications Mocha plans to build in the future center around community and art.</p>
                 </div>
             </div>
         </div>
