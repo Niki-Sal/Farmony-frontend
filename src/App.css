@@ -480,6 +480,8 @@ a {
 .communityButton {
   color: #156C28;
   padding: 10px;
+  width: 250px;
+  font-size: 15px;
   background-color: transparent;
   border: 2px solid #156C28;
 }
