@@ -11,9 +11,9 @@ const Navbar = (props) => {
                         <li>
                             <NavLink className="nav-link" exact to="/">Home</NavLink>
                         </li>
-                        <li>
-                            <NavLink className="nav-link"  to="/about">About</NavLink>
-                        </li>
+                        {/* <li> */}
+                            {/* <NavLink className="nav-link"  to="/about">About</NavLink>
+                        </li> */}
                         <li>
                             <NavLink className="nav-link"  to='/gardens'>Gardens list</NavLink>
                         </li>

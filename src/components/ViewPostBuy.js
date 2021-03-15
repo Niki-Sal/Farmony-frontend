@@ -74,7 +74,7 @@ const ViewPostBuy = (props) => {
                 <h5>By: {post.name}</h5>
                 <h5>{post.date}</h5>
                 <h5 className="no-margin">By: {post.name}</h5>
-            </div>
+            
             <p className="post-content">{post.content}</p>
             <div>
                 <h5 className="comment-title">Comments</h5>
@@ -95,7 +95,7 @@ const ViewPostBuy = (props) => {
                 </textarea> 
                 <button type="submit">Post</button>
             </form>
-         
+         </div>
         </div>
     );
 }

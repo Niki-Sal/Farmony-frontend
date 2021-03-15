@@ -388,11 +388,12 @@ a {
 .postDiv {
   position: relative;
   margin:10px;
+  margin-left: 75px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 1400px;
+  width: 1450px;
   text-align: center;
   padding: 20px;
   background-color: rgba(255,255,255,0.8);
@@ -484,7 +485,7 @@ a {
 }
 
 .postScroll {
-  width: 1500px;
+  width: 1560px;
   height: 300px;
   overflow: scroll;
 }
@@ -508,6 +509,18 @@ a {
 .boardDescrip {
   color:#156C28;
   text-align: center;
+}
+
+.view-post {
+  position: relative;
+  margin:5px;
+  margin-left: 75px;
+  width: 1450px;
+  text-align: center;
+  padding: 10px;
+  background-color: rgba(255,255,255,0.8);
+  border: 2px solid #156C28;
+  
 }
 /* login page styling */
 
@@ -830,8 +843,7 @@ p{
 .list-of-gardens{
   margin-top:100px;
   width: 1200px;
-  margin-left: 300px;
-  margin-right: 400px;
+  margin: auto;
 }
 .gardren-list-address{
   margin:50px;
