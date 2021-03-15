@@ -28,35 +28,48 @@ const GardenProfile = (props) => {
         return (
             <div>
                 <div className="garden-profile-heading">
-                <h1 className="garden-profile-name" key={gardenData._id}>{gardenData.name}</h1>
+                    <h1 className="garden-profile-name" key={gardenData._id}>{gardenData.name}</h1>
                 </div>
                 <div className="garden-profile">
-                    <div className="farm-profile"><img className="farm-profile-img" src={gardenData.image} alt="gardenpicture" /></div>
+                    <div className="garden-profile-img-addy">
+                    <div className="farm-profile-img-div"><img className="farm-profile-img" src={gardenData.image} alt="gardenpicture" /></div>
                     <div className="farm-profile-address">
                         <p>{gardenData.address} <br />
-                            {gardenData.state} {gardenData.zip}<br />
-                            <a href={gardenData.map}>Google map</a> </p>
-                    </div>
-                    <div className="garden-profile-info">
-                        <div className="garden-profile-about">
-                            <p>{gardenData.about}</p> </div>
-                        <div className="garden-profile-reviews">
-                            <p>{gardenData.review[0]}</p>
-                            <p>{gardenData.review[1]}</p>
-                            <p>{gardenData.review[2]}</p>
+                            {gardenData.city}, {gardenData.state} {gardenData.zip}<br /></p>
+                        <div clasName="map">
+                            <a href={gardenData.map} target="_blank">Directions</a>
                         </div>
                     </div>
                 </div>
+                <div className="garden-profile-info">
+                    <div className="garden-profile-about-heading">
+                        <h3>About {gardenData.name}</h3>
+                    </div>
+                    <div className="garden-profile-about">
+                        <p>{gardenData.about}</p> </div>
+                    {/* <div className="garden-profile-reviews"> */}
+                    <div className="garden-profile-reviews-heading">
+                        <h3>Reviews</h3>
+                    </div>
+                    <div className="review-1">
+                        <p>{gardenData.review[0]}</p></div>
+                    <div className="review-2">
+                        <p>{gardenData.review[1]}</p></div>
+                    <div className="review-3">
+                        <p>{gardenData.review[2]}</p></div>
+                </div>
+                </div> 
             </div>
+            
 
         )
     })
 
-    return (
-        <div>
-            {thisGarden}
-        </div>
-    )
+return (
+    <div>
+        {thisGarden}
+    </div>
+)
 }
 
 export default GardenProfile

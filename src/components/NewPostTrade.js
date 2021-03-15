@@ -58,6 +58,7 @@ const NewPostTrade = () => {
             TradeModel.create({
                 title,
                 name: currentUser.name,
+                date: Date(),
                 photo: currentUser.photo,
                 content: body,
                 postType,

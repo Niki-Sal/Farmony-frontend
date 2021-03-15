@@ -15,7 +15,7 @@ import Footer from './components/Footer';
 import Login from './components/Login';
 import Navbar from './components/Navbar';
 import Profile from './components/Profile';
-import Welcome from './components/Welcome';
+// import Welcome from './components/Welcome';
 import Home from './components/Home';
 import Holistic from './components/Holistic'
 import Trade from './components/Trade'
@@ -76,12 +76,11 @@ function App() {
             render={(props) => <Login {...props} nowCurrentUser={nowCurrentUser} setIsAuthenticated={setIsAuthenticated} user={currentUser}/>}
           />
           <PrivateRoute path="/profile" component={Profile} user={currentUser} handleLogout={handleLogout} />
-          <Route exact path="/" component={Welcome} />
-          
+          {/* <Route exact path="/" component={Welcome} /> */}
+          <Route path="/about" component={About} />
           <Route path="/holistichub" component={Holistic} />
           <Route exact path='/buy' component={Buy} />
           <Route path="/trade" component={Trade} />
-
         </Switch>
       </div>
       {routes}

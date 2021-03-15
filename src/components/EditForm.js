@@ -64,7 +64,7 @@ const EditForm = (props) => {
                 value={aboutme}
                 placeholder="tell us about yourself">
                 </textarea>
-                 <button type="submit" >submit</button>
+                 <button type="submit" className="edit-form">submit</button>
                 
             </form>
         </div>
