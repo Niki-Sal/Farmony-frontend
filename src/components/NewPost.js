@@ -60,14 +60,14 @@ const NewPost = () => {
             <h1 className="post-title">Post a new thread</h1>
                 <form  className="post-form" onSubmit={onFormSubmit}>
                     <label>
-                        Post Title: 
+                        <p>Post Title: </p>
                         <input type="text" name="postTitle" value={title} onChange={handleTitle}></input>
                     </label><br />
                     <label>
                     <textarea type="text" rows= '5' cols='80' name="body" value={body} onChange={handleBody}></textarea>
                     </label><br/>
                     <label>
-                        Category:
+                        <p>Category: </p>
                         <select value={category} onChange={handleCategory}>
                         <option value="Select">Select</option>
                         <option value="Trade">Trade</option>
@@ -76,7 +76,7 @@ const NewPost = () => {
                         <option value="Holistic Hub">Holistic Hub</option>
                         </select>
                     
-                        <input type="submit" value="Submit"></input>
+                        <input className="new-post-submit" type="submit" value="Submit"></input>
                     </label>
                 </form>
         </div>

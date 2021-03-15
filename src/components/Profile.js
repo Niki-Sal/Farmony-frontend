@@ -51,11 +51,11 @@ const Profile = (props) => {
                 </div>
                 <div className="about-container"> 
                     <div>
-                        <h4>About ME</h4>
+                        <h4 className="about-me-heading">About {name}</h4>
                         <p className="about">{about}</p>
                     </div>
                     <EditForm />
-                    <Link to={`/previewprofile/${user.id}`} >Profile Preview</Link>
+                    <Link to={`/previewprofile/${user.id}`} className="preview-profile">Profile Preview</Link>
                 </div>
 
             </div>

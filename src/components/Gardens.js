@@ -19,7 +19,7 @@ const Gardens = () => {
                 <div className="garden-list-address">
                 <h3 className="ind-garden-heading" key={gardenData._id}>{gardenData.name}</h3> 
                 <p>{gardenData.address} <br />{gardenData.city}, {gardenData.state} {gardenData.zip}</p></div>
-               <div className="ind-garden-profile"> <Link to={`/gardenprofile/${gardenData._id}`}>View Garden Profile</Link></div>
+               <div className="ind-garden-profile"> <Link to={`/gardenprofile/${gardenData._id}`}><p className="viewGardButton">View Garden Profile</p></Link></div>
             </div>
         )
     })

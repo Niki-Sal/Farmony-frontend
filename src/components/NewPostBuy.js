@@ -73,7 +73,7 @@ const NewPostBuy = () => {
                     <textarea type="text" rows= '5' cols='80' name="body" value={body} onChange={handleBody}></textarea>
                     </label><br/>
                     <label>
-                        Category:
+                        <p>Category:</p>
                         <select value={category} onChange={handleCategory}>
                         <option value="Select">Select</option>
                         <option value="Trade">Trade</option>
@@ -81,13 +81,13 @@ const NewPostBuy = () => {
                         <option value="Volunteer">Volunteer</option>
                         <option value="Trade Hub">Holistic Hub</option>
                         </select>
-                        Post Type: 
+                        <p>Post Type:</p> 
                         <select value={postType} onChange={handlePostType}>
                         <option value="Select">Select</option>
                         <option value="Seeking">Buying</option>
                         <option value="Sharing">Selling</option>
                         </select>
-                        <input type="submit" value="Submit"></input>
+                        <input className="new-post-submit" type="submit" value="Submit"></input>
                     </label>
                 </form>
         </div>
