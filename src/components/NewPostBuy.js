@@ -67,7 +67,7 @@ const NewPostBuy = () => {
                 <form  className="post-form" onSubmit={onFormSubmit}>
                     <label>
                         Post Title: 
-                        <input type="text" name="postTitle" value={title} onChange={handleTitle}></input>
+                        <input className="newPostContainer1" type="text" name="postTitle" value={title} onChange={handleTitle}></input>
                     </label><br />
                     <label>
                     <textarea type="text" rows= '5' cols='80' name="body" value={body} onChange={handleBody}></textarea>
