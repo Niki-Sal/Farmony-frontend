@@ -79,13 +79,13 @@ const NewPostBuy = () => {
                         <option value="Trade">Trade</option>
                         <option value="Buy">Buy</option>
                         <option value="Volunteer">Volunteer</option>
-                        <option value="Trade Hub">Holistic Hub</option>
+                        <option value="Holistic Hub">Holistic Hub</option>
                         </select>
                         <p>Post Type:</p> 
                         <select value={postType} onChange={handlePostType}>
                         <option value="Select">Select</option>
-                        <option value="Seeking">Buying</option>
-                        <option value="Sharing">Selling</option>
+                        <option value="Buying">Buying</option>
+                        <option value="Selling">Selling</option>
                         </select>
                         <input className="new-post-submit" type="submit" value="Submit"></input>
                     </label>
