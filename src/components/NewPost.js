@@ -75,12 +75,7 @@ const NewPost = () => {
                         <option value="Volunteer">Volunteer</option>
                         <option value="Holistic Hub">Holistic Hub</option>
                         </select>
-                        Post Type: 
-                        <select value={postType} onChange={handlePostType}>
-                        <option value="Select">Select</option>
-                        <option value="Seeking">Buying</option>
-                        <option value="Sharing">Selling</option>
-                        </select>
+                    
                         <input type="submit" value="Submit"></input>
                     </label>
                 </form>
