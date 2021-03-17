@@ -11,6 +11,8 @@ const Profile = (props) => {
    let currentTime = Date.now();
     const [ about, setAbout] = useState('')
     const [ photo, setPhoto] = useState('')
+
+    ///////////
     const getAbout = async() =>{
         let newAbout = ''
         const result = await UserModel.oneUser(id)
