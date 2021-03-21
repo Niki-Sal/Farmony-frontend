@@ -58,7 +58,7 @@ const CreateImage = (props) => {
         console.log('submit')
         let form_data = new FormData();
         form_data.append('image', photoo, 'image');
-        axios.post('http://localhost:8000/images', form_data, {
+        axios.post('http://localhost:8000/api/images', form_data, {
             headers: {
             'content-type': 'multipart/form-data'
             }
