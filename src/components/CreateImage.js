@@ -75,6 +75,8 @@ const CreateImage = (props) => {
 
       
         const [ photo, setPhoto] = useState('')
+
+        /////////////////////
         const getPhoto = async() =>{
             let newPhoto = ''
             const result = await UserModel.oneUser(id)

@@ -388,11 +388,12 @@ a {
 .postDiv {
   position: relative;
   margin:10px;
+  margin-left: 75px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 1400px;
+  width: 1450px;
   text-align: center;
   padding: 20px;
   background-color: rgba(255,255,255,0.8);
@@ -467,7 +468,6 @@ a {
   color: white;
   font-family: 'Elisabeth Clara', sans-serif;
   font-size: 60px;
-  margin-top: 0px;
 }
 
 .postContainer{
@@ -485,8 +485,7 @@ a {
 }
 
 .postScroll {
-  /* width: 1500px; */
-  margin: 50px;
+  width: 1560px;
   height: 300px;
   overflow: scroll;
 }
@@ -510,6 +509,18 @@ a {
 .boardDescrip {
   color:#156C28;
   text-align: center;
+}
+
+.view-post {
+  position: relative;
+  margin:5px;
+  margin-left: 75px;
+  width: 1450px;
+  text-align: center;
+  padding: 10px;
+  background-color: rgba(255,255,255,0.8);
+  border: 2px solid #156C28;
+  
 }
 /* login page styling */
 
@@ -831,8 +842,8 @@ p{
 }
 .list-of-gardens{
   margin-top:100px;
-  margin-left: 300px;
-  margin-right: 300px;
+  width: 1200px;
+  margin: auto;
 }
 .gardren-list-address{
   margin:50px;

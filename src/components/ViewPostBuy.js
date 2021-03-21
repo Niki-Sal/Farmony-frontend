@@ -19,12 +19,14 @@ const ViewPostBuy = (props) => {
         let temppost = buyPosts.data.filter((eachPost) => {
             return thisPostId === eachPost._id
         })
+        //////////////result is an array
         setPost(temppost[0])
         console.log(temppost[0])
+        //assign to a state
         setComments(temppost[0].comment)
         console.log(temppost[0].comment)
     }, []);
- 
+    //////map through that assigned state
     const thisPostComments = comments.map((comment)=>{
         return(
         <div className="comments">
