@@ -268,7 +268,6 @@ body{
 .review-1{
   background:rgba(215, 238, 214); 
   width: 800px;
-  font-family: 'Josefin Slab', sans-serif;
   letter-spacing: 1.5px;
   width: 700px;
   padding: 20px;
@@ -283,7 +282,6 @@ body{
 .review-2{
   background:rgba(215, 238, 214); 
   width: 800px;
-  font-family: 'Josefin Slab', sans-serif;
   letter-spacing: 1.5px;
   width: 700px;
   padding: 20px;
@@ -297,7 +295,6 @@ body{
 .review-3{
   background:rgba(215, 238, 214); 
   width: 800px;
-  font-family: 'Josefin Slab', sans-serif;
   letter-spacing: 1.5px;
   width: 700px;
   padding: 20px;
@@ -311,6 +308,7 @@ body{
 .farm-profile-address{
   margin-top: 100px;
   margin-left:170px;
+  padding: 10px;
   font-family: 'Beauty Club', sans-serif; 
   font-size: 20px;
   display: flex;
@@ -798,167 +796,4 @@ li{
   justify-content: flex-start;
   align-items: center;
 }
-
-/* garden profile styling */
-.garden-profile{
-  background:rgba(255,255,255,0.6);
-  font-family: 'Medio', sans-serif;
-  display: flex;
-  flex-direction:row;
-  justify-content: space-between;
-}
-
-.garden-profile-heading{
-  background-color: rgb(115, 181, 145) ;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  height: 100px;
-}
-.garden-profile-name{
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  color: white;
-  font-family: 'Elisabeth Clara', sans-serif;
-  font-size: 60px;
-}
-.farm-profile-img-div {
-  position: relative;
-  width: 500px;
-  height: 500px;
-  overflow: hidden;
-  border-radius: 50%;
-  margin-bottom: 50px;
-  margin-top: 150px;
-}
-.farm-profile-img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
- .garden-profile-info{
- margin: 100px 100px 100px 0px;
- }
-.garden-profile-about-heading{
-  font-family: 'Elisabeth Clara', sans-serif;
-  font-size: 24px;
-}
-.garden-profile-about{
-  background:rgba(215, 238, 214); 
-  width: 800px;
-  letter-spacing: 1.5px;
-  width: 700px;
-  padding: 20px;
-  font-weight: bold;
-  margin:20px;
-  font-family: 'Beauty Club', sans-serif;
-  font-size: 16px;
-  border: solid black;
-}
-.garden-profile-reviews-heading{
-  font-family: 'Elisabeth Clara', sans-serif;
-  font-size: 24px;
-}
-.review-1{
-  background:rgba(215, 238, 214); 
-  font-family: 'Josefin Slab', sans-serif;
-  letter-spacing: 1.5px;
-  padding: 20px;
-  margin: 20px;
-  font-weight: bold;
-  font-family: 'Beauty Club', sans-serif;
-  border: solid black;
-  font-size: 16px;
-}
-.review-2{
-  background:rgba(215, 238, 214);
-  font-family: 'Josefin Slab', sans-serif;
-  letter-spacing: 1.5px;
-  padding: 20px;
- font-weight: bold;
-  margin: 20px;
-  font-family: 'Beauty Club', sans-serif;
-  border: solid black;
-  font-size: 16px;
-}
-.review-3{
-  background:rgba(215, 238, 214);
-  font-family: 'Josefin Slab', sans-serif;
-  letter-spacing: 1.5px;
-  padding: 20px;
- font-weight: bold;
-  margin: 20px;
-  font-family: 'Beauty Club', sans-serif;
-  border: solid black;
-  font-size: 16px;
-}
-.farm-profile-address{
-
-  font-family: 'Beauty Club', sans-serif; 
-  font-size: 18px;
-  display: flex;
-  flex-direction:row;
-  justify-content: space-between;
-}
-
-/* garden page styling */
-.garden-list-heading{
-  background-color: rgb(115, 181, 145) ;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  height: 100px;
-}
-.garden-list{
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  color: white;
-  font-family: 'Elisabeth Clara', sans-serif;
-  font-size: 60px;
-}
-.ind-garden-heading{
-  font-family: 'Elisabeth Clara', sans-serif;
-  font-size: 24px;
-}
-.ind-garden{
-  background:rgba(255,255,255,0.6);
-  border: solid black;
-  margin: 15px;
-  display: flex;
-  flex-direction:row;
-  justify-content: space-between;
-  align-items: center;
-}
-.ind-garden-profile{
-  margin-right:80px;
-}
-.garden-list-img-div{
-  position: relative;
-            width: 200px;
-            height: 200px;
-            overflow: hidden;
-            border-radius: 50%;
-            margin-left: 140px;
-            margin-bottom: 50px;
-            margin-top: 50px;
-}
-.garden-list-img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-p{
-  font-family: 'Beauty Club', sans-serif; 
-}
-.list-of-gardens{
-  margin-top:100px;
-  width: 1200px;
-  margin: auto;
-}
-.gardren-list-address{
-  margin:50px;
-}
-
 
