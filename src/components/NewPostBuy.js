@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'
 import BuyModel from '../models/buy'
 import jwt_decode from 'jwt-decode';
 import setAuthToken from '../utils/setAuthToken';
@@ -40,13 +41,13 @@ const NewPostBuy = () => {
         console.log('***** post type', postType)
     }
     const onFormSubmit = (e) => {
-        e.preventDefault()
+        // e.preventDefault()
         console.log(title, body, category, currentUser.name, postType)
         // if (title || body || category|| postType === '') {
         //     alert('Must fill out all fields.')
         // }
         if (category !== 'Select' && postType !== 'Select') {
-            alert('Post Submited! :)')
+            // alert('Post Submited! :)')
             BuyModel.create({
                 title,
                 name: currentUser.name,
@@ -62,31 +63,31 @@ const NewPostBuy = () => {
     }
     return (
         <div>
-            <h1 className="buy">Buy</h1>
-                <form onSubmit={onFormSubmit}>
+            <h1 className="post-title">Post a new thread</h1>
+                <form  className="post-form" onSubmit={onFormSubmit}>
                     <label>
-                        Post Title: 
-                        <input type="text" name="postTitle" value={title} onChange={handleTitle}></input>
+                        <p>Post Title: </p>
+                        <input className="newPostContainer1" type="text" name="postTitle" value={title} onChange={handleTitle}></input>
                     </label><br />
-                    <label>Body: 
-                    <input type="text" name="body" value={body} onChange={handleBody}></input>
+                    <label>
+                    <textarea type="text" rows= '5' cols='80' name="body" value={body} onChange={handleBody}></textarea>
                     </label><br/>
                     <label>
-                        Category:
+                        <p>Category:</p>
                         <select value={category} onChange={handleCategory}>
                         <option value="Select">Select</option>
                         <option value="Trade">Trade</option>
                         <option value="Buy">Buy</option>
                         <option value="Volunteer">Volunteer</option>
-                        <option value="Trade Hub">Trade Hub</option>
+                        <option value="Trade Hub">Holistic Hub</option>
                         </select>
-                        Post Type: 
+                        <p>Post Type: </p>
                         <select value={postType} onChange={handlePostType}>
                         <option value="Select">Select</option>
                         <option value="Seeking">Buying</option>
                         <option value="Sharing">Selling</option>
                         </select>
-                        <input type="submit" value="Submit"></input>
+                        <input className="new-post-submit" type="submit" value="Submit"></input>
                     </label>
                 </form>
         </div>

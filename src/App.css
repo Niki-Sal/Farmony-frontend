@@ -143,16 +143,6 @@ body{
   border: 2px solid #156C28;
 }
 
-/* ***Garden Profile styling*** */
-.garden-profile{
-  background:rgba(255,255,255,0.6);
-  font-family: 'Medio', sans-serif;
-  display: flex;
-  flex-direction:row;
-  justify-content: space-between;
-   
-}
-
 .garden-img-div {
   position: relative; 
   width: 300px;
@@ -172,6 +162,17 @@ body{
   margin-top: 50px;
   
 }
+/* ***Garden Profile styling*** */
+.garden-profile{
+  background:rgba(255,255,255,0.6);
+  font-family: 'Medio', sans-serif;
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+   
+}
+
+
 
 .garden-profile-heading{
   background-color: rgb(115, 181, 145) ;
