@@ -10,7 +10,7 @@ import ViewPostBuy from '../components/ViewPostBuy'
 import ViewPostTrade from '../components/ViewPostTrade'
 import NewPostTrade from '../components/NewPostTrade'
 import OtherProfiles from '../components/OtherProfiles'
-import ViewPostVolunteer from '../components/NewPostVolunteer'
+import ViewPostVolunteer from '../components/ViewPostVolunteer'
 import NewPostVolunteer from '../components/NewPostVolunteer'
 import Volunteer from '../components/Volunteer'
 
@@ -24,13 +24,13 @@ export default(
         <Route exact path='/newpostbuy' component={ NewPostBuy } />
         <Route exact path='/editform' component={ EditForm } />
         <Route exact path='/post/:id' component={ ViewPost } />
-        <Route exact path='/viewpost' component={ ViewPost } />
-        <Route exact path='/viewpostbuy' component={ ViewPostBuy } />
+        <Route exact path='/viewpost/:id' component={ ViewPost } />
+        <Route exact path='/viewpostbuy/:id' component={ ViewPostBuy } />
         <Route exact path='/viewposttrade/:id' component={ ViewPostTrade } />
         <Route exact path='/viewposttrade' component={ ViewPostTrade } />
         <Route exact path='/newposttrade' component={ NewPostTrade } />
         <Route exact path='/gardenprofile/:id'  component={GardenProfile} />
-        <Route exact path='/viewpostvolunteer'  component={ViewPostVolunteer}/>
+        <Route exact path='/viewpostvolunteer/:id'  component={ViewPostVolunteer}/>
         <Route exact path='/newpostvolunteer'  component={NewPostVolunteer}/>
         <Route exact path='/previewprofile/:id'  component={OtherProfiles} />
         <Route exact path='/volunteer' component={Volunteer} />

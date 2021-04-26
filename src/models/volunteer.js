@@ -1,6 +1,6 @@
 import axios from 'axios'
-
-const endPoint = 'http://localhost:8000/api/volunteer'
+const { REACT_APP_SERVER_URL } = process.env;
+const endPoint = `${REACT_APP_SERVER_URL}/volunteer`
 
 
 
@@ -16,6 +16,14 @@ class VolunteerModel {
     }
     static delete = (post) =>{
         let request = axios.delete(`${endPoint}/${post._id}` )
+        return request
+    }
+    static find = (post) =>{
+        let request = axios.find(`${endPoint}/${post._id}` )
+        return request
+    }
+    static update = (postId, updatedPostObject) =>{
+        let request = axios.put(`${endPoint}/${postId}`, updatedPostObject)
         return request
     }
 }

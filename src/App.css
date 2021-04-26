@@ -27,7 +27,126 @@ body{
 
 .HomepageMain {
   background:rgba(255,255,255,0.6);
-  font-family: 'Medio', sans-serif;
+  font-family: 'Beauty Club', sans-serif;
+  display: block;
+  position: relative;
+  margin: 15px auto;
+  padding: 15px;
+  height: auto;
+  width: 1200px;
+}
+
+.welcomeComp {
+  background-color: rgba(115, 181, 145);
+}
+
+.aboutFarmony {
+  position: relative;
+  text-align: center;
+  letter-spacing: 1px;
+  color:#D7EED6;
+  margin: 0 auto;
+  font-size: 28px;
+  top: 140px;
+}
+
+#aboutFarmony2 {
+  color: #507E5A;
+  margin-bottom: -200px;
+}
+
+.topDivHP {
+  height: 200px;
+  width: 1100px;
+  background-color:rgba(115, 181, 145);
+  margin: auto;
+
+}
+
+.bottomDivHP {
+  height: 200px;
+  width: 1100px;
+  background-color: #D7EED6;
+  margin: auto;
+  
+}
+
+.triangleDivHpR {
+  position: relative;
+  width: 0;
+  height: 0;
+  left: 585px;
+  border-top: 100px solid #D7EED6;
+  border-right: 550px solid transparent;
+  
+}
+
+.triangleDivHpL {
+  position: relative;
+  display: inline;
+  right: -35px;
+  width: 0;
+  height: 0;
+  border-top: 100px solid #D7EED6;
+  border-left: 550px solid transparent;
+  
+}
+
+.zipFormDiv {
+  position: relative;
+  width: 900px;
+  height: 10px;
+  left: 0px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+/* ***Zip Form styling*** */
+
+.zip-form {
+  position: relative;
+  width: 900px;
+  left: 0px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.form-controlHp {
+  font-size: 30px;
+  color: #156C28;
+  text-align: center;
+  height: 40px;
+  width: 750px;
+}
+
+#zipButton {
+  position: relative;
+  color: #156C28;
+  width: 100px;
+  left: 10px;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: rgba(115, 181, 145, .4);
+  border: 2px solid #156C28;
+}
+
+.gardenDisplayDiv {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 30px;
+  background-color: rgba(255,255,255,0.8);
+  border: 2px solid #156C28;
+  font-size: 40px;
+}
+
+.HomepageMain {
+  background:rgba(255,255,255,0.6);
+  font-family: 'Beauty Club', sans-serif;
   display: block;
   position: relative;
   margin: 15px auto;
@@ -143,29 +262,50 @@ body{
   border: 2px solid #156C28;
 }
 
+/* ***Garden Profile styling*** */
 .garden-img-div {
-  position: relative; 
-  width: 300px;
-  height: 300px;
+  display: inline-block;
+  position: relative;
+  text-align: center; 
+  width: 200px;
+  height: 200px;
   overflow: hidden;
   border-radius: 50%;
-  margin-left: 140px;
-  margin-bottom: 100px;
-  
-  
+  margin: 0 auto;
+  border: 4px double #156C28;
+
+}
+
+.gardenDisplayP {
+  display: inline-block;
 }
 
 .garden-img {
   width: 100%;
   height: 100%;
+  object-fit: cover;  
+}
+a {
+  text-decoration: none;
+  color: #156C28;
+}
+.gardenDisplayLink {
+  position: relative;
+  display: inline-block;
+  color: #156C28;
+  width: 200px;
+  left: 10px;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: transparent;
+  border: 2px solid #156C28;
   object-fit: cover;
-  margin-top: 50px;
   
 }
 /* ***Garden Profile styling*** */
 .garden-profile{
   background:rgba(255,255,255,0.6);
-  font-family: 'Medio', sans-serif;
+  font-family: 'Beauty Club', sans-serif;
   display: flex;
   flex-direction:row;
   justify-content: space-between;
@@ -246,7 +386,6 @@ body{
 .review-1{
   background:rgba(215, 238, 214); 
   width: 800px;
-  font-family: 'Josefin Slab', sans-serif;
   letter-spacing: 1.5px;
   width: 700px;
   padding: 20px;
@@ -261,7 +400,6 @@ body{
 .review-2{
   background:rgba(215, 238, 214); 
   width: 800px;
-  font-family: 'Josefin Slab', sans-serif;
   letter-spacing: 1.5px;
   width: 700px;
   padding: 20px;
@@ -275,7 +413,6 @@ body{
 .review-3{
   background:rgba(215, 238, 214); 
   width: 800px;
-  font-family: 'Josefin Slab', sans-serif;
   letter-spacing: 1.5px;
   width: 700px;
   padding: 20px;
@@ -285,7 +422,13 @@ body{
   font-size: 20px;
   border: solid darkslategray;
 }
-
+.garden-left{
+  display: flex;
+  flex-direction:column;
+  justify-content: space-around;
+  align-items:  center;
+  margin-left: 100px;
+}
 .farm-profile-address{
   margin-top: 100px;
   margin-left:170px;
@@ -366,7 +509,7 @@ a{
 }
 
 #aboutme{
-  font-family: 'Medio', sans-serif;
+  font-family: 'Beauty Club', sans-serif;
 }
 .profile-container {
   display: flex;
@@ -386,10 +529,10 @@ a{
   border: solid black 2px;
   padding: 20px;
   background:rgba(255,255,255,0.6);
-  font-family: 'Medio', sans-serif;
+  font-family: 'Beauty Club', sans-serif;
 }
  .edit-form{
-  font-family: 'Medio', sans-serif;
+  font-family: 'Beauty Club', sans-serif;
   background-color: rgba(115, 181, 145, .4);
   color: #156C28;
  }
@@ -479,7 +622,7 @@ a{
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 1400px;
+  width: 1450px;
   text-align: center;
   padding: 20px;
   background-color: rgba(255,255,255,0.8);
@@ -577,8 +720,7 @@ a{
 .postContainer{
   padding: 20px;
   background:rgba(255,255,255,0.6);
-  font-family: 'Medio', sans-serif;
-  
+  font-family: 'Beauty Club', sans-serif;
 }
 
 .communityButton {
@@ -757,7 +899,7 @@ li{
 }
 .about-homepage{
   background:rgba(255,255,255,0.6);
-  font-family: 'Medio', sans-serif;
+  font-family: 'Beauty Club', sans-serif;
   margin: 50px;
   border: solid black 2px;
   padding: 20px;
@@ -784,7 +926,7 @@ li{
 /* garden profile styling */
 .garden-profile{
   background:rgba(255,255,255,0.6);
-  font-family: 'Medio', sans-serif;
+  font-family: 'Beauty Club', sans-serif;
   display: flex;
   flex-direction:row;
   justify-content: space-between;
@@ -844,7 +986,6 @@ li{
 }
 .review-1{
   background:rgba(215, 238, 214); 
-  font-family: 'Josefin Slab', sans-serif;
   letter-spacing: 1.5px;
   padding: 20px;
   margin: 20px;
@@ -855,7 +996,6 @@ li{
 }
 .review-2{
   background:rgba(215, 238, 214);
-  font-family: 'Josefin Slab', sans-serif;
   letter-spacing: 1.5px;
   padding: 20px;
  font-weight: bold;
@@ -866,7 +1006,6 @@ li{
 }
 .review-3{
   background:rgba(215, 238, 214);
-  font-family: 'Josefin Slab', sans-serif;
   letter-spacing: 1.5px;
   padding: 20px;
  font-weight: bold;
@@ -937,8 +1076,7 @@ p{
 .list-of-gardens{
   margin-top:100px;
   width: 1200px;
-  margin-left: 300px;
-  margin-right: 400px;
+  margin: auto;
 }
 .gardren-list-address{
   margin:50px;

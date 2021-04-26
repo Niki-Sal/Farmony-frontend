@@ -11,6 +11,8 @@ const Profile = (props) => {
    let currentTime = Date.now();
     const [ about, setAbout] = useState('')
     const [ photo, setPhoto] = useState('')
+
+    /////////////////
     const getAbout = async() =>{
         let newAbout = ''
         const result = await UserModel.oneUser(id)
@@ -28,6 +30,7 @@ const Profile = (props) => {
    (<div className="profile-info">
        <div className="name-farmer">
         <p>Name | {name}</p>
+        
         {farmer ? <img className = "badge-pic" src="https://i.imgur.com/G9tBFn9.png" alt="farmer-badge"/> : ""}
        </div>
        <p>Email | {email}</p>

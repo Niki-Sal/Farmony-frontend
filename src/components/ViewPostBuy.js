@@ -19,12 +19,14 @@ const ViewPostBuy = (props) => {
         let temppost = buyPosts.data.filter((eachPost) => {
             return thisPostId === eachPost._id
         })
+        //////////////result is an array
         setPost(temppost[0])
         console.log(temppost[0])
+        //assign to a state
         setComments(temppost[0].comment)
         console.log(temppost[0].comment)
     }, []);
- 
+    //////map through that assigned state
     const thisPostComments = comments.map((comment)=>{
         return(
         <div className="comments">
@@ -74,7 +76,7 @@ const ViewPostBuy = (props) => {
                 <h5>By: {post.name}</h5>
                 <h5>{post.date}</h5>
                 <h5 className="no-margin">By: {post.name}</h5>
-            
+            </div>
             <p className="post-content">{post.content}</p>
             <div>
                 <h5 className="comment-title">Comments</h5>
@@ -95,7 +97,7 @@ const ViewPostBuy = (props) => {
                 </textarea> 
                 <button type="submit">Post</button>
             </form>
-         </div>
+         
         </div>
     );
 }

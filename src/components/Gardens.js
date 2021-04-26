@@ -2,10 +2,6 @@ import React from 'react';
 import { useState, useEffect } from 'react'
 import GardenModel from '../models/garden'
 import {Link} from 'react-router-dom'
-
-
-
-
 const Gardens = () => {
     const [gardens, setGardens] = useState([])
     useEffect(()=>{
@@ -27,8 +23,6 @@ const Gardens = () => {
             </div>
         )
     })
-
-  
     return (
         <div>
             <div className="garden-list-heading">
@@ -40,5 +34,4 @@ const Gardens = () => {
         </div>
     );
 }
-
 export default Gardens;
