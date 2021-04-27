@@ -64,7 +64,7 @@ const NewPost = () => {
                         <input type="text" name="postTitle" value={title} onChange={handleTitle}></input>
                     </label><br />
                     <label>
-                    <textarea type="text" rows= '5' cols='80' name="body" value={body} onChange={handleBody}></textarea>
+                    <textarea type="text" rows= '5' cols='150' name="body" value={body} onChange={handleBody}></textarea>
                     </label><br/>
                     <label>
                         Category:
