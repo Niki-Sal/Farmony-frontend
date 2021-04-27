@@ -64,7 +64,11 @@ const NewPost = () => {
                         <input type="text" name="postTitle" value={title} onChange={handleTitle}></input>
                     </label><br />
                     <label>
+<<<<<<< HEAD
                     <textarea type="text" rows= '5' cols='150' name="body" value={body} onChange={handleBody}></textarea>
+=======
+                    <textarea type="text" rows= '5' cols='80' name="body" value={body} onChange={handleBody}></textarea>
+>>>>>>> 0d8b7c6fde02434ebbecbe7615fc9de6422b5fc1
                     </label><br/>
                     <label>
                         Category:
@@ -75,12 +79,16 @@ const NewPost = () => {
                         <option value="Volunteer">Volunteer</option>
                         <option value="Holistic Hub">Holistic Hub</option>
                         </select>
+<<<<<<< HEAD
                         Post Type: 
                         <select value={postType} onChange={handlePostType}>
                         <option value="Select">Select</option>
                         <option value="Seeking">Buying</option>
                         <option value="Sharing">Selling</option>
                         </select>
+=======
+                    
+>>>>>>> 0d8b7c6fde02434ebbecbe7615fc9de6422b5fc1
                         <input type="submit" value="Submit"></input>
                     </label>
                 </form>

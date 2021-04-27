@@ -1,6 +1,11 @@
 import axios from 'axios'
-const endPoint = 'http://localhost:8000/api/holistic'
-class HolisticModel {
+
+const endPoint = 'http://localhost:8000/api/posts'
+
+
+
+class PostModel {
+    
     static all = () => {
         let request = axios.get(endPoint)
         return request
@@ -10,16 +15,18 @@ class HolisticModel {
         return request
     }
     static delete = (post) =>{
-        let request = axios.delete(`${endPoint}/${post._id}`  )
+        let request = axios.delete( )
         return request
     }
-    static find = (post) =>{
-        let request = axios.find(`${endPoint}/${post._id}` )
+    static show = (post) => {
+        let request = axios.show(`${endPoint}/${post._id}`)
         return request
     }
     static update = (postId, updatedPostObject) =>{
-        let request = axios.put(`${endPoint}/${postId}`, updatedPostObject)
+        let request = axios.put(`${endPoint}/${postId}`, updatedPostObject )
         return request
     }
+    
 }
-export default HolisticModel;
+
+export default PostModel;

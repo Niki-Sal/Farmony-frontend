@@ -45,17 +45,13 @@ body{
   letter-spacing: 1px;
   color:#D7EED6;
   margin: 0 auto;
-  font-size: 18px;
+  font-size: 28px;
   top: 140px;
-  text-align: justify;
-  text-justify: inter-word;
 }
 
 #aboutFarmony2 {
-  color: #D7EED6;
+  color: #507E5A;
   margin-bottom: -200px;
-  text-align: justify;
-  text-justify: inter-word;
 }
 
 .topDivHP {
@@ -67,7 +63,7 @@ body{
 }
 
 .bottomDivHP {
-  height: 40px;
+  height: 200px;
   width: 1100px;
   background-color: #D7EED6;
   margin: auto;
@@ -397,7 +393,7 @@ a {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 1220px;
+  width: 1450px;
   text-align: center;
   padding: 20px;
   background-color: rgba(255,255,255,0.8);

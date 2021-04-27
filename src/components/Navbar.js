@@ -11,8 +11,13 @@ const Navbar = (props) => {
                         <li>
                             <NavLink className="nav-link" exact to="/">Home</NavLink>
                         </li>
+<<<<<<< HEAD
                         {/* <li>
                             <NavLink className="nav-link"  to="/about">About</NavLink>
+=======
+                        {/* <li> */}
+                            {/* <NavLink className="nav-link"  to="/about">About</NavLink>
+>>>>>>> 0d8b7c6fde02434ebbecbe7615fc9de6422b5fc1
                         </li> */}
                         <li>
                             <NavLink className="nav-link"  to='/gardens'>Gardens list</NavLink>
@@ -23,9 +28,15 @@ const Navbar = (props) => {
                          <li className="nav-item">
                             <NavLink className="nav-link"  to="/holistichub">Holistic Hub</NavLink>
                         </li>
+<<<<<<< HEAD
                         {/* <li>
                             <NavLink className="nav-link"  to="/trade">Trade</NavLink>
                         </li> */}
+=======
+                        <li>
+                            {/* <NavLink className="nav-link"  to="/trade">Trade</NavLink> */}
+                        </li>
+>>>>>>> 0d8b7c6fde02434ebbecbe7615fc9de6422b5fc1
                         <li>
                             <NavLink className="nav-link"  to="/buy">Buy</NavLink>
                         </li>
