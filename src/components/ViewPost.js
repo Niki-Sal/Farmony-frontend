@@ -56,11 +56,7 @@ const ViewPost = (props) => {
         <div className="view-post">
             <h3>Post Title: {post.title}</h3>
             <h5 className="no-margin">By: {post.name}</h5>
-<<<<<<< HEAD
-        </div>
-=======
         
->>>>>>> 0d8b7c6fde02434ebbecbe7615fc9de6422b5fc1
         <p className="post-content">{post.content}</p>
         <div>
             <h5 className="comment-title">Comments</h5>
@@ -78,10 +74,7 @@ const ViewPost = (props) => {
             </textarea> 
             <button type="submit" >Post</button>
         </form>
-<<<<<<< HEAD
-=======
         </div>
->>>>>>> 0d8b7c6fde02434ebbecbe7615fc9de6422b5fc1
     </div>
     );
 }
