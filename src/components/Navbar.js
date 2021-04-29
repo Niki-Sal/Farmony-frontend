@@ -4,52 +4,49 @@ import { NavLink } from 'react-router-dom';
 const Navbar = (props) => {
     return (
         <nav>
-            <div className="container">
-             
-                {/* <div className="collapse navbar-collapse" id="navbarsExample07"> */}
-                    <ul>
+            <div className="nav-container">
+                    <ul className = "navbar">
                         <li>
-                            <NavLink className="nav-link" exact to="/">Home</NavLink>
+                            <NavLink exact to="/"><h1 className="nav-header">FARMONY</h1></NavLink>
                         </li>
-                        {/* <li> */}
-                            {/* <NavLink className="nav-link"  to="/about">About</NavLink>
-                        </li> */}
                         <li>
-                            <NavLink className="nav-link"  to='/gardens'>Gardens list</NavLink>
+                            <NavLink exact to="/"><h1 className="nav-link">Home</h1></NavLink>
+                        </li>
+                        <li>
+                            <NavLink  to="/about"><h1 className="nav-link">About</h1></NavLink>
+                        </li>
+                        <li>
+                            <NavLink to='/gardens'><h1 className="nav-link">Gardens list</h1></NavLink>
                         </li>
                        
                     {props.isAuth ? 
                     <>
                          <li className="nav-item">
-                            <NavLink className="nav-link"  to="/holistichub">Holistic Hub</NavLink>
+                            <NavLink  to="/holistichub"><h1 className="nav-link">Holistic Hub</h1></NavLink>
                         </li>
                         <li>
-                            {/* <NavLink className="nav-link"  to="/trade">Trade</NavLink> */}
+                            <NavLink  to="/buy"><h1 className="nav-link">Buy</h1></NavLink>
                         </li>
                         <li>
-                            <NavLink className="nav-link"  to="/buy">Buy</NavLink>
-                        </li>
-                        <li>
-                            <NavLink className="nav-link"  to="/volunteer">Volunteer</NavLink>
+                            <NavLink  to="/volunteer"><h1 className="nav-link">Volunteer</h1></NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/profile">Profile</NavLink>
+                            <NavLink  to="/profile"><h1 className="nav-link">Profile</h1></NavLink>
                         </li> 
                         <li>
-                            <span onClick={props.handleLogout} className="nav-link logout-link">Logout</span>
+                            <span onClick={props.handleLogout}><h1 className="nav-link">Logout</h1></span>
                         </li>
                     </> : 
                     <>
                         <li>
-                            <NavLink className="nav-link" to="/signup">Sign up</NavLink>
+                            <NavLink to="/signup"><h1 className="nav-link">Sign up</h1></NavLink>
                         </li>
                         <li>
-                            <NavLink className="nav-link" to="/login">Login</NavLink>
+                            <NavLink to="/login"><h1 className="nav-link">Login</h1></NavLink>
                         </li>
                     </>}
                     </ul>
                 </div>
-            {/* </div> */}
         </nav>
     );
 }

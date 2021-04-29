@@ -65,7 +65,6 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="header">FARMONY</h1>
       <Navbar handleLogout={handleLogout} isAuth={isAuthenticated} />
       <div className="container-mt-5">
         <Switch className="switch">

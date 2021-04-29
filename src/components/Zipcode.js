@@ -39,7 +39,7 @@ const Zipcode = () => {
             
 
             <form onSubmit={handleSubmit} className="zip-form">
-                <input type="text" name="zip" placeholder="Enter zipcode to find farms near you." onChange={entry} className="form-controlHp" />
+                <input className="form-controlHp" type="text" name="zip" placeholder="Enter zipcode to find farms near you." onChange={entry} />
                 <button type="submit" id="zipButton">Search</button>
             </form>
             {listOfGardens.length >= 1 ? listOfGardens : null}
