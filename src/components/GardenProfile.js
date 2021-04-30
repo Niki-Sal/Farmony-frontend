@@ -41,13 +41,13 @@ const GardenProfile = (props) => {
                     <div className="garden-profile-info">
                         
                        
-                        <div >
-                            <h3>About {gardenData.name}</h3>
+                        <div className="info-container" >
+                            <h3 className = "review-title">About {gardenData.name}</h3>
                             <p>{gardenData.about}</p> 
                         </div>
                         
                         <div>
-                            <h3>Reviews</h3>
+                            <h3 className = "review-title">Reviews</h3>
                         </div>
                         <div className="review-container">
                             <p>{gardenData.review[0]}</p>

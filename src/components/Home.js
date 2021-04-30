@@ -10,7 +10,7 @@ const Home = () => {
             
             <h1 className="welcome">Welcome to Farmony</h1>
             <div className="welcome-note-div">
-                <p className="welcome-note">A place to create your own Marketplace and buy fresh produce</p> 
+                <p className="welcome-note">Create your own Marketplace and buy fresh produce</p> 
             </div>
             <div class ="bottom-div">
                 <p className="bottom-note">Find Your Nearest Garden</p> 

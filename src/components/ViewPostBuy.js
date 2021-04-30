@@ -75,7 +75,7 @@ const ViewPostBuy = (props) => {
                     <div className="allposts">
                         <h2 className="post-title">Post Title: {post.title}</h2>
                         <h4 className="post-title">By: {post.name}</h4>
-                        <h4 className="post-title">{post.date}</h4>
+                        <h4 className="post-title">{post.date.slice(0, 10)}</h4>
                     </div>
                     <p >{post.content}</p>
                 </div>

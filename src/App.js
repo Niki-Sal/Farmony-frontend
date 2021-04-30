@@ -20,7 +20,6 @@ import Holistic from './components/Holistic'
 import Trade from './components/Trade'
 import Buy from './components/Buy'
 
-
 const PrivateRoute = ({ component: Component, ...rest}) => {
   let token = localStorage.getItem('jwtToken');
   console.log('===> Hitting a Private Route');
