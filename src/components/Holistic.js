@@ -32,16 +32,13 @@ const Holistic = () => {
 
     return (
         <div>
-            <h1 className="holistic">Holistic Hub</h1>
-            <div className="postContainer">
-                
-                <h4 className="boardDescrip">Community chit-chat. Discuss community news, trade recipes, share photos, etc. Please be kind and respectful. </h4>
-                <NewPost />
+            <h1 className="heading-sm">Community chit-chat. Discuss community news, trade recipes, share photos, etc. Please be kind and respectful.</h1>
+            <div className="board-container">
+                <h3 className="heading-noback">Recent Posts in this board</h3>
                 <div className="postScroll">
                     {listOfPosts}     
                 </div>
-                
-                
+                <NewPost />  
             </div>
         </div>
         

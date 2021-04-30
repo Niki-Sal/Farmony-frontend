@@ -14,21 +14,26 @@ const Gardens = () => {
     },[])
     const listOfGardens = gardens.map((gardenData, index) =>{
         return(
-            <div className="ind-garden">
-                <div className="garden-list-img-div"><img  className="garden-list-img" src= {gardenData.image} alt= "gardenpicture"/></div>
-                <div className="garden-list-address">
-                <h3 className="ind-garden-heading" key={gardenData._id}>{gardenData.name}</h3> 
-                <p>{gardenData.address} <br />{gardenData.city}, {gardenData.state} {gardenData.zip}</p></div>
-               <div className="ind-garden-profile"> <Link to={`/gardenprofile/${gardenData._id}`}>View Garden Profile</Link></div>
+            <div className="garden-container">
+                <h3 key={gardenData._id}>{gardenData.name}</h3> 
+                <div>
+                    <p>Address: {gardenData.address}{gardenData.city} {gardenData.state} {gardenData.zip}</p>
+                </div>
+                <div className = "garden-prop">
+                    <div className="garden-img-div">
+                        <img className="garden-img" src= {gardenData.image} alt= "gardenpicture"/>
+                    </div>
+                    
+                    <div className="garden-link"> <Link to={`/gardenprofile/${gardenData._id}`}>View Garden Profile</Link></div>
+
+                </div>
             </div>
         )
     })
     return (
         <div>
-            <div className="garden-list-heading">
-            <h1 className="garden-list">Gardens</h1>
-            </div>
-            <div className="list-of-gardens">
+            <h1 className="heading">Gardens</h1>
+            <div >
             {listOfGardens}
             </div>
         </div>

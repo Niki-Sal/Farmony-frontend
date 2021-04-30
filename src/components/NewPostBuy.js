@@ -63,33 +63,30 @@ const NewPostBuy = () => {
     }
     return (
         <div>
-            <h1 className="post-title">Post a new thread</h1>
-                <form  className="post-form" onSubmit={onFormSubmit}>
-                    <label>
-                        Post Title: 
-                        <input className="newPostContainer1" type="text" name="postTitle" value={title} onChange={handleTitle}></input>
-                    </label><br />
-                    <label>
-                    <textarea type="text" rows= '5' cols='80' name="body" value={body} onChange={handleBody}></textarea>
-                    </label><br/>
-                    <label>
-                        Category:
-                        <select value={category} onChange={handleCategory}>
-                        <option value="Select">Select</option>
-                        <option value="Trade">Trade</option>
-                        <option value="Buy">Buy</option>
-                        <option value="Volunteer">Volunteer</option>
-                        <option value="Trade Hub">Holistic Hub</option>
-                        </select>
-                        Post Type: 
-                        <select value={postType} onChange={handlePostType}>
-                        <option value="Select">Select</option>
-                        <option value="Seeking">Buying</option>
-                        <option value="Sharing">Selling</option>
-                        </select>
-                        <input type="submit" value="Submit"></input>
-                    </label>
-                </form>
+            <form  className="post-form" onSubmit={onFormSubmit}>
+                <label>
+                    Post Title: 
+                    <input className="form-item2" type="text" name="postTitle" value={title} onChange={handleTitle}></input>
+                </label>
+                <label>
+                    Category:
+                    <select  className="form-item2" value={category} onChange={handleCategory}>
+                    <option value="Select">Select</option>
+                    <option value="Buy">Buy</option>
+                    </select>
+                    Post Type: 
+                    <select className="form-item2" value={postType} onChange={handlePostType}>
+                    <option value="Select">Select</option>
+                    <option value="Seeking">Buying</option>
+                    <option value="Sharing">Selling</option>
+                    </select>
+                    
+                </label>
+                <label>
+                    <textarea className="form-item" type="text" rows= '5' cols='80' name="body" value={body} onChange={handleBody}></textarea>
+                    <input id="subButton" type="submit" value="Submit"></input>
+                </label><br/>
+            </form>
         </div>
     );
 }

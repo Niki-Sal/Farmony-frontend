@@ -25,16 +25,13 @@ const Navbar = (props) => {
                             <NavLink  to="/holistichub"><h1 className="nav-link">Holistic Hub</h1></NavLink>
                         </li>
                         <li>
-                            <NavLink  to="/buy"><h1 className="nav-link">Buy</h1></NavLink>
-                        </li>
-                        <li>
-                            <NavLink  to="/volunteer"><h1 className="nav-link">Volunteer</h1></NavLink>
+                            <NavLink  to="/buy"><h1 className="nav-link">Market</h1></NavLink>
                         </li>
                         <li className="nav-item">
                             <NavLink  to="/profile"><h1 className="nav-link">Profile</h1></NavLink>
                         </li> 
                         <li>
-                            <span onClick={props.handleLogout}><h1 className="nav-link">Logout</h1></span>
+                            <span className="logout-link"onClick={props.handleLogout}><h1 className="nav-link">Logout</h1></span>
                         </li>
                     </> : 
                     <>

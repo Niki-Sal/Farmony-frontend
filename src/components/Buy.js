@@ -31,14 +31,13 @@ const Buy = () => {
 
     return (
         <div>
-            <h1 className="community-title">Buy</h1>
-            <div className="postContainer">
-                <h4 className="boardDescrip">Buy and sell goods. Please be kind and respectful.</h4>
-                {/* <button className="newpost-button"><Link to="/newpostbuy">Make New Post</Link></button> */}
-                <NewPostBuy />
+            <h1 className="heading-sm">Buy and Sell goods. Please be kind and respectful.</h1>
+            <div className="board-container">
+                <h3 className="heading-noback">Recent Posts in this board</h3>
                 <div className="postScroll">
                     {listOfPosts}
                 </div>
+                <NewPostBuy />
             </div>
             
         </div>

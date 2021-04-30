@@ -11,8 +11,6 @@ const Profile = (props) => {
    let currentTime = Date.now();
     const [ about, setAbout] = useState('')
     const [ photo, setPhoto] = useState('')
-
-    /////////////////
     const getAbout = async() =>{
         let newAbout = ''
         const result = await UserModel.oneUser(id)
@@ -46,7 +44,7 @@ const Profile = (props) => {
     };
     return (
         <div >
-            <h2 className="welcome-user">Welcome {name}!</h2>
+            <h2 className="heading">Welcome {name}</h2>
             <div className="profile-container">
                 <div className="pic-section">
                     <CreateImage user={user}/>

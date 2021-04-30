@@ -52,30 +52,34 @@ const ViewPost = (props) => {
     }
     return (
         <div>
-        <Link to='/holistichub'>&larr;Back holistic Community Board</Link>
-        <div className="view-post">
-            <h3>Post Title: {post.title}</h3>
-            <h5 className="no-margin">By: {post.name}</h5>
-        
-        <p className="post-content">{post.content}</p>
-        <div>
-            <h5 className="comment-title">Comments</h5>
-            <p>{thisPostComments} </p>
+            <div className="view-post">
+                <div className="post-content">
+                    <div className="allposts">
+                        <h2 className="post-title">Post Title: {post.title}</h2>
+                        <h4 className="post-title">By: {post.name}</h4>
+                        <h4 className="post-title">{post.date}</h4>
+                    </div>
+                    <p >{post.content}</p>
+                </div>
+
+                <h5 className="comment-title">Comments</h5>
+                <p>{thisPostComments} </p>
+            
+                <form onSubmit={onFormSubmit} className= "comment-form">
+                    <label htmlFor="content">Your Name</label>
+                    <input type="text" id="content" value ={name} placeholder="your name" onChange={handleName} />
+
+                    <label htmlFor="content">Post a comment</label>
+                    <textarea 
+                    onChange={handleCommentContent}
+                    id="content" rows= '5' cols='80'
+                    value={content}
+                    placeholder="post a comment to this post">
+                    </textarea> 
+                    <button type="submit" >Post</button>
+                </form>
+            </div>
         </div>
-        <form onSubmit={onFormSubmit} className= "comment-form">
-            <label htmlFor="content">Your Name</label>
-            <input type="text" id="content" value ={name} placeholder="your name" onChange={handleName} />
-            <label htmlFor="content">Post a comment</label>
-            <textarea 
-            onChange={handleCommentContent}
-            id="content" rows= '5' cols='80'
-            value={content}
-            placeholder="post a comment to this post">
-            </textarea> 
-            <button type="submit" >Post</button>
-        </form>
-        </div>
-    </div>
     );
 }
 export default ViewPost;
