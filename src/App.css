@@ -3,19 +3,35 @@
 }
 
 body{
-  background-image: url("https://i.imgur.com/VWwS0Zf.jpg");
-  background-size: cover;
-  background-attachment: fixed;
+  background-color: rgb(252, 255, 248);
+ 
+}
+
+.App {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  font-family: 'Inter', sans-serif;
 }
 
 /* *** Homepage Styling ***  */
-.header{
-  font-family: 'Elisabeth Clara', sans-serif;
-  color:white;
+
+ul {
   display: flex;
-  justify-content: left;
-  font-size: 60px;
-  margin-left: 100px;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-direction: row;
+  width: 100vw;
+  height: 50px;
+}
+
+.header{
+  position: absolute;
+  left: 0;
+  top: 0;
+  color:white;
+  
 }
 
 .welcome {
@@ -26,7 +42,6 @@ body{
 
 .HomepageMain {
   background:rgba(255,255,255,0.6);
-  font-family: 'Medio', sans-serif;
   display: block;
   position: relative;
   margin: 15px auto;
@@ -196,7 +211,6 @@ a {
   align-items: center;
   display: flex;
   color: white;
-  font-family: 'Elisabeth Clara', sans-serif;
   font-size: 60px;
 
 }
@@ -219,7 +233,6 @@ a {
 
 .garden-profile{
   background:rgba(255,255,255,0.6);
-  font-family: 'Medio', sans-serif;
   display: flexbox;
    
 }
@@ -256,7 +269,6 @@ a {
   align-items: center;
   display: flex;
   color: white;
-  font-family: 'Elisabeth Clara', sans-serif;
   font-size: 60px;
   margin-top: 0px;
 }
@@ -314,7 +326,6 @@ a {
   border: solid black 2px;
   padding: 20px;
   background:rgba(255,255,255,0.6);
-  font-family: 'Medio', sans-serif;
 }
 
 .about-container{
@@ -344,7 +355,6 @@ a {
   align-items: center;
   display: flex;
   color: white;
-  font-family: 'Elisabeth Clara', sans-serif;
   font-size: 60px;
 }
 
@@ -362,7 +372,6 @@ a {
   align-items: center;
   display: flex;
   color: white;
-  font-family: 'Elisabeth Clara', sans-serif;
   font-size: 60px;
 }
 
@@ -378,7 +387,6 @@ a {
   align-items: center;
   display: flex;
   color: white;
-  font-family: 'Elisabeth Clara', sans-serif;
   font-size: 60px;
   margin-top: 0px;
 }
@@ -415,7 +423,6 @@ a {
   align-items: center;
   display: flex;
   color: white;
-  font-family: 'Elisabeth Clara', sans-serif;
   font-size: 30px;
   margin: 0px 300px 0px 300px;
 }
@@ -439,7 +446,6 @@ a {
   align-items: center;
   display: flex;
   color: white;
-  font-family: 'Elisabeth Clara', sans-serif;
   font-size: 30px;
   margin: 0px 50px 0px 50px;
 }
@@ -466,14 +472,12 @@ a {
   align-items: center;
   display: flex;
   color: white;
-  font-family: 'Elisabeth Clara', sans-serif;
   font-size: 60px;
 }
 
 .postContainer{
   padding: 20px;
   background:rgba(255,255,255,0.6);
-  font-family: 'Medio', sans-serif;
   
 }
 
@@ -502,7 +506,6 @@ a {
   align-items: center;
   display: flex;
   color: white;
-  font-family: 'Elisabeth Clara', sans-serif;
   font-size: 60px;
 }
 
@@ -534,7 +537,6 @@ a {
   align-items: center;
   display: flex;
   color: white;
-  font-family: 'Elisabeth Clara', sans-serif;
   font-size: 60px;
 }
 .login-container{
@@ -559,7 +561,6 @@ a {
   align-items: center;
   display: flex;
   color: white;
-  font-family: 'Elisabeth Clara', sans-serif;
   font-size: 60px;
 }
 .signup-container{
@@ -592,7 +593,6 @@ ul{
   margin-bottom: 20px;
   padding-left: 20px;
   padding-right:20px;
-  font-family: 'Elisabeth Clara', sans-serif;
   font-size: 30px;
   color:white;
 
@@ -615,7 +615,6 @@ li{
   align-items: center;
   display: flex;
   color: white;
-  font-family: 'Elisabeth Clara', sans-serif;
   font-size: 60px;
 }
 
@@ -658,12 +657,10 @@ li{
   align-items: center;
   display: flex;
   color: white;
-  font-family: 'Elisabeth Clara', sans-serif;
   font-size: 60px;
 }
 .about-homepage{
   background:rgba(255,255,255,0.6);
-  font-family: 'Medio', sans-serif;
   margin: 50px;
   border: solid black 2px;
   padding: 20px;
@@ -690,7 +687,6 @@ li{
 /* garden profile styling */
 .garden-profile{
   background:rgba(255,255,255,0.6);
-  font-family: 'Medio', sans-serif;
   display: flex;
   flex-direction:row;
   justify-content: space-between;
@@ -708,7 +704,6 @@ li{
   align-items: center;
   display: flex;
   color: white;
-  font-family: 'Elisabeth Clara', sans-serif;
   font-size: 60px;
 }
 .farm-profile-img-div {
@@ -729,7 +724,6 @@ li{
  margin: 100px 100px 100px 0px;
  }
 .garden-profile-about-heading{
-  font-family: 'Elisabeth Clara', sans-serif;
   font-size: 24px;
 }
 .garden-profile-about{
@@ -740,50 +734,40 @@ li{
   padding: 20px;
   font-weight: bold;
   margin:20px;
-  font-family: 'Beauty Club', sans-serif;
   font-size: 16px;
   border: solid black;
 }
 .garden-profile-reviews-heading{
-  font-family: 'Elisabeth Clara', sans-serif;
   font-size: 24px;
 }
 .review-1{
   background:rgba(215, 238, 214); 
-  font-family: 'Josefin Slab', sans-serif;
   letter-spacing: 1.5px;
   padding: 20px;
   margin: 20px;
   font-weight: bold;
-  font-family: 'Beauty Club', sans-serif;
   border: solid black;
   font-size: 16px;
 }
 .review-2{
   background:rgba(215, 238, 214);
-  font-family: 'Josefin Slab', sans-serif;
   letter-spacing: 1.5px;
   padding: 20px;
  font-weight: bold;
   margin: 20px;
-  font-family: 'Beauty Club', sans-serif;
   border: solid black;
   font-size: 16px;
 }
 .review-3{
   background:rgba(215, 238, 214);
-  font-family: 'Josefin Slab', sans-serif;
   letter-spacing: 1.5px;
   padding: 20px;
  font-weight: bold;
   margin: 20px;
-  font-family: 'Beauty Club', sans-serif;
   border: solid black;
   font-size: 16px;
 }
 .farm-profile-address{
-
-  font-family: 'Beauty Club', sans-serif; 
   font-size: 18px;
   display: flex;
   flex-direction:row;
@@ -803,11 +787,9 @@ li{
   align-items: center;
   display: flex;
   color: white;
-  font-family: 'Elisabeth Clara', sans-serif;
   font-size: 60px;
 }
 .ind-garden-heading{
-  font-family: 'Elisabeth Clara', sans-serif;
   font-size: 24px;
 }
 .ind-garden{
@@ -837,9 +819,7 @@ li{
   height: 100%;
   object-fit: cover;
 }
-p{
-  font-family: 'Beauty Club', sans-serif; 
-}
+
 .list-of-gardens{
   margin-top:100px;
   width: 1200px;
