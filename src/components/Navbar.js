@@ -7,13 +7,11 @@ const Navbar = (props) => {
             <div className="container">
              
                 {/* <div className="collapse navbar-collapse" id="navbarsExample07"> */}
-                    <ul>
-                        <li>
-                            <NavLink className="nav-link" exact to="/">Home</NavLink>
+                    <ul> 
+                        <li className="header">
+                            <NavLink className="nav-link" exact to="/"> FARMONY </NavLink>
                         </li>
-                        {/* <li> */}
-                            {/* <NavLink className="nav-link"  to="/about">About</NavLink>
-                        </li> */}
+                
                         <li>
                             <NavLink className="nav-link"  to='/gardens'>Gardens list</NavLink>
                         </li>
