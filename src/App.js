@@ -15,7 +15,6 @@ import Footer from './components/Footer';
 import Login from './components/Login';
 import Navbar from './components/Navbar';
 import Profile from './components/Profile';
-import Home from './components/Home';
 import Holistic from './components/Holistic'
 import Trade from './components/Trade'
 import Buy from './components/Buy'
@@ -65,9 +64,8 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="header">FARMONY</h1>
+      <div className="nav">
       <Navbar handleLogout={handleLogout} isAuth={isAuthenticated} />
-      <div className="container-mt-5">
         <Switch className="switch">
           <Route path='/signup' component={Signup} />
           <Route 
