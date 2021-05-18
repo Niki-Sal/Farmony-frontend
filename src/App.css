@@ -573,29 +573,38 @@ a {
   margin:  15px 0px 15px 0px;
 }
 
-/* nav styling */
+          /* nav styling */
 
 nav{
   background-color:#7C997B;
   display:flex;
   flex-direction:column;
   align-items: center;
-
-  
+  height: 60px;
 }
+
 ul{
   text-decoration: none;
   
 }
+
 .nav-link{
   text-decoration: none;
   justify-content: space-between;
-  margin-bottom: 20px;
   padding-left: 20px;
   padding-right:20px;
-  font-size: 30px;
+  font-size: 20px;
   color:white;
+}
 
+.nav-logo{
+  text-decoration: none;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right:20px;
+  font-size: 45px;
+  color:white;
 }
 
 li{
@@ -619,12 +628,12 @@ li{
 
 .garden-list-img-div{
   position: relative;
-            width: 200px;
-            height: 200px;
-            overflow: hidden;
-            border-radius: 50%;
-            margin-left: 140px;
-            margin-bottom: 50px;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-left: 140px;
+  margin-bottom: 50px;
   
   
 }
