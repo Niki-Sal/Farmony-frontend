@@ -25,7 +25,7 @@ const Gardens = () => {
     })
     return (
         <div>
-            <div className="garden-list-heading">
+            <div className="community-title">
             <h1 className="garden-list">Gardens</h1>
             </div>
             <div className="list-of-gardens">

@@ -32,7 +32,7 @@ const Holistic = () => {
 
     return (
         <div>
-            <h1 className="holistic">Holistic Hub</h1>
+            <h1 className="community-title">Holistic Hub</h1>
             <div className="postContainer">
                 
                 <h4 className="boardDescrip">Community chit-chat. Discuss community news, trade recipes, share photos, etc. Please be kind and respectful. </h4>

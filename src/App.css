@@ -264,12 +264,12 @@ a {
   justify-content: center;
   align-items: center;
   display: flex;
-  height: 100px;
+  height: 50px;
   justify-content: center;
   align-items: center;
   display: flex;
   color: white;
-  font-size: 60px;
+  font-size: 30px;
   margin-top: 0px;
 }
 
@@ -382,12 +382,12 @@ a {
   justify-content: center;
   align-items: center;
   display: flex;
-  height: 100px;
+  height: 70px;
   justify-content: center;
   align-items: center;
   display: flex;
   color: white;
-  font-size: 60px;
+  font-size: 50px;
   margin-top: 0px;
 }
 .newpost-button{
@@ -463,7 +463,7 @@ a {
 /* styling for holistic */
 
 .holistic{
-  background-color: rgb(115, 181, 145) ;
+  background-color: rgb(115, 181, 145);
   justify-content: center;
   align-items: center;
   display: flex;
@@ -610,12 +610,11 @@ li{
   justify-content: center;
   align-items: center;
   display: flex;
-  height: 100px;
   justify-content: center;
   align-items: center;
   display: flex;
   color: white;
-  font-size: 60px;
+  font-size: 50px;
 }
 
 .garden-list-img-div{

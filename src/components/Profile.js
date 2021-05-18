@@ -46,7 +46,7 @@ const Profile = (props) => {
     };
     return (
         <div >
-            <h2 className="welcome-user">Welcome {name}!</h2>
+            <h4 className="welcome-user">Welcome {name}!</h4>
             <div className="profile-container">
                 <div className="pic-section">
                     <CreateImage user={user}/>
