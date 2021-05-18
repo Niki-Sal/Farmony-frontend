@@ -4,12 +4,10 @@ import { NavLink } from 'react-router-dom';
 const Navbar = (props) => {
     return (
         <nav>
-            <div className="container">
-             
                 {/* <div className="collapse navbar-collapse" id="navbarsExample07"> */}
                     <ul> 
                         <li className="header">
-                            <NavLink className="nav-link" exact to="/"> FARMONY </NavLink>
+                            <NavLink className="nav-logo" exact to="/"> FARMONY </NavLink>
                         </li>
                 
                         <li>
@@ -46,7 +44,7 @@ const Navbar = (props) => {
                         </li>
                     </>}
                     </ul>
-                </div>
+                
             {/* </div> */}
         </nav>
     );
