@@ -54,8 +54,7 @@ const Signup = () => {
 
     return (
         <div className="signup-container">
-            <div>
-                <div >
+                <div class="signup-fields">
                     <h1 className="signup">Sign up</h1>
                     <form onSubmit={handleSubmit}>
                         <div className="form-group">
@@ -80,10 +79,9 @@ const Signup = () => {
                             <label htmlFor="confirmPassword">Confirm Password  </label>
                             <input type="password" name="confirmPassword" value={confirmPassword} onChange={handleConfirmPassword} className="form-control"/>
                         </div>
-                        <button className="form-group" type="submit" className="singup-submit">Submit</button>
+                        <button className="form-group" type="submit" className="signup-submit">Submit</button>
                     </form>
                 </div>
-            </div>
         </div>
     )
 }

@@ -3,38 +3,121 @@
 }
 
 body{
-  background-image: url("https://i.imgur.com/VWwS0Zf.jpg");
-  background-size: cover;
-  background-attachment: fixed;
+  background-color: rgb(252, 255, 248);
+ 
+}
+
+.App {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  font-family: 'Inter', sans-serif;
+}
+
+          /* NAVBAR */
+
+nav{
+  position: fixed;
+  z-index: 2;
+  background-color:#7C997B;
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  height: 60px;
+}
+
+ul{
+  text-decoration: none;
+  padding-right: 50px;
+  
+}
+
+.nav-link{
+  text-decoration: none;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right:20px;
+  font-size: 20px;
+  color:white;
+}
+
+.nav-logo{
+  text-decoration: none;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 50px;
+  padding-right:20px;
+  font-size: 45px;
+  color:white;
+}
+
+li{
+  display: inline;
+  float:left;
+  
 }
 
 /* *** Homepage Styling ***  */
-.header{
-  font-family: 'Elisabeth Clara', sans-serif;
-  color:white;
+
+ul {
   display: flex;
-  justify-content: left;
-  font-size: 60px;
-  margin-left: 100px;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-direction: row;
+  width: 100vw;
+  height: 50px;
 }
+
+.header{
+  position: absolute;
+  left: 0;
+  top: 0;
+  color:white;
+  
+}
+
+.video-container{
+  position: static;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #507E5A;
+  text-align: center;
+  font-size: 50px;
+  width: 100vw;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.homepageVideo {
+  position: relative;
+  width: 100vw;
+}
+
 
 .welcome {
   color: #507E5A;
   text-align: center;
   font-size: 50px;
-  font-family: 'Elisabeth Clara', sans-serif;
-  
+}
+
+.welcome-to-farmony {
+  position: absolute;
+  z-index: 1;
+  background-color: rgba(103, 136, 103, 0.26);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .HomepageMain {
   background:rgba(255,255,255,0.6);
-  font-family: 'Medio', sans-serif;
-  display: block;
   position: relative;
-  margin: 15px auto;
-  padding: 15px;
+  top: 0;
   height: auto;
-  width: 1200px;
+  width: 100vw;
 }
 
 .welcomeComp {
@@ -44,16 +127,14 @@ body{
 .aboutFarmony {
   position: relative;
   text-align: center;
-  font-family: ‘Medio’, sans-serif;
   letter-spacing: 1px;
-  color:#D7EED6;
+  color:#e9f3e9;
   margin: 0 auto;
   font-size: 28px;
   top: 165px;
 }
 
 #aboutFarmony2 {
-  font-family: ‘Medio’, sans-serif;
   color: #507E5A;
   margin-bottom: -200px;
 }
@@ -104,6 +185,47 @@ body{
   padding: 10px;
 }
 
+         /* SIGNUP PAGE */
+
+.signup-container{
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.555);
+  width: 50vw;
+  height: 45vh;
+  text-align:right;
+}
+
+.signup{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: rgb(115, 181, 145);
+  font-size: 40px;
+}
+
+  .signup-fields {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.signup-submit {
+  position: relative;
+  background-color: rgb(115, 181, 145);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  border: none;
+
+}
+
+.form-group{
+  margin:  15px 0px 15px 0px;
+}
 /* ***Zip Form styling*** */
 
 .zip-form {
@@ -170,7 +292,6 @@ body{
 /* ***Garden Profile styling*** */
 .garden-profile{
   background:rgba(255,255,255,0.6);
-  font-family: 'Medio', sans-serif;
   display: flex;
   flex-direction:row;
   justify-content: space-between;
@@ -209,7 +330,6 @@ body{
   align-items: center;
   display: flex;
   color: white;
-  font-family: 'Elisabeth Clara', sans-serif;
   font-size: 60px;
 
 }
@@ -238,7 +358,6 @@ body{
                                       
 
 .garden-profile-about-heading{
-  font-family: 'Elisabeth Clara', sans-serif;
   font-size: 24px;
   
 }
@@ -251,7 +370,6 @@ body{
   padding: 20px;
   font-weight: bold;
   margin:20px;
-  font-family: 'Beauty Club', sans-serif;
   font-size: 20px;
   border: solid darkslategray;
   
@@ -260,9 +378,14 @@ body{
 
 
 .garden-profile-reviews-heading{
-  font-family: 'Elisabeth Clara', sans-serif;
   font-size: 24px;
-  
+
+}
+
+.garden-profile{
+  background:rgba(255,255,255,0.6);
+  display: flexbox;
+   
 }
 
 .review-1{
@@ -273,7 +396,6 @@ body{
   padding: 20px;
   margin: 20px;
   font-weight: bold;
-  font-family: 'Beauty Club', sans-serif;
   border: solid darkslategray;
   font-size: 20px;
   
@@ -287,7 +409,6 @@ body{
   padding: 20px;
  font-weight: bold;
   margin: 20px;
-  font-family: 'Beauty Club', sans-serif;
   border: solid darkslategray;
   font-size: 20px;
   
@@ -300,7 +421,6 @@ body{
   padding: 20px;
   margin: 20px 100px 20px 20px;
   font-weight: bold;
-  font-family: 'Beauty Club', sans-serif; 
   font-size: 20px;
   border: solid darkslategray;
 }
@@ -309,7 +429,6 @@ body{
   margin-top: 100px;
   margin-left:170px;
   padding: 10px;
-  font-family: 'Beauty Club', sans-serif; 
   font-size: 20px;
   display: flex;
   flex-direction:row;
@@ -336,13 +455,12 @@ a{
   justify-content: center;
   align-items: center;
   display: flex;
-  height: 100px;
+  height: 50px;
   justify-content: center;
   align-items: center;
   display: flex;
   color: white;
-  font-family: 'Elisabeth Clara', sans-serif;
-  font-size: 60px;
+  font-size: 30px;
   margin-top: 0px;
 }
 
@@ -381,12 +499,10 @@ a{
   border-radius: 50%;
 }
 .about-me-heading{
-  font-family: 'Elisabeth Clara', sans-serif;
   font-size: 30px;
 }
 
 #aboutme{
-  font-family: 'Medio', sans-serif;
 }
 .profile-container {
   display: flex;
@@ -406,10 +522,8 @@ a{
   border: solid black 2px;
   padding: 20px;
   background:rgba(255,255,255,0.6);
-  font-family: 'Medio', sans-serif;
 }
  .edit-form{
-  font-family: 'Medio', sans-serif;
   background-color: rgba(115, 181, 145, .4);
   color: #156C28;
  }
@@ -451,7 +565,6 @@ a{
   align-items: center;
   display: flex;
   color: white;
-  font-family: 'Elisabeth Clara', sans-serif;
   font-size: 60px;
 }
 
@@ -469,7 +582,6 @@ a{
   align-items: center;
   display: flex;
   color: white;
-  font-family: 'Elisabeth Clara', sans-serif;
   font-size: 60px;
 }
 
@@ -480,13 +592,12 @@ a{
   justify-content: center;
   align-items: center;
   display: flex;
-  height: 100px;
+  height: 70px;
   justify-content: center;
   align-items: center;
   display: flex;
   color: white;
-  font-family: 'Elisabeth Clara', sans-serif;
-  font-size: 60px;
+  font-size: 50px;
   margin-top: 0px;
 }
 .newpost-button{
@@ -522,7 +633,6 @@ a{
   align-items: center;
   display: flex;
   color: white;
-  font-family: 'Elisabeth Clara', sans-serif;
   font-size: 30px;
   margin: 0px 300px 0px 300px;
 }
@@ -546,7 +656,6 @@ a{
   align-items: center;
   display: flex;
   color: white;
-  font-family: 'Elisabeth Clara', sans-serif;
   font-size: 30px;
   margin: 0px 50px 0px 50px;
 }
@@ -564,7 +673,7 @@ a{
 /* styling for holistic */
 
 .holistic{
-  background-color: rgb(115, 181, 145) ;
+  background-color: rgb(115, 181, 145);
   justify-content: center;
   align-items: center;
   display: flex;
@@ -573,14 +682,12 @@ a{
   align-items: center;
   display: flex;
   color: white;
-  font-family: 'Elisabeth Clara', sans-serif;
   font-size: 60px;
 }
 
 .postContainer{
   padding: 20px;
   background:rgba(255,255,255,0.6);
-  font-family: 'Medio', sans-serif;
   
 }
 
@@ -611,7 +718,6 @@ a{
   align-items: center;
   display: flex;
   color: white;
-  font-family: 'Elisabeth Clara', sans-serif;
   font-size: 60px;
 }
 
@@ -643,7 +749,6 @@ a{
   align-items: center;
   display: flex;
   color: white;
-  font-family: 'Elisabeth Clara', sans-serif;
   font-size: 60px;
 }
 .login-container{
@@ -656,62 +761,6 @@ a{
   margin:  15px 0px 15px 0px;
 }
 
-/* signup page styling */
-
-.signup{
-  background-color: rgb(115, 181, 145) ;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  height: 100px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  color: white;
-  font-family: 'Elisabeth Clara', sans-serif;
-  font-size: 60px;
-}
-.signup-container{
-  background-color: rgba(255, 255, 255, 0.5);
-  text-align: center;
-  margin-left: 400px;
-  margin-right: 400px;
-}
-.form-group{
-  margin:  15px 0px 15px 0px;
-}
-
-/* nav styling */
-
-nav{
-  background-color:#7C997B;
-  display:flex;
-  flex-direction:column;
-  align-items: center;
-
-  
-}
-ul{
-  text-decoration: none;
-  
-}
-.nav-link{
-  text-decoration: none;
-  justify-content: space-between;
-  margin-bottom: 20px;
-  padding-left: 20px;
-  padding-right:20px;
-  font-family: 'Elisabeth Clara', sans-serif;
-  font-size: 30px;
-  color:white;
-
-}
-
-li{
-  display: inline;
-  float:left;
-  
-}
 /* garden page styling */
 
 .garden-list{
@@ -719,23 +768,21 @@ li{
   justify-content: center;
   align-items: center;
   display: flex;
-  height: 100px;
   justify-content: center;
   align-items: center;
   display: flex;
   color: white;
-  font-family: 'Elisabeth Clara', sans-serif;
-  font-size: 60px;
+  font-size: 50px;
 }
 
 .garden-list-img-div{
   position: relative;
-            width: 200px;
-            height: 200px;
-            overflow: hidden;
-            border-radius: 50%;
-            margin-left: 140px;
-            margin-bottom: 50px;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-left: 140px;
+  margin-bottom: 50px;
   
   
 }
@@ -768,12 +815,10 @@ li{
   align-items: center;
   display: flex;
   color: white;
-  font-family: 'Elisabeth Clara', sans-serif;
   font-size: 60px;
 }
 .about-homepage{
   background:rgba(255,255,255,0.6);
-  font-family: 'Medio', sans-serif;
   margin: 50px;
   border: solid black 2px;
   padding: 20px;
@@ -797,3 +842,147 @@ li{
   align-items: center;
 }
 
+/* garden profile styling */
+.garden-profile{
+  background:rgba(255,255,255,0.6);
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+}
+
+.garden-profile-heading{
+  background-color: rgb(115, 181, 145) ;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100px;
+}
+.garden-profile-name{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: white;
+  font-size: 60px;
+}
+.farm-profile-img-div {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-bottom: 50px;
+  margin-top: 150px;
+}
+.farm-profile-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+ .garden-profile-info{
+ margin: 100px 100px 100px 0px;
+ }
+.garden-profile-about-heading{
+  font-size: 24px;
+}
+.garden-profile-about{
+  background:rgba(215, 238, 214); 
+  width: 800px;
+  letter-spacing: 1.5px;
+  width: 700px;
+  padding: 20px;
+  font-weight: bold;
+  margin:20px;
+  font-size: 16px;
+  border: solid black;
+}
+.garden-profile-reviews-heading{
+  font-size: 24px;
+}
+.review-1{
+  background:rgba(215, 238, 214); 
+  letter-spacing: 1.5px;
+  padding: 20px;
+  margin: 20px;
+  font-weight: bold;
+  border: solid black;
+  font-size: 16px;
+}
+.review-2{
+  background:rgba(215, 238, 214);
+  letter-spacing: 1.5px;
+  padding: 20px;
+ font-weight: bold;
+  margin: 20px;
+  border: solid black;
+  font-size: 16px;
+}
+.review-3{
+  background:rgba(215, 238, 214);
+  letter-spacing: 1.5px;
+  padding: 20px;
+ font-weight: bold;
+  margin: 20px;
+  border: solid black;
+  font-size: 16px;
+}
+.farm-profile-address{
+  font-size: 18px;
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+}
+
+/* garden page styling */
+.garden-list-heading{
+  background-color: rgb(115, 181, 145) ;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100px;
+}
+.garden-list{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: white;
+  font-size: 60px;
+}
+.ind-garden-heading{
+  font-size: 24px;
+}
+.ind-garden{
+  background:rgba(255,255,255,0.6);
+  border: solid black;
+  margin: 15px;
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+  align-items: center;
+}
+.ind-garden-profile{
+  margin-right:80px;
+}
+.garden-list-img-div{
+  position: relative;
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 50%;
+            margin-left: 140px;
+            margin-bottom: 50px;
+            margin-top: 50px;
+}
+.garden-list-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.list-of-gardens{
+  margin-top:100px;
+  width: 1200px;
+  margin: auto;
+}
+.gardren-list-address{
+  margin:50px;
+}
