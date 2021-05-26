@@ -4,6 +4,7 @@ import { useEffect,useState } from 'react';
 import UserModel from '../models/user'
 import jwt_decode from 'jwt-decode';
 import setAuthToken from '../utils/setAuthToken';
+const { REACT_APP_SERVER_URL } = process.env;
 
 
 
@@ -58,7 +59,7 @@ const CreateImage = (props) => {
         console.log('submit')
         let form_data = new FormData();
         form_data.append('image', photoo, 'image');
-        axios.post('http://localhost:8000/images', form_data, {
+        axios.post(`${REACT_APP_SERVER_URL}/images`, form_data, {
             headers: {
             'content-type': 'multipart/form-data'
             }

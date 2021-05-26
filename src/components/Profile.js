@@ -30,6 +30,7 @@ const Profile = (props) => {
    (<div className="profile-info">
        <div className="name-farmer">
         <p>Name | {name}</p>
+        
         {farmer ? <img className = "badge-pic" src="https://i.imgur.com/G9tBFn9.png" alt="farmer-badge"/> : ""}
        </div>
        <p>Email | {email}</p>
@@ -45,7 +46,7 @@ const Profile = (props) => {
     };
     return (
         <div >
-            <h2 className="welcome-user">Welcome {name}!</h2>
+            <h4 className="welcome-user">Welcome {name}!</h4>
             <div className="profile-container">
                 <div className="pic-section">
                     <CreateImage user={user}/>

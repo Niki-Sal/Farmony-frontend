@@ -1,6 +1,6 @@
 import axios from 'axios'
-
-const endPoint = 'http://localhost:8000/api/trade'
+const { REACT_APP_SERVER_URL } = process.env;
+const endPoint = `${REACT_APP_SERVER_URL}/trade`
 
 
 

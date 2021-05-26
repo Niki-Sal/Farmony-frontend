@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# Farmony
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Created by:
+Mocha Brown
+Nikki Salehi
+Sophia Dipaola
 
-## Available Scripts
+## User Stories
 
-In the project directory, you can run:
+### As a farmer member:
 
-### `npm start`
+- I want to find help, sell and trade crops/food that I have grown on my farm.
+- I can connect to my local community and spread awareness about my farm. 
+- I can create posts specific to my needs and communicate with other users.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### As a farmhand member:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- I want to connect to my local community.
+- I can offer help, buy/ trade affordable food and learn about my local farms and their crops/food.
+- I can create posts specific to my needs and find farmers and other users close-by who can help me find what I am looking.
 
-### `npm test`
+### As a non-member:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- I want to do a simple browse to find a farm I can check out.
+- I can browser urban farms near me. I can not send messages to farmers or write posts.
 
-### `npm run build`
+#### About Us
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The health and wellness industry is currently valued at 4.5 trillion dollars for a reason.  It’s hard not to notice that being healthy today seems to come with a hefty price tag. The purpose of Farmony is to ensure that no one has to go broke to get healthy. Farmony is a social media website for those looking to cut the middle man out of their shopping and buy locally, straight from the source.  Users can buy or trade products with one another, offer or seek help at urban farms, trade recipes or just learn about the farmers in their area. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## database Setup
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Image-1](./assets/diagram.jpeg)
 
-### `npm run eject`
+## Wireframe
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### 1
+![Image-2](./assets/Farmonynonmemberhomepage.png)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### 2
+![Image-3](./assets/Farmonymemberhomepage.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### 3
+![Image-4](./assets/Farmresults.png)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### 4
+![Image-5](./assets/Farmprofile.png)
 
-## Learn More
+#### 5
+![Image-6](./assets/Userprofile.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### 6
+![Image-7](./assets/Holistichubboard.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### 7
+![Image-8](./assets/Trade.png)
 
-### Code Splitting
+#### 8
+![Image-8](./assets/CreatePost.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+#### 9
+![Image-8](./assets/CreateProfile.png)
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#### 10
+![Image-8](./assets/ViewPost.png)
