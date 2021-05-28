@@ -136,22 +136,39 @@ ul {
   width: 100vw;
 }
 
+.about-home{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 30px;
+  background-color: rgb(112, 173, 132);
+
+}
+
 .aboutFarmony {
   position: relative;
   text-align: center;
-  letter-spacing: 1px;
+  text-align: justify;
+  padding: 25px;
   color:#e9f3e9;
   margin: 0 auto;
-  font-size: 28px;
-  top: 165px;
+  font-size: 25px;
 }
 
 #aboutFarmony2 {
-  color: #507E5A;
+  color: #b8e9cb;
   margin-bottom: -200px;
 }
 
-.topDivHP {
+.homepage-img {
+  position: relative;
+  width: 40vw;
+  height: auto;
+  
+}
+
+/* .topDivHP {
   height: 200px;
   width: 1100px;
   background-color:rgba(115, 181, 145);
@@ -186,7 +203,7 @@ ul {
   border-top: 100px solid #D7EED6;
   border-left: 550px solid transparent;
   
-}
+} */
 
 .zipFormDiv {
   position: relative;
