@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
 import VolunteerModel from '../models/volunteer'
-import NewPostVolunteer from './NewPostVolunteer'
+import NewPost from './NewPost'
 
 
 const Volunteer = () => {
@@ -35,7 +35,7 @@ const Volunteer = () => {
             <div className="postContainer">
             <h4 className="boardDescrip">Ask for help at your garden or vounteer your time at someone else's!</h4>
                 {/* <button className="newpost-button"><Link to="/newpostbuy">Make New Post</Link></button> */}
-                <NewPostVolunteer />
+                <NewPost />
                 <div className="postScroll">
                     {listOfPosts}
                 </div>

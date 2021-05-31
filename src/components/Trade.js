@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
 import TradeModel from '../models/trade'
-import NewPostTrade from './NewPostTrade';
+import NewPost from './NewPost';
 
 
 
@@ -39,7 +39,7 @@ const Trade = () => {
             <div className="postContainer">
             <h4 className="boardDescrip">Trade amongst one another. No money necesary! Please be kind and respectful. </h4>
             <p>Make New Post</p>
-            <NewPostTrade />
+            <NewPost />
             <div className="postScroll">
                 {listOfPosts}    
             </div>

@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
 import BuyModel from '../models/buy'
-import NewPostBuy from './NewPostBuy'
+import NewPost from './NewPost'
 
 
 const Buy = () => {
 
     const [posts, setPosts] = useState([])
+    const [postType, setPostType] = useState({backgroundColor: 'white'})
 
     useEffect(() => {
         const fetchData = async () => {
@@ -18,10 +19,18 @@ const Buy = () => {
     }, []);
 
     const listOfPosts = posts.map((post) => {
+        //TRYING SO SET POST TYPE COLORS
+        // if (postType == 'Sharing') {
+        //     setPostType({backgroundColor: 'green'})
+        // } else {
+        //     setPostType({backgroundColor: 'orange'})
+        // }
         return (
             <div key={post._id} className="postDiv">
+                <img src="{post.photo}" alt="profile photo"></img>
                 <h3>{post.title} </h3>
-                <h4>{post.date.slice(0, 10)} by {post.name} at {post.date.slice(11, 16)} </h4>
+                <h4 style={postType}>{post.postType}</h4>
+                <h4>{post.date.slice(0, 10)} by {post.name} at {post.date.slice(11, 16)}</h4>
                 <button className="communityButton">
                     <Link to={`/viewpostbuy/${post._id}`}>View Post</Link>
                 </button>
@@ -35,7 +44,7 @@ const Buy = () => {
             <div className="postContainer">
                 <h4 className="boardDescrip">Buy and sell goods. Please be kind and respectful.</h4>
                 {/* <button className="newpost-button"><Link to="/newpostbuy">Make New Post</Link></button> */}
-                <NewPostBuy />
+                <NewPost />
                 <div className="postScroll">
                     {listOfPosts}
                 </div>
