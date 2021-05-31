@@ -1,26 +1,29 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom'
 import HolisticModel from '../models/holistic'
+import BuyModel from '../models/buy'
+import VolunteerModel from '../models/volunteer'
 import jwt_decode from 'jwt-decode';
 import setAuthToken from '../utils/setAuthToken';
-import ViewPost from './ViewPost';
+
 const NewPost = () => {
     const [category, setCategory] = useState('Select')
     const [title, setTitle] = useState('')
     const [body, setBody] = useState('')
     const [postType, setPostType] = useState('Select')
+    const [categoryPostType, setCategoryPostType] = useState({display: 'none'})
     const [currentUser, setCurrentUser] = useState({});
     const [isAuthenticated, setIsAuthenticated] = useState(true);
+
     useEffect(() => {
-      let token;
-      if (!localStorage.getItem('jwtToken')) {
-        setIsAuthenticated(false);
-        console.log('====> Authenticated is now FALSE');
-      } else {
-        token = jwt_decode(localStorage.getItem('jwtToken'));
-        setAuthToken(localStorage.getItem('jwtToken'));
-        setCurrentUser(token);
-      }
+        let token;
+        if (!localStorage.getItem('jwtToken')) {
+            setIsAuthenticated(false);
+            console.log('====> Authenticated is now FALSE');
+        } else {
+            token = jwt_decode(localStorage.getItem('jwtToken'));
+            setAuthToken(localStorage.getItem('jwtToken'));
+            setCurrentUser(token);
+        }
     }, []);
     const handleTitle = (e) => {
         setTitle(e.target.value)
@@ -32,6 +35,11 @@ const NewPost = () => {
     }
     const handleCategory = (e) => {
         setCategory(e.target.value)
+        if (e.target.value === 'Buy' || e.target.value === 'Volunteer') {
+            setCategoryPostType({display: 'block'})
+        } else {
+            setCategoryPostType({display: 'none'})
+        }
         console.log('***** category', category)
     }
     const handlePostType = (e) => {
@@ -39,52 +47,74 @@ const NewPost = () => {
         console.log('***** post type', postType)
     }
     const onFormSubmit = (e) => {
-        // e.preventDefault()
-        console.log(title, body, category, currentUser.name, postType)
-        if (category !== 'Select' && postType !== 'Select') {
-            // alert('Post Submited! :)')
+
+        if (category === 'Holistic Hub') {
+
             HolisticModel.create({
                 title,
                 name: currentUser.name,
                 photo: currentUser.photo,
+                farmer: currentUser.farmer,
                 content: body,
                 postType,
                 category,
             })
-            } else {
-               alert('Please choose an option')
+        } else if (category === 'Volunteer') {
+            VolunteerModel.create({
+                title,
+                name: currentUser.name,
+                photo: currentUser.photo,
+                farmer: currentUser.farmer,
+                content: body,
+                postType,
+                category,
+            })
+        } else if (category === 'Buy') {
+            BuyModel.create({
+                title,
+                name: currentUser.name,
+                photo: currentUser.photo,
+                farmer: currentUser.farmer,
+                content: body,
+                postType,
+                category,
+            })
+        }
+        while (postType === 'Select') {
+            alert('Please choose an option')
         }
     }
     return (
         <div className="makeNewPost">
             <h1 className="post-title">Post a new thread</h1>
-                <form  className="post-form" onSubmit={onFormSubmit}>
-                    <label>
-                        <p>Post Title: </p>
-                        <input type="text" name="postTitle" value={title} onChange={handleTitle}></input>
-                    </label><br />
-                    <label>
-                    <textarea type="text" rows= '5' cols='80' name="body" value={body} onChange={handleBody}></textarea>
-                    </label><br/>
-                    <label>
-                        <p>Category: </p>
-                        <select value={category} onChange={handleCategory}>
+            <form className="post-form" onSubmit={onFormSubmit}>
+                <label>
+                    <p>Post Title: </p>
+                    <input type="text" name="postTitle" value={title} onChange={handleTitle}></input>
+                </label><br />
+                <label>
+                    <textarea type="text" rows='5' cols='80' name="body" value={body} onChange={handleBody}></textarea>
+                </label><br />
+                <label>
+                    <p>Category: </p>
+                    <select value={category} onChange={handleCategory}>
                         <option value="Select">Select</option>
-                        <option value="Trade">Trade</option>
                         <option value="Buy">Buy</option>
                         <option value="Volunteer">Volunteer</option>
                         <option value="Holistic Hub">Holistic Hub</option>
+                    </select>
+                    <div class="category-post-type" style={categoryPostType}>
+                        Post Type:
+                    <select value={postType} onChange={handlePostType}>
+                            <option value="Select">Select</option>
+                            <option value="Seeking">Seeking</option>
+                            <option value="Sharing">Sharing</option>
                         </select>
-                        Post Type: 
-                        <select value={postType} onChange={handlePostType}>
-                        <option value="Select">Select</option>
-                        <option value="Seeking">Buying</option>
-                        <option value="Sharing">Selling</option>
-                        </select>
-                    
-                        <input className="new-post-submit" type="submit" value="Submit"></input>
-                    </label>
-                </form>
+                    </div>
+
+                    <input className="new-post-submit" type="submit" value="Submit"></input>
+                </label>
+            </form>
         </div>
     );
 }
