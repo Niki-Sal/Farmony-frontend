@@ -16,7 +16,7 @@ const Profile = (props) => {
     const getAbout = async() =>{
         let newAbout = ''
         const result = await UserModel.oneUser(id)
-        newAbout= result.data.about
+        newAbout = result.data.about
         setAbout(newAbout)
         console.log(newAbout)
     }

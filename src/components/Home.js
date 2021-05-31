@@ -1,11 +1,8 @@
 import React from 'react';
 import Zipcode from './Zipcode'
-import { Link } from 'react-router-dom';
 import Footer from './Footer'
 import Team from './Team';
 import Video from './Video'
-import axios from 'axios';
-
 
 
 const Home = () => {
