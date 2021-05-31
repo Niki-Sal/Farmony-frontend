@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom'
 const Gardens = () => {
     const [gardens, setGardens] = useState([])
     useEffect(()=>{
-        const fetchData = async() =>{
+        const fetchData = async() => {
             const res = await GardenModel.all()
             console.log(res)
             setGardens(res.data)
