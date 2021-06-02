@@ -19,6 +19,7 @@ body{
 
 nav{
   position: fixed;
+  top: 0;
   z-index: 2;
   background-color:#7C997B;
   display:flex;
@@ -582,6 +583,16 @@ a{
   border: 2px solid #156C28;
 
 }
+          /* NEW POST COMPONENT */
+ .makeNewPost {
+   text-align: left;
+   margin: 0;
+   max-width: 30vw;
+ }
+
+ textarea {
+   max-width: 22vw;
+ }
 /* about us page styling */
 
 .about-us-heading{
@@ -614,35 +625,30 @@ a{
   font-size: 60px;
 }
 
-/* buy styling */
+/* BUY BOARD*/
 
-.community-title{
+.board-title{
   background-color: rgb(115, 181, 145) ;
-  justify-content: center;
-  align-items: center;
-  display: flex;
+  position: relative;
   height: 70px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
   color: white;
   font-size: 50px;
-  margin-top: 0px;
 }
+
 .newpost-button{
   margin: 0 auto;
 }
 .postDiv {
   position: relative;
-  margin:10px;
-  margin-left: 75px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 1450px;
+  height: 15vh;
+  width: 67vw;
+  margin-bottom: .5vh;
   text-align: center;
-  padding: 20px;
+  padding: 15px;
   background-color: rgba(255,255,255,0.8);
   border: 2px solid #156C28;
   
@@ -686,7 +692,7 @@ a{
   display: flex;
   color: white;
   font-size: 30px;
-  margin: 0px 50px 0px 50px;
+  margin: 0 10px;
 }
 .post-form{
   background-color: rgba(255, 255, 255, 0.5);
@@ -715,9 +721,19 @@ a{
 }
 
 .postContainer{
-  padding: 20px;
+  display: flex;
+  flex-direction: row;
   background:rgba(255,255,255,0.6);
+  margin: 0 10px;
   
+}
+
+.post-stamp {
+  font-size: 15px;
+}
+
+.post-type {
+  font-size: 15px;
 }
 
 .communityButton {
@@ -730,8 +746,7 @@ a{
 }
 
 .postScroll {
-  width: 1560px;
-  height: 300px;
+  height: 75vh;
   overflow: scroll;
 }
 

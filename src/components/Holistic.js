@@ -10,16 +10,16 @@ const Holistic = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-           const res = await HolisticModel.all()
-           //console.log(res)
-           setPosts(res.data)
+            const res = await HolisticModel.all()
+            //console.log(res)
+            setPosts(res.data)
         };
         fetchData()
     }, []);
     console.log(posts)
     const listOfPosts = posts.map((post) => {
         return (
-        
+
             <div key={post._id} className="postDiv">
                 <h3>{post.title} </h3>
                 <h4>{post.date.slice(0, 10)} by {post.name} at {post.date.slice(11, 16)} </h4>
@@ -27,24 +27,23 @@ const Holistic = () => {
                     <Link to={`/post/${post._id}`}>View Post</Link>
                 </button>
             </div>
-            )
+        )
     })
 
     return (
         <div>
-            <h1 className="community-title">Holistic Hub</h1>
+            <h1 className="board-title">Holistic Hub</h1>
+            <h4 className="boardDescrip">Community chit-chat. Discuss community news, trade recipes, share photos, etc. Please be kind and respectful. </h4>
             <div className="postContainer">
-                
-                <h4 className="boardDescrip">Community chit-chat. Discuss community news, trade recipes, share photos, etc. Please be kind and respectful. </h4>
                 <NewPost />
                 <div className="postScroll">
-                    {listOfPosts}     
+                    {listOfPosts}
                 </div>
-                
-                
+
+
             </div>
         </div>
-        
+
     );
 }
 

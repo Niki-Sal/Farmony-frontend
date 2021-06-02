@@ -10,7 +10,7 @@ const NewPost = () => {
     const [title, setTitle] = useState('')
     const [body, setBody] = useState('')
     const [postType, setPostType] = useState('Select')
-    const [categoryPostType, setCategoryPostType] = useState({display: 'none'})
+    const [categoryPostType, setCategoryPostType] = useState({ display: 'none' })
     const [currentUser, setCurrentUser] = useState({});
     const [isAuthenticated, setIsAuthenticated] = useState(true);
 
@@ -36,11 +36,10 @@ const NewPost = () => {
     const handleCategory = (e) => {
         setCategory(e.target.value)
         if (e.target.value === 'Buy' || e.target.value === 'Volunteer') {
-            setCategoryPostType({display: 'block'})
+            setCategoryPostType({ display: 'block' })
         } else {
-            setCategoryPostType({display: 'none'})
+            setCategoryPostType({ display: 'none' })
         }
-        console.log('***** category', category)
     }
     const handlePostType = (e) => {
         setPostType(e.target.value)
