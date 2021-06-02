@@ -12,7 +12,7 @@ const Buy = () => {
     useEffect(() => {
         const fetchData = async () => {
             const res = await BuyModel.all()
-            console.log(res)
+            //console.log(res)
             setPosts(res.data)
         };
         fetchData()
@@ -28,7 +28,7 @@ const Buy = () => {
         return (
             <div key={post._id} className="postDiv">
                 <div className="poster-info">
-                    <img src="{post.photo}" alt="profile photo"></img>
+                    <img className="poster-photo" src="{post.photo}" alt="profile photo"></img>
                     <p className="post-stamp">{post.name}</p>
                 </div>
                 <h4 style={postType} className="post-type">{post.postType}</h4>

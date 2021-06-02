@@ -27,7 +27,7 @@ const GardenProfile = (props) => {
                         <div className="farm-profile-address">
                             <p>{gardenData.address} <br />
                                 {gardenData.city}, {gardenData.state} {gardenData.zip}<br /></p>
-                            <div clasName="map">
+                            <div className="map">
                                 <a href={gardenData.map} target="_blank">Directions</a>
                             </div>
                         </div>
