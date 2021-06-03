@@ -13,16 +13,16 @@ const Video = () => {
     // homepageVideo()
     return (
         <div>
-            <div class="video-container">
-            <p class="welcome-to-farmony"> Welcome to Farmony</p>
-                <video class="homepageVideo" loop autoPlay muted>
+            <div className="video-container">
+            <p className="welcome-to-farmony"> Welcome to Farmony</p>
+                <video className="homepageVideo" loop autoPlay muted>
                     <source
                         src='https://res.cloudinary.com/doihe1pi6/video/upload/v1621991670/production_ID_5085490_scuccu.mp4'
                         type="video/mp4">
                     </source>
                 </video>
             </div>
-        </div >
+        </div>
     );
 }
 

@@ -649,7 +649,7 @@ a{
   margin-bottom: .5vh;
   text-align: center;
   padding: 15px;
-  background-color: rgba(255,255,255,0.8);
+  background-color: rgb(216, 231, 216);
   border: 2px solid #156C28;
   
 }
@@ -733,7 +733,9 @@ a{
 }
 
 .post-type {
+  background-color: #e3ffee;
   font-size: 15px;
+  padding: 5px;
 }
 
 .poster-photo {

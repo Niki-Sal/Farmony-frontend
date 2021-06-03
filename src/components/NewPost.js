@@ -47,6 +47,7 @@ const NewPost = () => {
     }
     const onFormSubmit = (e) => {
 
+        
         if (category === 'Holistic Hub') {
 
             HolisticModel.create({
@@ -55,7 +56,6 @@ const NewPost = () => {
                 photo: currentUser.photo,
                 farmer: currentUser.farmer,
                 content: body,
-                postType,
                 category,
             })
         } else if (category === 'Volunteer') {
@@ -79,9 +79,13 @@ const NewPost = () => {
                 category,
             })
         }
-        while (postType === 'Select') {
+        
+        if (postType === 'Select') {
+            e.preventDefault()
             alert('Please choose an option')
         }
+
+        console.log(currentUser)
     }
     return (
         <div className="makeNewPost">
@@ -102,7 +106,7 @@ const NewPost = () => {
                         <option value="Volunteer">Volunteer</option>
                         <option value="Holistic Hub">Holistic Hub</option>
                     </select>
-                    <div class="category-post-type" style={categoryPostType}>
+                    <div className="category-post-type" style={categoryPostType}>
                         Post Type:
                     <select value={postType} onChange={handlePostType}>
                             <option value="Select">Select</option>

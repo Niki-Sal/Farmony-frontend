@@ -45,7 +45,6 @@ const Comments = (props) => {
 
             name: currentUser.name,
             photo: currentUser.photo,
-            
             content: comment,
             date: Date()
 

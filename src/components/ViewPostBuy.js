@@ -24,26 +24,26 @@ const ViewPostBuy = (props) => {
         setPost(temppost[0])
         console.log(temppost[0])
         //assign to a state
-        // setComments(temppost[0].comment)
-        // console.log(temppost[0].comment)
+        setComments(temppost[0].comment)
+        console.log(temppost[0].comment)
     }, []);
     //////map through that assigned state
-    // const thisPostComments = comments.map((comment) => {
-    //     return (
-    //         <div className="comments">
-    //             <h3>-{comment.name}</h3>
-    //             <p>{comment.data}</p>
-    //             <p>{comment.content}</p>
-    //         </div>
-    //     )
-    // })
+    const thisPostComments = comments.map((comment) => {
+        return (
+            <div className="comments">
+                <h3>-{comment.name}</h3>
+                <p>{comment.date}</p>
+                <p>{comment.content}</p>
+            </div>
+        )
+    })
 
 
 
-    // const handleCommentContent = (event) => {
-    //     setContent(event.target.value)
-    //     console.log(event.target.value)
-    // }
+    const handleCommentContent = (event) => {
+        setContent(event.target.value)
+        console.log(event.target.value)
+    }
     
     const handleName = (event) => {
         setName(event.target.value)
@@ -54,20 +54,19 @@ const ViewPostBuy = (props) => {
         const result = await BuyModel.update(postId, newComment)
     }
 
-    // const onFormSubmit = async (e) => {
-    //     const newComment = await {
-    //         name: name,
-    //         photo: ,
-    //         content: content,
-    //         date: Date()
-    //     }
-    //     // console.log(newComment)
-    //     // comments.push(newComment)
-    //     // console.log(comments)
-    //     // updatePost(post._id, { comment: comments })
-    //     // console.log(post)
+    const onFormSubmit = async (e) => {
+        const newComment = await {
+            name: name,
+            content: content,
+            date: Date()
+        }
+        console.log(newComment)
+        comments.push(newComment)
+        console.log(comments)
+        updatePost(post._id, { comment: comments })
+        console.log(post)
 
-    // }
+    }
 
 
 
@@ -84,7 +83,7 @@ const ViewPostBuy = (props) => {
                     <Comments />
                 </div>
 
-                {/* <form onSubmit={onFormSubmit} className="comment-form">
+                <form onSubmit={onFormSubmit} className="comment-form">
 
                     <label htmlFor="content">Your Name</label>
                     <input type="text" id="content" value={name} placeholder="your name" onChange={handleName} />
@@ -97,7 +96,7 @@ const ViewPostBuy = (props) => {
                         placeholder="post a comment to this post">
                     </textarea>
                     <button type="submit">Post</button>
-                </form> */}
+                </form>
             </div>
         </div>
     );

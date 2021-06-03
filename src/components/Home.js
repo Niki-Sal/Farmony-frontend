@@ -11,7 +11,7 @@ const Home = () => {
 
     return (
 
-        <div class='homepage-main'>
+        <div className='homepage-main'>
             <Video />
             <div className="separator"></div>
             <div className="home-about-container">

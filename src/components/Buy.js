@@ -7,31 +7,34 @@ import NewPost from './NewPost'
 const Buy = () => {
 
     const [posts, setPosts] = useState([])
-    const [postType, setPostType] = useState({ backgroundColor: 'white' })
+    let style = { backgroundColor: 'white' }
 
     useEffect(() => {
         const fetchData = async () => {
             const res = await BuyModel.all()
-            //console.log(res)
+
             setPosts(res.data)
         };
         fetchData()
     }, []);
+    
+    
 
+    
     const listOfPosts = posts.map((post) => {
-        //TRYING SO SET POST TYPE COLORS
-        // if (postType == 'Sharing') {
-        //     setPostType({backgroundColor: 'green'})
-        // } else {
-        //     setPostType({backgroundColor: 'orange'})
-        // }
+        //TRYING TO SET POST TYPE COLORS
+        if (post.postType === 'Sharing') {
+            style = { border: '2px solid green' }
+        } else {
+            style = { border: '2px solid orange' }
+        }
         return (
             <div key={post._id} className="postDiv">
                 <div className="poster-info">
-                    <img className="poster-photo" src="{post.photo}" alt="profile photo"></img>
+                    <img className="poster-photo" src="{post.photo}" alt="Poster"></img>
                     <p className="post-stamp">{post.name}</p>
                 </div>
-                <h4 style={postType} className="post-type">{post.postType}</h4>
+                <h4 style={style} className="post-type">{post.postType}</h4>
                 <h3>{post.title} </h3>
                 <h4 className="post-stamp"> <br /> {post.date.slice(0, 10)}  <br /> {post.date.slice(11, 16)}</h4>
                 <button className="communityButton">
