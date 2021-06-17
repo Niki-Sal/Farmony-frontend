@@ -17,15 +17,28 @@ body{
 
           /* NAVBAR */
 
-nav{
+.non-authenticated-nav{
   position: fixed;
   top: 0;
-  z-index: 2;
+  z-index:3;
   background-color:#7C997B;
   display:flex;
   flex-direction:column;
   align-items: center;
   height: 60px;
+}
+
+.authenticated-nav {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 15vw;
+  z-index: 2;
+  background-color:#7C997B;
+
 }
 
 ul{
@@ -35,12 +48,39 @@ ul{
 }
 
 .nav-link{
+  display: inline-block;
   text-decoration: none;
-  justify-content: space-between;
-  padding-left: 20px;
-  padding-right:20px;
+  position: relative;
+  width: 10vw;
+  text-align: center;
   font-size: 20px;
   color:white;
+}
+
+.nav-link-side{
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+  width: 13vw;
+  text-align: center;
+  margin-bottom: 5px  ;
+  padding: 10px;
+  background-color: #a1ccb2;
+  font-size: 20px;
+  color:white;
+}
+
+.nav-link-side:hover{
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+  width: 13vw;
+  text-align: center;
+  margin-bottom: 5px  ;
+  padding: 10px;
+  background-color: #bcddc9;
+  font-size: 20px;
+  color:rgb(95, 136, 112);
 }
 
 .nav-logo{
@@ -53,6 +93,13 @@ ul{
   color:white;
 }
 
+.nav-sidebar-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:stretch;
+}
+
 li{
   display: inline;
   float:left;
@@ -61,7 +108,7 @@ li{
 
 /* *** Homepage Styling ***  */
 
-ul {
+.nav-horizontalbar-links {
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
@@ -76,6 +123,17 @@ ul {
   top: 0;
   color:white;
   
+}
+
+.header-authenticated {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color:white;
+  position: relative;
+  top: -3.5vh;
+  font-size: 2.5vw;
 }
 
 .video-container{
@@ -767,7 +825,7 @@ a{
 }
 
 
-/* volunteer page styling */
+/* Volunteer page styling */
 .volunteer{
   background-color: rgb(115, 181, 145) ;
   justify-content: center;
