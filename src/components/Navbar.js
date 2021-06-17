@@ -1,7 +1,10 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
+
+
 const Navbar = (props) => {
+
     return (
         <nav>
             <div className="container">
@@ -20,19 +23,21 @@ const Navbar = (props) => {
                        
                     {props.isAuth ? 
                     <>
+                     
+    
                          <li className="nav-item">
                             <NavLink className="nav-link"  to="/holistichub">Holistic Hub</NavLink>
                         </li>
                         {/* <li>
                             <NavLink className="nav-link"  to="/trade">Trade</NavLink>
                         </li> */}
-                        <li>
+                         <li>
                             <NavLink className="nav-link"  to="/buy">Buy</NavLink>
                         </li>
                         <li>
                             <NavLink className="nav-link"  to="/volunteer">Volunteer</NavLink>
                         </li>
-                        <li className="nav-item">
+                        <li className="nav-item"> 
                             <NavLink className="nav-link" to="/profile">Profile</NavLink>
                         </li> 
                         <li>
