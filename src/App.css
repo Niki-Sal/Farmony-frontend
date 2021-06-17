@@ -115,7 +115,7 @@ ul {
 }
 .separator {
   height: 100vh;
-  background-color: rgba(0, 128, 128, 0.384);
+  background-color: #7C997B;
 }
 
 .homepage-main {
@@ -563,20 +563,26 @@ a{
 }
           /* NEW POST COMPONENT */
  .makeNewPost {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
    position: relative;
    top: 0;
    text-align: left;
-   max-width: 30vw;
-   height: 90vh;
+   max-width: 20vw;
+   height: 80vh;
    color:rgb(165, 99, 37);
    background-color: rgb(255, 239, 225);
-   border: 1px solid orange;
+   border: 1px solid rgb(204, 153, 58);
    border-radius: 20px;
-   margin-right: 15px;
+   margin-left: 10px;
+   margin-top: 1vh;
+   overflow: hidden;
  }
 
  textarea {
-   max-width: 22vw;
+   max-width: 16vw;
+   max-height: 38vh;
  }
 /* about us page styling */
 
@@ -620,13 +626,20 @@ a{
 .board-posts {
   display: flex;
   flex-direction: column;
+  height: 55vh;
+  width: 80vw;
+  margin: 0 auto;
 }
 
 .board-title{
   background-color: rgb(115, 181, 145) ;
   height: 50px;
   color: white;
-  font-size: 50px;
+  font-size: 35px;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+  top: 3vh;
 }
 
 .newpost-button{
@@ -639,7 +652,6 @@ a{
   align-items: center;
   justify-content: space-between;
   height: 15vh;
-  width: 67vw;
   margin: .8vh 0;
   text-align: center;
   padding: 25px;
@@ -647,7 +659,6 @@ a{
   border: 1px solid rgb(183, 209, 183);
   border-left: 5px solid #90bd85;
   border-radius: 5px;
-  
 }
 .no-margin{
   margin:0px;
@@ -687,14 +698,16 @@ a{
   align-items: center;
   display: flex;
   color: white;
-  font-size: 30px;
+  font-size: 25px;
   margin: 0 10px;
+  width: 22vw;
 }
 .post-form{
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   padding: 30px;
+  
 
 }
 
@@ -747,7 +760,8 @@ a{
 }
 
 .postScroll {
-  height: 75vh;
+  height: 70vh;
+  width: 80vw;
   background:rgba(255,255,255,0.6);
   overflow: scroll;
 }
@@ -842,10 +856,9 @@ a{
 
 /* ***Team*** */
 .team{
-  color: #507E5A;
+  color: white;
   padding: 10px;
-  background-color: rgba(255,255,255,0.7);
-  border: 2px solid #156C28;
+  background-color: rgb(112, 173, 132);
   margin: 50px;
 
 }

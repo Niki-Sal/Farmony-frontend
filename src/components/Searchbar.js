@@ -5,23 +5,24 @@ function Searchbar(props) {
 
     const [postMatches, setPostmMatches] = useState([])
 
-    const handleOnChange = (e) => {
+    const handleSearchBar = (e) => {
         const posts = props.posts 
-        const searchedPosts = posts.filter((post) => {
+        let filteredPosts = []
+        for (let post of posts) {
+            let postVals = Object.values(post)
+
+            // console.log(postVals)
+            const searchedPosts = postVals.filter((post) => post.includes('Tan')
+            )
             
-            while (e.target.value == post.title) {
-                return (
-                    <div>{post.title}</div>
-                )
-            }
-        })
+        }
         
     }
 
     return (
         <div className="searchbar-container">
             <form>
-                <input type="text" id="searchbar" className="searchbar" placeholder="Search posts..." onChange={handleOnChange}></input>
+                <input type="text" id="searchbar" className="searchbar" placeholder="Search posts..." onChange={handleSearchBar}></input>
             </form>
            
         </div>

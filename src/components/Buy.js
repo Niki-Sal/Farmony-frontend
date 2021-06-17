@@ -53,7 +53,7 @@ const Buy = () => {
             <NewPost />
             <container className="board-posts">
                 <h4 className="boardDescrip">Buy and sell goods. Please be kind and respectful.</h4>
-                    <Searchbar posts={posts}/>
+                    {/* <Searchbar posts={posts}/> */}
                 <div className="postContainer">
                     {/* <button className="newpost-button"><Link to="/newpostbuy">Make New Post</Link></button> */}
 
