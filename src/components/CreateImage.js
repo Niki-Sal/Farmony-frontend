@@ -14,7 +14,7 @@ const CreateImage = (props) => {
     const [photoo, setPhotoo] = useState('')
     const [url, setUrl] = useState('')
     const { handleLogout, user } = props;
-    const { id, name, email, farmer, exp} = user;
+    const { id, exp} = user;
     const expirationTime = new Date(exp * 1000);
     let currentTime = Date.now();
 
@@ -77,7 +77,7 @@ const CreateImage = (props) => {
       
         const [ photo, setPhoto] = useState('')
 
-        /////////////////////
+        ////////////////
         const getPhoto = async() =>{
             let newPhoto = ''
             const result = await UserModel.oneUser(id)

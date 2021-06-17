@@ -9,20 +9,20 @@ const Comments = (props) => {
     const [comment, setComment] = useState('')
     const [post, setPost] = useState([])
     const [name, setName] = useState('')
-    // const [currentUser, setCurrentUser] = useState({});
-    // const [isAuthenticated, setIsAuthenticated] = useState(true);
+    const [currentUser, setCurrentUser] = useState({});
+    const [isAuthenticated, setIsAuthenticated] = useState(true);
 
     useEffect( async () => {
-        // let token;
+        let token;
 
-        // if (!localStorage.getItem('jwtToken')) {
-        //     setIsAuthenticated(false);
-        //     console.log('====> Authenticated is now FALSE');
-        // } else {
-        //     token = jwt_decode(localStorage.getItem('jwtToken'));
-        //     setAuthToken(localStorage.getItem('jwtToken'));
-        //     setCurrentUser(token);
-        // }
+        if (!localStorage.getItem('jwtToken')) {
+            setIsAuthenticated(false);
+            console.log('====> Authenticated is now FALSE');
+        } else {
+            token = jwt_decode(localStorage.getItem('jwtToken'));
+            setAuthToken(localStorage.getItem('jwtToken'));
+            setCurrentUser(token);
+        }
         setPost(props.post)
         
     }, []);
@@ -32,10 +32,10 @@ const Comments = (props) => {
         console.log('***** comment', comment)
     }
     
-    const handleName = async (e) => {
-        await setName(e.target.value)
-        console.log('***** name', name)
-    }
+    // const handleName = async (e) => {
+    //     await setName(e.target.value)
+    //     console.log('***** name', name)
+    // }
 
     const onFormSubmit = async (e) => {
         e.preventDefault()
@@ -43,7 +43,8 @@ const Comments = (props) => {
 
         const newComment =  await {
 
-            name: name,
+            name: currentUser.name,
+            photo: currentUser.photo,
             content: comment,
             date: Date()
 
@@ -59,8 +60,6 @@ const Comments = (props) => {
 
             <form onSubmit={onFormSubmit}>
                 <label>
-                    Add Name:
-                    <input type="text" name="name" value={name} onChange={handleName}></input>
                     Add Comment:
                     <input type="text" name="comment" value={comment} onChange={handleComment}></input>
                 </label><br />

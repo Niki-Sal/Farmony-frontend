@@ -13,12 +13,12 @@ import Signup from './components/Signup';
 import About from './components/About';
 import Footer from './components/Footer';
 import Login from './components/Login';
+import CommunityBoards from './components/CommunityBoards'
 import Navbar from './components/Navbar';
 import Profile from './components/Profile';
 import Holistic from './components/Holistic'
 import Trade from './components/Trade'
 import Buy from './components/Buy'
-
 
 const PrivateRoute = ({ component: Component, ...rest}) => {
   let token = localStorage.getItem('jwtToken');
@@ -65,6 +65,7 @@ function App() {
   return (
     <div className="App">
       <div className="nav">
+        {/* <CommunityBoards /> */}
       <Navbar handleLogout={handleLogout} isAuth={isAuthenticated} />
         <Switch className="switch">
           <Route path='/signup' component={Signup} />
@@ -73,11 +74,14 @@ function App() {
             render={(props) => <Login {...props} nowCurrentUser={nowCurrentUser} setIsAuthenticated={setIsAuthenticated} user={currentUser}/>}
           />
           <PrivateRoute path="/profile" component={Profile} user={currentUser} handleLogout={handleLogout} />
+          
           <Route path="/about" component={About} />
           <Route path="/holistichub" component={Holistic} />
           <Route exact path='/buy' component={Buy} />
-          <Route path="/trade" component={Trade} />
+          {/* <Route path="/trade" component={Trade} /> */}
         </Switch>
+
+        
       </div>
       {routes}
       <Footer />
