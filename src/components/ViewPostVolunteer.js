@@ -71,7 +71,7 @@ const ViewPostVolunteer = (props) => {
             <div className="view-post">
                 <h3>Post Title: {post.title}</h3>
                 <h5 className="no-margin">By: {post.name}</h5>
-            </div>
+            
             <p className="post-content">{post.content}</p>
             <div>
                 <h5 className="comment-title">Comments</h5>
@@ -92,7 +92,7 @@ const ViewPostVolunteer = (props) => {
                 </textarea> 
                 <button type="submit" >Post</button>
             </form>
-         
+         </div>
         </div>
     );
 }

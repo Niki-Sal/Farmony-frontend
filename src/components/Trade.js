@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
 import TradeModel from '../models/trade'
+import NewPost from './NewPost';
 
 
 
@@ -19,12 +20,12 @@ const Trade = () => {
 
     const listOfPosts = posts.map((post) => {
         return (
-            <div key={post._id}>
+            <div key={post._id} className="postDiv">
                 {post.title}
                 {post.name}
                 {post.date}
                 {post.postType}
-                <button>
+                <button className="communityButton">
                     <Link to={`/viewposttrade/${post._id}`}>View Post</Link>
                 </button>
             
@@ -35,10 +36,16 @@ const Trade = () => {
     return (
         <div>
             <h1 className="trade">Trade</h1>
-            <h4>Trade. Be kind and respectful. </h4>
-            <button><Link to="/newposttrade">Make New Post</Link></button>
-            {listOfPosts}
+            <div className="postContainer">
+            <h4 className="boardDescrip">Trade amongst one another. No money necesary! Please be kind and respectful. </h4>
+            <p>Make New Post</p>
+            <NewPost />
+            <div className="postScroll">
+                {listOfPosts}    
+            </div>
             
+            
+            </div>
         </div>
         
     );

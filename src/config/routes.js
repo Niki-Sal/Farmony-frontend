@@ -13,6 +13,7 @@ import OtherProfiles from '../components/OtherProfiles'
 import ViewPostVolunteer from '../components/ViewPostVolunteer'
 import NewPostVolunteer from '../components/NewPostVolunteer'
 import Volunteer from '../components/Volunteer'
+import ContactUs from '../components/ContactUs'
 
 
 
@@ -34,5 +35,6 @@ export default(
         <Route exact path='/newpostvolunteer'  component={NewPostVolunteer}/>
         <Route exact path='/previewprofile/:id'  component={OtherProfiles} />
         <Route exact path='/volunteer' component={Volunteer} />
+        <Route exact path="/contact" component={ ContactUs } />
     </Switch> 
 )

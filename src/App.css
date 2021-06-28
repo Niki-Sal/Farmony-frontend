@@ -3,92 +3,227 @@
 }
 
 body{
-  background-image: url("https://i.imgur.com/VWwS0Zf.jpg");
-  background-size: cover;
-  background-attachment: fixed;
+  background-color: rgb(236, 241, 229);
+ 
+}
+
+.App {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  font-family: 'Inter', sans-serif;
+}
+
+          /* NAVBAR */
+
+.non-authenticated-nav{
+  position: fixed;
+  top: 0;
+  z-index:3;
+  background-color:#7C997B;
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  height: 60px;
+}
+
+.authenticated-nav {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 15vw;
+  z-index: 2;
+  background-color:#7C997B;
+
+}
+
+ul{
+  text-decoration: none;
+  padding-right: 50px;
+  
+}
+
+.nav-link{
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+  width: 10vw;
+  text-align: center;
+  font-size: 20px;
+  color:white;
+}
+
+.nav-link-side{
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+  width: 13vw;
+  text-align: center;
+  margin-bottom: 5px  ;
+  padding: 10px;
+  background-color: #a1ccb2;
+  font-size: 20px;
+  color:white;
+}
+
+.nav-link-side:hover{
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+  width: 13vw;
+  text-align: center;
+  margin-bottom: 5px  ;
+  padding: 10px;
+  background-color: #bcddc9;
+  font-size: 20px;
+  color:rgb(95, 136, 112);
+}
+
+.nav-logo{
+  text-decoration: none;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 50px;
+  padding-right:20px;
+  font-size: 45px;
+  color:white;
+}
+
+.nav-sidebar-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:stretch;
+}
+
+li{
+  display: inline;
+  float:left;
+  
 }
 
 /* *** Homepage Styling ***  */
-.header{
-  font-family: 'Elisabeth Clara', sans-serif;
-  color:white;
+
+.nav-horizontalbar-links {
   display: flex;
-  justify-content: left;
-  font-size: 60px;
-  margin-left: 100px;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-direction: row;
+  width: 100vw;
+  height: 50px;
 }
+
+.header{
+  position: absolute;
+  left: 0;
+  top: 0;
+  color:white;
+  
+}
+
+.header-authenticated {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color:white;
+  position: relative;
+  top: -3.5vh;
+  font-size: 2.5vw;
+}
+
+.video-container{
+  position: fixed;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #507E5A;
+  text-align: center;
+  font-size: 50px;
+  width: 100vw;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.homepageVideo {
+  position: relative;
+  width: 100vw;
+}
+
 
 .welcome {
   color: #507E5A;
   text-align: center;
   font-size: 50px;
-  font-family: 'Elisabeth Clara', sans-serif;
 }
 
-.HomepageMain {
+.welcome-to-farmony {
+  position: absolute;
+  z-index: 1;
+  background-color: rgba(103, 136, 103, 0.26);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+.separator {
+  height: 100vh;
+  background-color: #7C997B;
+}
+
+.homepage-main {
+  z-index: 1;
   background:rgba(255,255,255,0.6);
-  font-family: 'Beauty Club', sans-serif;
-  display: block;
-  position: relative;
-  margin: 15px auto;
-  padding: 15px;
+  position: absolute;
+  top: 0;
   height: auto;
-  width: 1200px;
+  width: 100vw;
 }
 
 .welcomeComp {
   background-color: rgba(115, 181, 145);
 }
+.home-about-container {
+  position: absolute;
+  z-index: 3;
+  background-color: white;
+  width: 100vw;
+}
+
+.about-home{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 30px;
+  background-color: rgb(112, 173, 132);
+
+}
 
 .aboutFarmony {
   position: relative;
   text-align: center;
-  letter-spacing: 1px;
-  color:#D7EED6;
+  text-align: justify;
+  padding: 25px;
+  color:#e9f3e9;
   margin: 0 auto;
-  font-size: 28px;
-  top: 140px;
+  font-size: 25px;
 }
 
 #aboutFarmony2 {
-  color: #507E5A;
+  color: #b8e9cb;
   margin-bottom: -200px;
 }
 
-.topDivHP {
-  height: 200px;
-  width: 1100px;
-  background-color:rgba(115, 181, 145);
-  margin: auto;
-
-}
-
-.bottomDivHP {
-  height: 200px;
-  width: 1100px;
-  background-color: #D7EED6;
-  margin: auto;
-  
-}
-
-.triangleDivHpR {
+.homepage-img {
   position: relative;
-  width: 0;
-  height: 0;
-  left: 585px;
-  border-top: 100px solid #D7EED6;
-  border-right: 550px solid transparent;
-  
-}
-
-.triangleDivHpL {
-  position: relative;
-  display: inline;
-  right: -35px;
-  width: 0;
-  height: 0;
-  border-top: 100px solid #D7EED6;
-  border-left: 550px solid transparent;
+  width: 40vw;
+  height: auto;
   
 }
 
@@ -101,125 +236,47 @@ body{
   padding: 10px;
 }
 
-/* ***Zip Form styling*** */
+         /* SIGNUP PAGE */
 
-.zip-form {
-  position: relative;
-  width: 900px;
-  left: 0px;
+.signup-container{
   margin: 0 auto;
-  padding: 10px;
-}
-
-.form-controlHp {
-  font-size: 30px;
-  color: #156C28;
-  text-align: center;
-  height: 40px;
-  width: 750px;
-}
-
-#zipButton {
-  position: relative;
-  color: #156C28;
-  width: 100px;
-  left: 10px;
-  margin: 0 auto;
-  padding: 10px;
-  background-color: rgba(115, 181, 145, .4);
-  border: 2px solid #156C28;
-}
-
-.gardenDisplayDiv {
-  position: relative;
   display: flex;
-  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  width: 1000px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 30px;
-  background-color: rgba(255,255,255,0.8);
-  border: 2px solid #156C28;
+  background-color: rgba(255, 255, 255, 0.555);
+  width: 50vw;
+  height: 45vh;
+  text-align:right;
+}
+
+.signup{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: rgb(115, 181, 145);
   font-size: 40px;
 }
 
-.HomepageMain {
-  background:rgba(255,255,255,0.6);
-  font-family: 'Beauty Club', sans-serif;
-  display: block;
+  .signup-fields {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.signup-submit {
   position: relative;
-  margin: 15px auto;
-  padding: 15px;
-  height: auto;
-  width: 1200px;
-}
-
-.welcomeComp {
-  background-color: rgba(115, 181, 145);
-}
-
-.aboutFarmony {
-  position: relative;
-  text-align: center;
-  letter-spacing: 1px;
-  color:#D7EED6;
-  margin: 0 auto;
-  font-size: 28px;
-  top: 140px;
-}
-
-#aboutFarmony2 {
-  color: #507E5A;
-  margin-bottom: -200px;
-}
-
-.topDivHP {
-  height: 200px;
-  width: 1100px;
-  background-color:rgba(115, 181, 145);
-  margin: auto;
-
-}
-
-.bottomDivHP {
-  height: 200px;
-  width: 1100px;
-  background-color: #D7EED6;
-  margin: auto;
-  
-}
-
-.triangleDivHpR {
-  position: relative;
-  width: 0;
-  height: 0;
-  left: 585px;
-  border-top: 100px solid #D7EED6;
-  border-right: 550px solid transparent;
-  
-}
-
-.triangleDivHpL {
-  position: relative;
-  display: inline;
-  right: -35px;
-  width: 0;
-  height: 0;
-  border-top: 100px solid #D7EED6;
-  border-left: 550px solid transparent;
-  
-}
-
-.zipFormDiv {
-  position: relative;
-  width: 900px;
-  height: 10px;
-  left: 0px;
-  margin: 0 auto;
+  background-color: rgb(115, 181, 145);
+  color: white;
   padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  border: none;
+
 }
 
+.form-group{
+  margin:  15px 0px 15px 0px;
+}
 /* ***Zip Form styling*** */
 
 .zip-form {
@@ -254,6 +311,7 @@ body{
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-around;
   width: 1000px;
   margin: 0 auto;
   text-align: center;
@@ -262,33 +320,6 @@ body{
   border: 2px solid #156C28;
 }
 
-/* ***Garden Profile styling*** */
-.garden-img-div {
-  display: inline-block;
-  position: relative;
-  text-align: center; 
-  width: 200px;
-  height: 200px;
-  overflow: hidden;
-  border-radius: 50%;
-  margin: 0 auto;
-  border: 4px double #156C28;
-
-}
-
-.gardenDisplayP {
-  display: inline-block;
-}
-
-.garden-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;  
-}
-a {
-  text-decoration: none;
-  color: #156C28;
-}
 .gardenDisplayLink {
   position: relative;
   display: inline-block;
@@ -299,6 +330,40 @@ a {
   padding: 10px;
   background-color: transparent;
   border: 2px solid #156C28;
+  object-fit: cover;
+}
+
+.viewGardButton {
+  border: 2px solid #156C28;
+  padding: 5px;
+  text-decoration: none;
+  color: #156C28;
+}
+
+/* ***Garden Profile styling*** */
+.garden-profile{
+  background:rgba(255,255,255,0.6);
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+   
+}
+
+.garden-img-div {
+  display: inline-block;
+  position: relative;
+  text-align: center; 
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 0 auto;
+  border: 4px double #156C28;
+}
+
+.garden-img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   
 }
@@ -327,7 +392,6 @@ a {
   align-items: center;
   display: flex;
   color: white;
-  font-family: 'Elisabeth Clara', sans-serif;
   font-size: 60px;
 
 }
@@ -356,7 +420,6 @@ a {
                                       
 
 .garden-profile-about-heading{
-  font-family: 'Elisabeth Clara', sans-serif;
   font-size: 24px;
   
 }
@@ -369,7 +432,6 @@ a {
   padding: 20px;
   font-weight: bold;
   margin:20px;
-  font-family: 'Beauty Club', sans-serif;
   font-size: 20px;
   border: solid darkslategray;
   
@@ -378,9 +440,14 @@ a {
 
 
 .garden-profile-reviews-heading{
-  font-family: 'Elisabeth Clara', sans-serif;
   font-size: 24px;
-  
+
+}
+
+.garden-profile{
+  background:rgba(255,255,255,0.6);
+  display: flexbox;
+   
 }
 
 .review-1{
@@ -391,7 +458,6 @@ a {
   padding: 20px;
   margin: 20px;
   font-weight: bold;
-  font-family: 'Beauty Club', sans-serif;
   border: solid darkslategray;
   font-size: 20px;
   
@@ -405,7 +471,6 @@ a {
   padding: 20px;
  font-weight: bold;
   margin: 20px;
-  font-family: 'Beauty Club', sans-serif;
   border: solid darkslategray;
   font-size: 20px;
   
@@ -418,21 +483,14 @@ a {
   padding: 20px;
   margin: 20px 100px 20px 20px;
   font-weight: bold;
-  font-family: 'Beauty Club', sans-serif; 
   font-size: 20px;
   border: solid darkslategray;
 }
-.garden-left{
-  display: flex;
-  flex-direction:column;
-  justify-content: space-around;
-  align-items:  center;
-  margin-left: 100px;
-}
+
 .farm-profile-address{
   margin-top: 100px;
   margin-left:170px;
-  font-family: 'Beauty Club', sans-serif; 
+  padding: 10px;
   font-size: 20px;
   display: flex;
   flex-direction:row;
@@ -447,6 +505,21 @@ a{
   color: black;
 }
 
+        /* SEARCHBAR */
+.searchbar-container {
+  position: relative;
+  text-align: center;
+  padding: 10px;
+  
+}
+
+.searchbar {
+  padding: 5px;
+  width: 65vw;
+  border: 1px solid rgb(208, 224, 208);
+}
+
+
 /* user profile styling */
 .profile-container{
   margin: 50px;
@@ -459,13 +532,12 @@ a{
   justify-content: center;
   align-items: center;
   display: flex;
-  height: 100px;
+  height: 50px;
   justify-content: center;
   align-items: center;
   display: flex;
   color: white;
-  font-family: 'Elisabeth Clara', sans-serif;
-  font-size: 60px;
+  font-size: 30px;
   margin-top: 0px;
 }
 
@@ -504,12 +576,10 @@ a{
   border-radius: 50%;
 }
 .about-me-heading{
-  font-family: 'Elisabeth Clara', sans-serif;
   font-size: 30px;
 }
 
 #aboutme{
-  font-family: 'Beauty Club', sans-serif;
 }
 .profile-container {
   display: flex;
@@ -529,10 +599,8 @@ a{
   border: solid black 2px;
   padding: 20px;
   background:rgba(255,255,255,0.6);
-  font-family: 'Beauty Club', sans-serif;
 }
  .edit-form{
-  font-family: 'Beauty Club', sans-serif;
   background-color: rgba(115, 181, 145, .4);
   color: #156C28;
  }
@@ -562,6 +630,29 @@ a{
   border: 2px solid #156C28;
 
 }
+          /* NEW POST COMPONENT */
+ .makeNewPost {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   position: relative;
+   top: 0;
+   text-align: left;
+   max-width: 20vw;
+   height: 80vh;
+   color:rgb(165, 99, 37);
+   background-color: rgb(255, 239, 225);
+   border: 1px solid rgb(204, 153, 58);
+   border-radius: 20px;
+   margin-left: 10px;
+   margin-top: 1vh;
+   overflow: hidden;
+ }
+
+ textarea {
+   max-width: 16vw;
+   max-height: 38vh;
+ }
 /* about us page styling */
 
 .about-us-heading{
@@ -574,7 +665,6 @@ a{
   align-items: center;
   display: flex;
   color: white;
-  font-family: 'Elisabeth Clara', sans-serif;
   font-size: 60px;
 }
 
@@ -592,42 +682,52 @@ a{
   align-items: center;
   display: flex;
   color: white;
-  font-family: 'Elisabeth Clara', sans-serif;
   font-size: 60px;
 }
 
-/* buy styling */
+/* BUY BOARD*/
 
-.community-title{
+.board-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.board-posts {
+  display: flex;
+  flex-direction: column;
+  height: 55vh;
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.board-title{
   background-color: rgb(115, 181, 145) ;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  height: 100px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
+  height: 50px;
   color: white;
-  font-family: 'Elisabeth Clara', sans-serif;
-  font-size: 60px;
-  margin-top: 0px;
+  font-size: 35px;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+  top: 3vh;
 }
+
 .newpost-button{
   margin: 0 auto;
 }
 .postDiv {
   position: relative;
-  margin:10px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 1450px;
+  height: 15vh;
+  margin: .8vh 0;
   text-align: center;
-  padding: 20px;
-  background-color: rgba(255,255,255,0.8);
-  border: 2px solid #156C28;
-  
+  padding: 25px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(183, 209, 183);
+  border-left: 5px solid #90bd85;
+  border-radius: 5px;
 }
 .no-margin{
   margin:0px;
@@ -644,7 +744,6 @@ a{
   align-items: center;
   display: flex;
   color: white;
-  font-family: 'Elisabeth Clara', sans-serif;
   font-size: 30px;
   margin: 0px 300px 0px 300px;
 }
@@ -663,23 +762,21 @@ a{
   margin-right: 300px;
 }
 .post-title{
-  background-color: rgb(115, 181, 145) ;
+  background-color: rgb(221, 193, 166) ;
   justify-content: center;
   align-items: center;
   display: flex;
   color: white;
-  font-family: 'Elisabeth Clara', sans-serif;
-  font-size: 30px;
-  margin: 0px 50px 0px 50px;
+  font-size: 25px;
+  margin: 0 10px;
+  width: 22vw;
 }
 .post-form{
-  background-color: rgba(255, 255, 255, 0.5);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  margin-left: 50px;
-  margin-right: 50px;
-  padding: 20px;
+  justify-content: center;
+  padding: 30px;
+  
 
 }
 
@@ -696,7 +793,7 @@ a{
 /* styling for holistic */
 
 .holistic{
-  background-color: rgb(115, 181, 145) ;
+  background-color: rgb(115, 181, 145);
   justify-content: center;
   align-items: center;
   display: flex;
@@ -705,7 +802,6 @@ a{
   align-items: center;
   display: flex;
   color: white;
-  font-family: 'Elisabeth Clara', sans-serif;
   font-size: 60px;
 }
 .holistic-heading{
@@ -718,28 +814,47 @@ a{
 }
 
 .postContainer{
-  padding: 20px;
-  background:rgba(255,255,255,0.6);
-  font-family: 'Beauty Club', sans-serif;
+  display: flex;
+  flex-direction: row;
+  margin: 0 10px;
+  
+}
+
+.post-stamp {
+  font-size: 13px;
+}
+
+.post-type {
+  background-color: #ffffff;
+  border-radius: 15px;
+  font-size: 14px;
+  padding: 6px;
+}
+
+.poster-photo {
+  width: 30px;
+  height: 30px;
 }
 
 .communityButton {
   color: #156C28;
   padding: 10px;
-  width: 250px;
+  width: 210px;
   font-size: 15px;
   background-color: transparent;
-  border: 2px solid #156C28;
+  border: 1px solid #156C28;
+  border-radius: 15px;
 }
 
 .postScroll {
-  width: 1500px;
-  height: 300px;
+  height: 70vh;
+  width: 80vw;
+  background:rgba(255,255,255,0.6);
   overflow: scroll;
 }
 
 
-/* volunteer page styling */
+/* Volunteer page styling */
 .volunteer{
   background-color: rgb(115, 181, 145) ;
   justify-content: center;
@@ -750,7 +865,6 @@ a{
   align-items: center;
   display: flex;
   color: white;
-  font-family: 'Elisabeth Clara', sans-serif;
   font-size: 60px;
 }
 
@@ -770,7 +884,6 @@ a{
   align-items: center;
   display: flex;
   color: white;
-  font-family: 'Elisabeth Clara', sans-serif;
   font-size: 60px;
 }
 .login-container{
@@ -783,62 +896,6 @@ a{
   margin:  15px 0px 15px 0px;
 }
 
-/* signup page styling */
-
-.signup{
-  background-color: rgb(115, 181, 145) ;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  height: 100px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  color: white;
-  font-family: 'Elisabeth Clara', sans-serif;
-  font-size: 60px;
-}
-.signup-container{
-  background-color: rgba(255, 255, 255, 0.5);
-  text-align: center;
-  margin-left: 400px;
-  margin-right: 400px;
-}
-.form-group{
-  margin:  15px 0px 15px 0px;
-}
-
-/* nav styling */
-
-nav{
-  background-color:#7C997B;
-  display:flex;
-  flex-direction:column;
-  align-items: center;
-
-  
-}
-ul{
-  text-decoration: none;
-  
-}
-.nav-link{
-  text-decoration: none;
-  justify-content: space-between;
-  margin-bottom: 20px;
-  padding-left: 20px;
-  padding-right:20px;
-  font-family: 'Elisabeth Clara', sans-serif;
-  font-size: 30px;
-  color:white;
-
-}
-
-li{
-  display: inline;
-  float:left;
-  
-}
 /* garden page styling */
 
 .garden-list{
@@ -846,23 +903,21 @@ li{
   justify-content: center;
   align-items: center;
   display: flex;
-  height: 100px;
   justify-content: center;
   align-items: center;
   display: flex;
   color: white;
-  font-family: 'Elisabeth Clara', sans-serif;
-  font-size: 60px;
+  font-size: 50px;
 }
 
 .garden-list-img-div{
   position: relative;
-            width: 200px;
-            height: 200px;
-            overflow: hidden;
-            border-radius: 50%;
-            margin-left: 140px;
-            margin-bottom: 50px;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-left: 140px;
+  margin-bottom: 50px;
   
   
 }
@@ -876,11 +931,11 @@ li{
 
 /* ***Team*** */
 .team{
-  color: #507E5A;
+  color: white;
   padding: 10px;
-  background-color: rgba(255,255,255,0.7);
-  border: 2px solid #156C28;
+  background-color: rgb(112, 173, 132);
   margin: 50px;
+
 }
 
 
@@ -894,12 +949,10 @@ li{
   align-items: center;
   display: flex;
   color: white;
-  font-family: 'Elisabeth Clara', sans-serif;
   font-size: 60px;
 }
 .about-homepage{
   background:rgba(255,255,255,0.6);
-  font-family: 'Beauty Club', sans-serif;
   margin: 50px;
   border: solid black 2px;
   padding: 20px;
@@ -926,7 +979,6 @@ li{
 /* garden profile styling */
 .garden-profile{
   background:rgba(255,255,255,0.6);
-  font-family: 'Beauty Club', sans-serif;
   display: flex;
   flex-direction:row;
   justify-content: space-between;
@@ -944,7 +996,6 @@ li{
   align-items: center;
   display: flex;
   color: white;
-  font-family: 'Elisabeth Clara', sans-serif;
   font-size: 60px;
 }
 .farm-profile-img-div {
@@ -965,7 +1016,6 @@ li{
  margin: 100px 100px 100px 0px;
  }
 .garden-profile-about-heading{
-  font-family: 'Elisabeth Clara', sans-serif;
   font-size: 24px;
 }
 .garden-profile-about{
@@ -976,12 +1026,10 @@ li{
   padding: 20px;
   font-weight: bold;
   margin:20px;
-  font-family: 'Beauty Club', sans-serif;
   font-size: 16px;
   border: solid black;
 }
 .garden-profile-reviews-heading{
-  font-family: 'Elisabeth Clara', sans-serif;
   font-size: 24px;
 }
 .review-1{
@@ -990,7 +1038,6 @@ li{
   padding: 20px;
   margin: 20px;
   font-weight: bold;
-  font-family: 'Beauty Club', sans-serif;
   border: solid black;
   font-size: 16px;
 }
@@ -1000,7 +1047,6 @@ li{
   padding: 20px;
  font-weight: bold;
   margin: 20px;
-  font-family: 'Beauty Club', sans-serif;
   border: solid black;
   font-size: 16px;
 }
@@ -1010,13 +1056,10 @@ li{
   padding: 20px;
  font-weight: bold;
   margin: 20px;
-  font-family: 'Beauty Club', sans-serif;
   border: solid black;
   font-size: 16px;
 }
 .farm-profile-address{
-
-  font-family: 'Beauty Club', sans-serif; 
   font-size: 18px;
   display: flex;
   flex-direction:row;
@@ -1036,11 +1079,9 @@ li{
   align-items: center;
   display: flex;
   color: white;
-  font-family: 'Elisabeth Clara', sans-serif;
   font-size: 60px;
 }
 .ind-garden-heading{
-  font-family: 'Elisabeth Clara', sans-serif;
   font-size: 24px;
 }
 .ind-garden{
@@ -1070,9 +1111,7 @@ li{
   height: 100%;
   object-fit: cover;
 }
-p{
-  font-family: 'Beauty Club', sans-serif; 
-}
+
 .list-of-gardens{
   margin-top:100px;
   width: 1200px;
@@ -1080,4 +1119,12 @@ p{
 }
 .gardren-list-address{
   margin:50px;
+}
+
+
+/* CONTACT PAGE */
+
+.contact-form{
+  justify-content: center;
+  margin-top: 400px;
 }
